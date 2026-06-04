@@ -645,11 +645,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
   #mobileMenu, #mobileMenu .mobile-menu-panel, #mobileMenu .mobile-nav-item.stagger {
     transition: none !important;
   }
   .navigation__iconBbar { transition: none !important; }
   .mobile-nav-item { transition: none !important; }
+  .hero-slide { transition: none !important; }
+  .marquee-track { animation: none !important; }
+  .progressive-img { transition: none !important; filter: none !important; }
+  #preloader { transition: none !important; }
 }
 
 .progressive-img {
@@ -711,3 +721,68 @@
   .lightbox-btn.next { right: 12px; }
   .lightbox-title { font-size: 14px; }
 }
+
+/* RECRUITER CARDS */
+.recruiter-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 12px 8px; background: #fff; border: 1px solid #e5e7eb;
+  height: 88px; cursor: pointer; text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 8px; gap: 6px;
+}
+.recruiter-card:hover { box-shadow: 0 4px 16px rgba(29,92,171,0.13); transform: translateY(-2px); }
+.recruiter-card:focus-visible {
+  outline: 2px solid theme(colors.primary);
+  outline-offset: 2px;
+}
+.recruiter-card img {
+  height: 38px; width: auto; max-width: 110px;
+  object-fit: contain; flex-shrink: 0;
+}
+.recruiter-card span {
+  font-size: 9px; color: #9ca3af; font-weight: 600;
+  letter-spacing: 0.04em; text-align: center; line-height: 1.2;
+}
+.recruiter-fallback {
+  display: none; font-size: 11px; font-weight: 700; color: #374151;
+}
+
+/* ACCREDITATION CARDS */
+.accreditation-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 1.5rem 1rem;
+  background: #FFFFFF; border: 1px solid theme(colors.border);
+  border-radius: 12px; text-align: center;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+.accreditation-card:hover {
+  box-shadow: 0 8px 20px rgba(10,25,47,0.08);
+  transform: translateY(-2px);
+}
+.accreditation-card:focus-visible {
+  outline: 2px solid theme(colors.primary);
+  outline-offset: 2px;
+}
+.accreditation-card img { height: 56px; width: auto; margin-bottom: 10px; }
+@media (min-width: 768px) {
+  .accreditation-card { padding: 2rem 1.5rem; }
+  .accreditation-card img { height: 64px; }
+}
+
+/* INTERACTIVE CARD BASE */
+.interactive-card {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+.interactive-card:hover {
+  box-shadow: 0 8px 20px rgba(10,25,47,0.08);
+  transform: translateY(-2px);
+}
+.interactive-card:focus-visible {
+  outline: 2px solid theme(colors.primary);
+  outline-offset: 2px;
+}
+
+/* STATS — remove cursor-pointer since not clickable */
+.hero-stat-item { text-align: center; cursor: default; }

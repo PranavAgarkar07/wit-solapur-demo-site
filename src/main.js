@@ -193,7 +193,11 @@ function animateCounter(el, target, duration, suffix) {
     const current = Math.floor(eased * target)
     el.textContent = current.toLocaleString() + suffix
     if (progress < 1) requestAnimationFrame(update)
-    else el.textContent = target.toLocaleString() + suffix
+    else {
+      el.textContent = target.toLocaleString() + suffix
+      el.style.transform = 'scale(1.08)'
+      setTimeout(function() { el.style.transform = '' }, 200)
+    }
   }
   requestAnimationFrame(update)
 }
@@ -201,6 +205,8 @@ function animateCounter(el, target, duration, suffix) {
 function initMarquee() {
   const track = document.querySelector('.marquee-track')
   if (!track) return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
   const group = track.querySelector('.marquee-group')
   if (!group) return
 
