@@ -1,0 +1,11 @@
+/home/pranav/Desktop/projects/WIT/index.html
+/home/pranav/Desktop/projects/WIT/about.html
+/home/pranav/Desktop/projects/WIT/departments.html
+/home/pranav/Desktop/projects/WIT/placements.html
+/home/pranav/Desktop/projects/WIT/gallery.html
+/home/pranav/Desktop/projects/WIT/contact.html
+/home/pranav/Desktop/projects/WIT/.opencode/skills/ui-ux-pro-max/SKILL.md
+/home/pranav/Desktop/projects/WIT/design-system/walchand-institute-of-technology/MASTER.md
+/home/pranav/Desktop/projects/WIT/src/components/header.html
+/home/pranav/Desktop/projects/WIT/src/components/footer.html
+/home/pranav/Desktop/projects/WIT/.agent/skills/ui-ux-pro-max/SKILL.md

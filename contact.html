@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Walchand Institute of Technology, Solapur</title>
+  <meta name="description" content="Get in touch with WIT Solapur. Admissions inquiries, contact details, and campus location." />
+  <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="preloader">
+    <div id="spinner">
+      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
+      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
+    </div>
+  </div>
+  <header-component></header-component>
+
+  <main id="main-content">
+    <section class="page-banner" style="background-image: url(./images/campus-hero-2.jpg);">
+      <div class="page-banner-content">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-2 text-sm mb-4">
+            <a href="./" class="breadcrumb-link">Home</a>
+            <span class="text-white/40">/</span>
+            <span class="breadcrumb-current">Contact Us</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>
+          <p class="text-lg text-white/80 max-w-2xl mt-2">We'd love to hear from you. Reach out for admissions, inquiries, or campus visits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__block">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <div class="bg-white border border-slate-200 p-8">
+              <h2 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
+              <form class="space-y-5" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
+                    <input type="text" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Your full name" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
+                    <input type="email" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="your@email.com" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone</label>
+                  <input type="tel" class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="+91 9X XXX XXXXX" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Subject *</label>
+                  <select required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white">
+                    <option value="">Select a subject</option>
+                    <option>Admissions 2026-27</option>
+                    <option>Program Information</option>
+                    <option>Placement Related</option>
+                    <option>Campus Visit</option>
+                    <option>General Inquiry</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Message *</label>
+                  <textarea rows="5" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Tell us how we can help..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full justify-center text-base py-3.5">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="bg-white border border-slate-200 p-8">
+              <h2 class="text-2xl font-bold text-primary mb-6">Contact Information</h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
+                    <i class="fa-solid fa-location-dot text-xl text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Address</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">S. A. P. D. Jain Pathshala's<br/>Walchand Institute of Technology<br/>P.B. No. 634, Walchand Hirachand Marg<br/>Ashok Chowk, Solapur - 413006<br/>Maharashtra, India</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
+                    <i class="fa-solid fa-phone-volume text-xl text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Phone</h3>
+                    <p class="text-sm text-slate-500">Admissions Helpline:<br/><strong class="text-primary">+91 758 857 1100</strong> / <strong class="text-primary">+91 758 858 1100</strong></p>
+                    <p class="text-sm text-slate-500 mt-1">Office: (0217) 2652700 / 2653040</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
+                    <i class="fa-solid fa-envelope text-xl text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary mb-1">Email</h3>
+                    <p class="text-sm text-slate-500">Admissions: <strong class="text-primary">admissions@witsolapur.org</strong><br/>Principal: <strong class="text-primary">principal@witsolapur.org</strong><br/>TPO: <strong class="text-primary">tpo@witsolapur.org</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 overflow-hidden">
+              <div class="p-6 border-b border-slate-200">
+                <h3 class="font-bold text-primary">Find Us on Map</h3>
+              </div>
+              <div class="h-72 bg-slate-200">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.988!2d75.9063!3d17.6787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5d8c1b9a1a1a1%3A0x1a1a1a1a1a1a1a1a!2sWalchand%20Institute%20of%20Technology%2C%20Solapur!5e0!3m2!1sen!2sin!4v1" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__block section__block--bgsandal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="common__heading">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto mt-8 space-y-4">
+          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-primary list-none">
+              How can I apply for admission?
+              <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">Visit our Admissions page on the official website or contact our admissions helpline at +91 758 857 1100. Applications are accepted through CAP rounds and direct admission based on merit.</p>
+          </details>
+          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-primary list-none">
+              What are the eligibility criteria for B.Tech?
+              <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">Candidates must have passed HSC (10+2) with Physics and Mathematics as compulsory subjects, along with one of Chemistry/Biotechnology/Biology/Technical subjects with at least 45% marks (40% for reserved categories). JEE Main or MHT-CET scores are considered.</p>
+          </details>
+          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-primary list-none">
+              Does WIT provide hostel facilities?
+              <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">Yes, separate hostel facilities are available for boys and girls with modern amenities, mess facilities, and 24/7 security. Hostel admission is based on merit and availability.</p>
+          </details>
+          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-primary list-none">
+              What is the placement record of WIT?
+              <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">WIT has an excellent placement record with over 60+ companies visiting annually. The highest on-campus package is ₹12.5 LPA, with a median package of ₹5.10 LPA. Our placement rate has been consistently growing year-over-year.</p>
+          </details>
+          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+            <summary class="flex items-center justify-between font-bold text-primary list-none">
+              Are scholarships available?
+              <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">Yes, scholarships are available for eligible students including EBC, SEBC, Minority, and Reserve Category scholarships. AICTE scholarship/fellowship schemes are also available. Contact the administration office for more details.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer-component></footer-component>
+</body>
+</html>

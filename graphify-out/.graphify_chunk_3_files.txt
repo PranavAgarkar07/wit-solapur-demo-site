@@ -1,0 +1,16 @@
+/home/pranav/Desktop/projects/WIT/public/images/hero-slide-1.jpg
+/home/pranav/Desktop/projects/WIT/public/images/india-today-rank.jpg
+/home/pranav/Desktop/projects/WIT/public/images/civil-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/cse-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/award-ceremony.jpg
+/home/pranav/Desktop/projects/WIT/public/images/ecm-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/entc-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/it-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/campus-banner.jpg
+/home/pranav/Desktop/projects/WIT/public/images/mechanical-icon.png
+/home/pranav/Desktop/projects/WIT/public/images/campus-hero-1.jpg
+/home/pranav/Desktop/projects/WIT/public/images/campus-hero-2.jpg
+/home/pranav/Desktop/projects/WIT/public/images/wit-logo.png
+/home/pranav/Desktop/projects/WIT/public/images/favicon.jpg
+/home/pranav/Desktop/projects/WIT/public/images/campus-hero-3.jpg
+/home/pranav/Desktop/projects/WIT/public/images/wit-logo-original.jpg

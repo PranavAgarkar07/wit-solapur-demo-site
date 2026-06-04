@@ -1,0 +1,208 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+<header id="site-header">
+
+  <!-- ═══════════════════════════════════════
+       TIER 1 — UTILITY BAR
+       ═══════════════════════════════════════ -->
+  <div class="header__topmenu">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between" style="height: 36px;">
+      <ul class="header__topleftmenu flex items-center" style="list-style:none;margin:0;padding:0;">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./departments.html">Academics</a></li>
+        <li><a href="./placements.html">Placements</a></li>
+        <li><a href="./about.html#nirf">NIRF</a></li>
+        <li><a href="https://witsolapur.org/webmail/" target="_blank" rel="noopener noreferrer">Webmail</a></li>
+      </ul>
+      <div class="flex items-center gap-3" style="list-style:none;margin:0;padding:0;">
+        <a href="https://facebook.com/wit.solapur" target="_blank" aria-label="Facebook" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com/wit_solapur" target="_blank" aria-label="Instagram" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://linkedin.com/school/walchand-institute-of-technology-solapur" target="_blank" aria-label="LinkedIn" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/WIT_Solapur" target="_blank" aria-label="X / Twitter" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIER 2 — LOGO SECTION
+       ═══════════════════════════════════════ -->
+  <div class="header__middlesec">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 border-b border-border">
+      <div class="flex items-center justify-between" style="min-height: 88px;">
+
+        <!-- Logo + name -->
+        <div class="flex items-center gap-4">
+          <a href="./" class="header__logo" aria-label="WIT Solapur Home">
+            <img src="./images/wit-logo.png" alt="WIT Solapur" width="64" height="64">
+          </a>
+          <div>
+            <div class="font-lora text-primary font-bold" style="font-family:Lora,Georgia,serif;font-size:19px;font-weight:700;color:#1d5cab;line-height:1.2;">
+              Walchand Institute of Technology
+            </div>
+            <div style="font:11px/1 'Lato',sans-serif;color:#64748B;margin-top:3px;">
+              Solapur, Maharashtra &middot; Est. 1983 &middot; NAAC A+ Accredited
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <a href="./placements.html" class="header--links flex items-center gap-1.5 text-primary font-semibold border-2 border-primary rounded px-3.5 py-1.5 text-xs hover:bg-primary hover:text-white transition-all duration-300 no-underline">
+            <i class="fa-solid fa-chart-line"></i> NIRF Ranked
+          </a>
+          <button class="search__tab" id="searchToggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SCROLL + MOBILE STYLES
+       ═══════════════════════════════════════ -->
+  <style>
+    .header__bottomsec {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+    body.navbar-scrolled .header__bottomsec {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    body.navbar-scrolled .header__topmenu,
+    body.navbar-scrolled .header__middlesec {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .mobile-drawer {
+      position: absolute; top: 100%; left: 0; width: 100%;
+      background: #FFFFFF; border-top: 1px solid #e2e8f0;
+      max-height: 0; overflow: hidden; z-index: 30;
+      transition: max-height 0.35s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    #main-nav.drawer-open .mobile-drawer { max-height: 420px; }
+    .mobile-drawer a {
+      display: flex; align-items: center; height: 48px; padding-left: 24px;
+      font: 15px 'Lato', sans-serif; font-weight: 500;
+      color: #1E293B; text-decoration: none;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .mobile-drawer a:hover,
+    .mobile-drawer a.active { color: #1d5cab; padding-left: 30px; }
+
+    @media (max-width: 1023px) {
+      .navigation__menu > li > a { font-size: 13px; padding: 14px 10px; }
+    }
+    @media (max-width: 767px) {
+      .header__topmenu { display: none; }
+      .navigation__menu { display: none; }
+      .header__middlesec > div > div { min-height: 60px !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .header__topmenu, .header__middlesec, .header__bottomsec,
+      .header__submenu, .mobile-drawer, .navigation__iconBbar {
+        transition: none !important;
+      }
+    }
+  </style>
+
+</header>
+
+<!-- ═══════════════════════════════════════
+     TIER 3 — MAIN NAVIGATION (sibling of header so sticky works)
+     ═══════════════════════════════════════ -->
+<div class="header__bottomsec" id="main-nav">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="flex items-center justify-between" style="min-height:52px;">
+
+      <ul class="navigation__menu" role="list">
+        <li><a href="./">Home</a></li>
+
+        <li class="navigation__submenudropdown">
+          <a href="javascript:;">About</a>
+          <ul class="navigation__submenu">
+            <li><a href="./about.html">Overview</a></li>
+            <li><a href="./about.html">Vision &amp; Mission</a></li>
+            <li><a href="./about.html">Leadership</a></li>
+            <li><a href="./about.html">Quality Policy</a></li>
+            <li><a href="./about.html">Accreditations</a></li>
+          </ul>
+        </li>
+
+        <li class="navigation__submenudropdown">
+          <a href="javascript:;">Departments</a>
+          <ul class="navigation__submenu">
+            <li><a href="./cse.html">Computer Science &amp; Engineering</a></li>
+            <li><a href="./departments.html">Electronics &amp; Telecommunication</a></li>
+            <li><a href="./departments.html">Electronics &amp; Computer Management</a></li>
+            <li><a href="./departments.html">Mechanical Engineering</a></li>
+            <li><a href="./departments.html">Civil Engineering</a></li>
+            <li><a href="./departments.html">Information Technology</a></li>
+            <li><a href="./departments.html">Postgraduate Programs</a></li>
+            <li><a href="./departments.html" class="text-primary font-bold border-t border-border mt-1 pt-1">All Departments →</a></li>
+          </ul>
+        </li>
+
+        <li class="navigation__submenudropdown">
+          <a href="javascript:;">Placements</a>
+          <ul class="navigation__submenu">
+            <li><a href="./placements.html">Overview</a></li>
+            <li><a href="./placements.html">Top Recruiters</a></li>
+            <li><a href="./placements.html">Placement Statistics</a></li>
+            <li><a href="./placements.html">Training &amp; Preparation</a></li>
+          </ul>
+        </li>
+
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Mobile hamburger (hidden on md+) -->
+      <button class="navigation__menuMobile md:hidden" id="hamburger"
+              aria-label="Toggle navigation" aria-expanded="false">
+        <span class="navigation__iconBbar"></span>
+        <span class="navigation__iconBbar"></span>
+        <span class="navigation__iconBbar"></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul>
+      <li><a href="./">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./cse.html">CSE Department</a></li>
+      <li><a href="./departments.html">Departments</a></li>
+      <li><a href="./placements.html">Placements</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div id="nav-spacer"></div>
+
+<!-- Search overlay -->
+<div id="searchOverlay" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-white"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-24 md:pt-32">
+    <div class="findinfo__searchboxsec">
+      <span class="findinfo__label">?</span>
+      <input type="text" id="searchInput" class="findinfo__searchbox" placeholder="Search keywords..." autofocus>
+    </div>
+    <div id="searchResults" class="findinfo__searchshowtext">
+      <h3 class="text-primary font-bold text-lg uppercase mb-3">How to search</h3>
+      <p class="text-slate-500 text-sm">Type a keyword to search across programs, departments, events, and more.</p>
+    </div>
+    <button id="searchClose" class="findinfo__btn mt-8">Close Search</button>
+  </div>
+</div>

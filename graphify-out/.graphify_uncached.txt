@@ -1,0 +1,13 @@
+/home/pranav/Desktop/projects/WIT/tailwind.config.js
+/home/pranav/Desktop/projects/WIT/download_logos.py
+/home/pranav/Desktop/projects/WIT/test_md5.py
+/home/pranav/Desktop/projects/WIT/src/main.js
+/home/pranav/Desktop/projects/WIT/index.html
+/home/pranav/Desktop/projects/WIT/about.html
+/home/pranav/Desktop/projects/WIT/departments.html
+/home/pranav/Desktop/projects/WIT/placements.html
+/home/pranav/Desktop/projects/WIT/gallery.html
+/home/pranav/Desktop/projects/WIT/contact.html
+/home/pranav/Desktop/projects/WIT/src/components/header.html
+/home/pranav/Desktop/projects/WIT/public/images/wit-logo.png
+/home/pranav/Desktop/projects/WIT/public/images/principal.jpg

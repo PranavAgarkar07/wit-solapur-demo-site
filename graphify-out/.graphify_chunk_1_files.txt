@@ -1,0 +1,12 @@
+/home/pranav/Desktop/projects/WIT/package.json
+/home/pranav/Desktop/projects/WIT/vite.config.js
+/home/pranav/Desktop/projects/WIT/tailwind.config.js
+/home/pranav/Desktop/projects/WIT/postcss.config.js
+/home/pranav/Desktop/projects/WIT/.opencode/package.json
+/home/pranav/Desktop/projects/WIT/.opencode/skills/ui-ux-pro-max/scripts/core.py
+/home/pranav/Desktop/projects/WIT/.opencode/skills/ui-ux-pro-max/scripts/design_system.py
+/home/pranav/Desktop/projects/WIT/.opencode/skills/ui-ux-pro-max/scripts/search.py
+/home/pranav/Desktop/projects/WIT/src/main.js
+/home/pranav/Desktop/projects/WIT/.agent/skills/ui-ux-pro-max/scripts/core.py
+/home/pranav/Desktop/projects/WIT/.agent/skills/ui-ux-pro-max/scripts/design_system.py
+/home/pranav/Desktop/projects/WIT/.agent/skills/ui-ux-pro-max/scripts/search.py

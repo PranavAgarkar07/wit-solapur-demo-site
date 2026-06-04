@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Walchand Institute of Technology, Solapur</title>
+  <meta name="description" content="Photo gallery showcasing campus, events, labs, sports, cultural activities, and achievements at WIT Solapur." />
+  <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script type="module" src="/src/main.js"></script>
+  <style>
+    .gallery-filter .active { background: #1d5cab; color: white; border-color: #1d5cab; }
+    .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(10,25,47,0.95); display: none; align-items: center; justify-content: center; padding: 2rem; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="preloader">
+    <div id="spinner">
+      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
+      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
+    </div>
+  </div>
+  <header-component></header-component>
+
+  <main id="main-content">
+    <section class="page-banner" style="background-image: url(./images/campus-hero-1.jpg);">
+      <div class="page-banner-content">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-2 text-sm mb-4">
+            <a href="./" class="breadcrumb-link">Home</a>
+            <span class="text-white/40">/</span>
+            <span class="breadcrumb-current">Gallery</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white">Gallery</h1>
+          <p class="text-lg text-white/80 max-w-2xl mt-2">Moments that define life at WIT Solapur.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__block">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-3 mb-12 gallery-filter">
+          <button data-filter="all" class="active px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">All</button>
+          <button data-filter="campus" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Campus</button>
+          <button data-filter="events" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Events</button>
+          <button data-filter="sports" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Sports</button>
+          <button data-filter="cultural" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Cultural</button>
+          <button data-filter="sih" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">SIH</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Album 1: SIH -->
+          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+               data-category="sih"
+               data-album-title="Smart India Hackathon 2024"
+               data-images='[
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/SIH1-480x423.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/SIH1.jpg", "caption": "SIH 2024 Winners Trophy Presentation"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2024/12/SIH-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2024/12/SIH-1024x768.jpg", "caption": "WIT Team at SIH Grand Finale"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2024/12/HIVE-SIH--300x200.jpg", "high": "https://witsolapur.org/wp-content/uploads/2024/12/HIVE-SIH--1024x683.jpg", "caption": "Team HIVE Presentation at SIH"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2024/12/BlackWell-SIH-480x270.jpeg", "high": "https://witsolapur.org/wp-content/uploads/2024/12/BlackWell-SIH.jpeg", "caption": "Team Blackwell Winner Trophy Presentation"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2024/12/HIVE-SIH-480x329.png", "high": "https://witsolapur.org/wp-content/uploads/2024/12/HIVE-SIH.png", "caption": "HIVE SIH Project Winner Presentation"}
+               ]'>
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://witsolapur.org/wp-content/uploads/2025/01/SIH1-480x423.jpg" alt="Smart India Hackathon 2024" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="px-4 py-2 border border-white text-white text-xs uppercase tracking-wider font-semibold">View Album (5 Photos)</span>
+              </div>
+            </div>
+            <div class="p-5 border-t border-slate-100 bg-white">
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">SIH Winners</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Smart India Hackathon 2024</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Celebrating triple glory for WIT Solapur at the national-level grand finale.</p>
+            </div>
+          </div>
+
+          <!-- Album 2: Campus -->
+          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+               data-category="campus"
+               data-album-title="Campus Infrastructure"
+               data-images='[
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3387.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3387.jpg", "caption": "Walchand Institute of Technology Campus View"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3456.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3456.jpg", "caption": "Main Academic Block and Offices"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3500.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/DSC_3500.jpg", "caption": "WIT Central Courtyard Gardens"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/02/Website-480x342.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/02/Website.jpg", "caption": "Campus Entrance Main Road Gate"}
+               ]'>
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://witsolapur.org/wp-content/uploads/2026/03/DSC_3387.jpg" alt="Campus Infrastructure" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="px-4 py-2 border border-white text-white text-xs uppercase tracking-wider font-semibold">View Album (4 Photos)</span>
+              </div>
+            </div>
+            <div class="p-5 border-t border-slate-100 bg-white">
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">Campus &amp; Facilities</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Campus Infrastructure</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">A walkthrough of our modern labs, research classrooms, and central courtyards.</p>
+            </div>
+          </div>
+
+          <!-- Album 3: Cultural -->
+          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+               data-category="cultural"
+               data-album-title="Atharva Cultural Fest"
+               data-images='[
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2827.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2827.jpg", "caption": "Atharva Annual Gathering Stage Setup"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2928.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2928.jpg", "caption": "Atharva Musical Fest Band Night"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2842.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2842.jpg", "caption": "Traditional Dance Fest Performance"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_3135.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_3135.jpg", "caption": "Atharva Stage Performance Dramatics"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2892.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2892.jpg", "caption": "Student Cultural Choreography Performance"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2925.jpg", "high": "https://witsolapur.org/wp-content/uploads/2025/01/DSC_2925.jpg", "caption": "Vocal Singing Competition at Atharva"}
+               ]'>
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://witsolapur.org/wp-content/uploads/2025/01/DSC_2827.jpg" alt="Atharva Cultural Fest" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="px-4 py-2 border border-white text-white text-xs uppercase tracking-wider font-semibold">View Album (6 Photos)</span>
+              </div>
+            </div>
+            <div class="p-5 border-t border-slate-100 bg-white">
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">Atharva 2K25</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Atharva Cultural Fest</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Showcasing student talent, musical performance, stage dramas, and traditional day.</p>
+            </div>
+          </div>
+
+          <!-- Album 4: Events -->
+          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+               data-category="events"
+               data-album-title="Technical Seminars &amp; WITchar"
+               data-images='[
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4066-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4066-1024x768.jpg", "caption": "WITchar Technical Seminar Lecture"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4138-480x270.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4138-scaled.jpg", "caption": "National Technical Project Exhibition"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4054-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4054-1024x768.jpg", "caption": "Hands-on Technical Coding Workshop"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4168-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4168-1024x768.jpg", "caption": "National Level AI Symposium Presentations"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4158-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4158-1024x768.jpg", "caption": "Emerging Technologies Guest Seminar"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4112-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4112-1024x768.jpg", "caption": "Expert Guest Lecture Keynote Session"}
+               ]'>
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://witsolapur.org/wp-content/uploads/2026/03/IMG_4066-300x225.jpg" alt="Technical Seminars &amp; WITchar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="px-4 py-2 border border-white text-white text-xs uppercase tracking-wider font-semibold">View Album (6 Photos)</span>
+              </div>
+            </div>
+            <div class="p-5 border-t border-slate-100 bg-white">
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">WITchar Workshops</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Technical Workshops</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Interactive expert guest lectures, hands-on labs, and WITchar tech events.</p>
+            </div>
+          </div>
+
+          <!-- Album 5: Sports -->
+          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+               data-category="sports"
+               data-album-title="WIT Annual Sports Meet"
+               data-images='[
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4043-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4043-1024x768.jpg", "caption": "Cricket Tournament Match Event"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4027-480x270.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4027-scaled.jpg", "caption": "Athletics Racing Meet Championships"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4029-480x270.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4029-scaled.jpg", "caption": "Volleyball Championship Finals"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4033-480x270.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4033-scaled.jpg", "caption": "Basketball Tournament Finale Match"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4709-480x270.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4709-scaled.jpg", "caption": "Track Running Athletics Competition"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4728-300x169.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4728-1024x576.jpg", "caption": "High Jump Athletics Event"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4674-300x169.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4674-1024x576.jpg", "caption": "Kabaddi Inter-College Finals Match"},
+                 {"thumb": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4767-300x225.jpg", "high": "https://witsolapur.org/wp-content/uploads/2026/03/IMG_4767-1024x768.jpg", "caption": "Badminton Tournament Finals Event"}
+               ]'>
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://witsolapur.org/wp-content/uploads/2026/03/IMG_4043-300x225.jpg" alt="WIT Annual Sports Meet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="px-4 py-2 border border-white text-white text-xs uppercase tracking-wider font-semibold">View Album (8 Photos)</span>
+              </div>
+            </div>
+            <div class="p-5 border-t border-slate-100 bg-white">
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">Sports Meet</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">WIT Annual Sports Meet</h3>
+              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Cricket championships, athletics racing meets, volleyball and basketball tournaments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="absolute top-6 right-6 text-white/60 hover:text-white text-3xl cursor-pointer z-[120]" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-btn prev" id="lightboxPrev">&lt;</button>
+    <button class="lightbox-btn next" id="lightboxNext">&gt;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <div class="lightbox-caption-bar">
+      <div class="lightbox-counter" id="lightboxCounter">Photo 1 of 4</div>
+      <div class="lightbox-title" id="lightboxTitle">Caption Text</div>
+    </div>
+  </div>
+
+  <footer-component></footer-component>
+
+</body>
+</html>
