@@ -260,38 +260,31 @@
   .announcements::after { width: 35%; }
 }
 
-/* HERO SECTION */
+/* HERO SECTION — split layout */
 .hero-section {
   position: relative;
-  height: 85vh;
-  min-height: 500px;
-  max-height: 700px;
-  overflow: hidden;
   background: theme(colors.primary-900);
+  overflow: hidden;
 }
-.hero-slide {
-  position: absolute; inset: 0;
-  background-size: cover; background-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+.hero__layout {
+  display: flex;
+  min-height: 85vh;
+  max-height: 700px;
 }
-.hero-slide.active { opacity: 1; }
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,25,47,0.85) 0%, rgba(10,25,47,0.4) 50%, rgba(10,25,47,0.7) 100%);
-  z-index: 1;
+.hero__text {
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px clamp(24px, 4vw, 60px) 60px;
+  position: relative;
+  z-index: 2;
 }
-.hero-content {
-  position: relative; z-index: 2;
-  height: 100%;
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
-  text-align: center;
-  padding: 120px 20px 40px;
-}
-.hero-badge-row {
+.hero__text .hero-badge-row {
   display: flex; flex-wrap: wrap; gap: 8px;
-  justify-content: center; margin-bottom: 20px;
+  margin-bottom: 20px;
+  justify-content: flex-start;
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 5px;
@@ -306,28 +299,46 @@
   text-transform: uppercase;
 }
 .hero-badge i { font-size: 12px; }
-.hero-heading {
+.hero__text .hero-heading {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   color: #FFFFFF;
-  font-size: clamp(1.8rem, 5vw, 3.8rem);
-  line-height: 1.15;
-  margin-bottom: 12px;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 1.12;
+  margin-bottom: 14px;
 }
-.hero-heading-sub {
+.hero__text .hero-heading-sub {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: rgba(255,255,255,0.85);
-  font-size: clamp(0.95rem, 2.2vw, 1.4rem);
-  line-height: 1.5;
+  color: rgba(255,255,255,0.8);
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
+  line-height: 1.55;
   margin-bottom: 28px;
-  max-width: 680px;
-  text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+  max-width: 580px;
 }
-.hero-cta-row {
+.hero__text .hero-cta-row {
   display: flex; flex-wrap: wrap; gap: 14px;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+/* Visual side (image slideshow) */
+.hero__visual {
+  flex: 0 0 45%;
+  max-width: 45%;
+  position: relative;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+.hero__visual-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(10,25,47,0.55) 0%, transparent 35%);
+  z-index: 1;
 }
 
 /* Hero stats bar */
@@ -348,20 +359,23 @@
   margin-top: 4px;
 }
 
-@media (max-width: 768px) {
-  .hero-section { height: 92vh; min-height: 520px; max-height: 620px; }
-  .hero-content { padding: 100px 16px 30px; }
-  .hero-badge { font-size: 9px; padding: 4px 10px; }
-  .hero-heading { margin-bottom: 8px; }
-  .hero-heading-sub { margin-bottom: 20px; }
+@media (max-width: 900px) {
+  .hero__layout { flex-direction: column-reverse; min-height: 0; max-height: none; }
+  .hero__visual { flex: none; max-width: 100%; height: 40vh; min-height: 260px; }
+  .hero__text { flex: none; max-width: 100%; padding: 40px clamp(20px, 4vw, 40px); }
+  .hero__text .hero-badge-row { justify-content: center; }
+  .hero__text .hero-heading { text-align: center; }
+  .hero__text .hero-heading-sub { text-align: center; margin-left: auto; margin-right: auto; }
+  .hero__text .hero-cta-row { justify-content: center; }
+  .hero__visual-overlay { background: linear-gradient(0deg, rgba(10,25,47,0.5) 0%, transparent 40%); }
   .hero-stats { padding: 20px 0; }
   .hero-stat-number { font-size: 24px; }
   .hero-stat-label { font-size: 11px; }
 }
 
 @media (max-width: 480px) {
-  .hero-section { min-height: 460px; max-height: 520px; }
-  .hero-content { padding: 90px 14px 24px; }
+  .hero__visual { height: 30vh; min-height: 200px; }
+  .hero__text { padding: 30px 16px; }
   .hero-badge { font-size: 8px; padding: 3px 8px; gap: 3px; }
   .hero-badge i { font-size: 9px; }
   .hero-cta-row { gap: 10px; }

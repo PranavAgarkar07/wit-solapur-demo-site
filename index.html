@@ -24,24 +24,61 @@
 
   <main id="main-content">
 
+  <!-- ANNOUNCEMENTS -->
+  <div class="announcements overflow-hidden">
+    <div class="max-w-7xl mx-auto announcements__inner">
+      <p class="announcements__text">
+        <i class="fas fa-bullhorn mr-2"></i> Announcements
+      </p>
+      <div class="announcements__marquee">
+        <div class="flex marquee-track" style="white-space: nowrap;">
+          <div class="flex marquee-group">
+            <span class="marquee__list"><a href="#">Admissions Open for B.Tech 2026-27 — Application deadline extended to June 30</a></span>
+            <span class="marquee__list"><a href="#">B.Tech III Semester (ICT-based) Academic Calendar 2026-27 released</a></span>
+            <span class="marquee__list"><a href="#">Results declared for B.Tech II Semester Examinations — May 2026</a></span>
+            <span class="marquee__list"><a href="#">IEEE WIT Student Chapter wins Best Technical Event at National Symposium</a></span>
+            <span class="marquee__list"><a href="#">Internship Drive: Amazon, TCS, Infosys hiring WIT students for Summer 2026</a></span>
+            <span class="marquee__list"><a href="#">International Conference on Emerging Technologies — Call for Papers</a></span>
+            <span class="marquee__list"><a href="#">WIT Innovation Cell Hackathon 2026 — Register by July 10</a></span>
+            <span class="marquee__list"><a href="#">Merit Scholarships announced for First Year B.Tech 2026-27</a></span>
+          </div>
+          <div class="flex marquee-group" aria-hidden="true">
+            <span class="marquee__list"><a href="#">Admissions Open for B.Tech 2026-27 — Application deadline extended to June 30</a></span>
+            <span class="marquee__list"><a href="#">B.Tech III Semester (ICT-based) Academic Calendar 2026-27 released</a></span>
+            <span class="marquee__list"><a href="#">Results declared for B.Tech II Semester Examinations — May 2026</a></span>
+            <span class="marquee__list"><a href="#">IEEE WIT Student Chapter wins Best Technical Event at National Symposium</a></span>
+            <span class="marquee__list"><a href="#">Internship Drive: Amazon, TCS, Infosys hiring WIT students for Summer 2026</a></span>
+            <span class="marquee__list"><a href="#">International Conference on Emerging Technologies — Call for Papers</a></span>
+            <span class="marquee__list"><a href="#">WIT Innovation Cell Hackathon 2026 — Register by July 10</a></span>
+            <span class="marquee__list"><a href="#">Merit Scholarships announced for First Year B.Tech 2026-27</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- HERO SECTION -->
   <section class="hero-section" id="heroSection">
-    <div class="hero-slide active" style="background-image: url('/images/hero-slide-1.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('/images/campus-hero-1.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('/images/campus-hero-2.jpg');"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge-row">
-        <span class="hero-badge"><i class="fas fa-star"></i> NAAC A+</span>
-        <span class="hero-badge"><i class="fas fa-check-circle"></i> NBA Accredited</span>
-        <span class="hero-badge"><i class="fas fa-university"></i> Autonomous</span>
-        <span class="hero-badge"><i class="fas fa-calendar-alt"></i> Est. 1983</span>
+    <div class="hero__layout">
+      <div class="hero__text">
+        <div class="hero-badge-row">
+          <span class="hero-badge"><i class="fas fa-star"></i> NAAC A+</span>
+          <span class="hero-badge"><i class="fas fa-check-circle"></i> NBA Accredited</span>
+          <span class="hero-badge"><i class="fas fa-university"></i> Autonomous</span>
+          <span class="hero-badge"><i class="fas fa-calendar-alt"></i> Est. 1983</span>
+        </div>
+        <h1 class="hero-heading">Walchand Institute of Technology, Solapur</h1>
+        <p class="hero-heading-sub">Empowering minds since 1983 — shaping future engineers and innovators through academic excellence, research, and industry collaboration.</p>
+        <div class="hero-cta-row">
+          <a href="./contact.html" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Admissions 2026-27</a>
+          <a href="./departments.html" class="btn-hero-secondary"><i class="fas fa-book-open"></i> Explore Programs</a>
+        </div>
       </div>
-      <h1 class="hero-heading">Walchand Institute of Technology, Solapur</h1>
-      <p class="hero-heading-sub">Empowering minds since 1983 — shaping future engineers and innovators through academic excellence, research, and industry collaboration.</p>
-      <div class="hero-cta-row">
-        <a href="./contact.html" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Admissions 2026-27</a>
-        <a href="./departments.html" class="btn-hero-secondary"><i class="fas fa-book-open"></i> Explore Programs</a>
+      <div class="hero__visual">
+        <div class="hero-slide active" style="background-image: url('./images/hero-slide-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./images/campus-hero-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./images/campus-hero-2.jpg');"></div>
+        <div class="hero__visual-overlay"></div>
       </div>
     </div>
   </section>
@@ -70,7 +107,6 @@
     </div>
   </div>
 
-  <!-- ANNOUNCEMENTS -->
   <div class="announcements overflow-hidden">
     <div class="max-w-7xl mx-auto announcements__inner">
       <p class="announcements__text">
@@ -297,7 +333,7 @@
   </div>
 
   <!-- RESEARCH -->
-  <div class="section__block section__block--research text-white" style="background-image:linear-gradient(135deg, rgba(22,5,4,0.92), rgba(22,5,4,0.8)), url('/images/campus-banner.jpg');">
+  <div class="section__block section__block--research text-white" style="background-image:linear-gradient(135deg, rgba(22,5,4,0.92), rgba(22,5,4,0.8)), url('./images/campus-banner.jpg');">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between mb-6 md:mb-8">
         <h2 class="common__heading !mb-0 !text-white">Research &amp; Innovation</h2>
