@@ -6,7 +6,11 @@
   <title>Gallery — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Photo gallery showcasing campus, events, labs, sports, cultural activities, and achievements at WIT Solapur." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
   <style>
     .gallery-filter .active { background: #1d5cab; color: white; border-color: #1d5cab; }
@@ -44,17 +48,17 @@
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-wrap justify-center gap-3 mb-12 gallery-filter">
-          <button data-filter="all" class="active px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">All</button>
-          <button data-filter="campus" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Campus</button>
-          <button data-filter="events" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Events</button>
-          <button data-filter="sports" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Sports</button>
-          <button data-filter="cultural" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Cultural</button>
-          <button data-filter="sih" class="px-5 py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">SIH</button>
+          <button data-filter="all" class="active px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">All</button>
+          <button data-filter="campus" class="px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Campus</button>
+          <button data-filter="events" class="px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Events</button>
+          <button data-filter="sports" class="px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Sports</button>
+          <button data-filter="cultural" class="px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">Cultural</button>
+          <button data-filter="sih" class="px-5 py-2.5 sm:py-2 text-sm font-medium border border-slate-200 hover:border-primary hover:text-primary transition-all cursor-pointer bg-white">SIH</button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Album 1: SIH -->
-          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+          <div class="album-card card group cursor-pointer overflow-hidden"
                data-category="sih"
                data-album-title="Smart India Hackathon 2024"
                data-images='[
@@ -78,7 +82,7 @@
           </div>
 
           <!-- Album 2: Campus -->
-          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+          <div class="album-card card group cursor-pointer overflow-hidden"
                data-category="campus"
                data-album-title="Campus Infrastructure"
                data-images='[
@@ -101,7 +105,7 @@
           </div>
 
           <!-- Album 3: Cultural -->
-          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+          <div class="album-card card group cursor-pointer overflow-hidden"
                data-category="cultural"
                data-album-title="Atharva Cultural Fest"
                data-images='[
@@ -126,7 +130,7 @@
           </div>
 
           <!-- Album 4: Events -->
-          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+          <div class="album-card card group cursor-pointer overflow-hidden"
                data-category="events"
                data-album-title="Technical Seminars &amp; WITchar"
                data-images='[
@@ -151,7 +155,7 @@
           </div>
 
           <!-- Album 5: Sports -->
-          <div class="album-card group cursor-pointer border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-md"
+          <div class="album-card card group cursor-pointer overflow-hidden"
                data-category="sports"
                data-album-title="WIT Annual Sports Meet"
                data-images='[
@@ -182,9 +186,15 @@
   </main>
 
   <div class="lightbox" id="lightbox">
-    <button class="absolute top-6 right-6 text-white/60 hover:text-white text-3xl cursor-pointer z-[120]" onclick="closeLightbox()">&times;</button>
-    <button class="lightbox-btn prev" id="lightboxPrev">&lt;</button>
-    <button class="lightbox-btn next" id="lightboxNext">&gt;</button>
+    <button class="absolute top-6 right-6 text-white/60 hover:text-white text-3xl cursor-pointer z-[120]" id="lightboxClose" aria-label="Close lightbox">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-btn prev" id="lightboxPrev" aria-label="Previous photo">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="lightbox-btn next" id="lightboxNext" aria-label="Next photo">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
     <img id="lightboxImg" src="" alt="" />
     <div class="lightbox-caption-bar">
       <div class="lightbox-counter" id="lightboxCounter">Photo 1 of 4</div>

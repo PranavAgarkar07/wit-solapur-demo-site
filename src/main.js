@@ -2,62 +2,6 @@ import './input.css'
 import headerHtml from './components/header.html?raw'
 import footerHtml from './components/footer.html?raw'
 
-/* ── Logo resolver: tries multiple Clearbit domains before showing text ── */
-var DOMAIN_MAP = {
-  tcs: ['tcs.com'],
-  infosys: ['infosys.com'],
-  capgemini: ['capgemini.com'],
-  persistent: ['persistentsys.com', 'persistent.com'],
-  techmahindra: ['techmahindra.com'],
-  amdocs: ['amdocs.com'],
-  atlascopco: ['atlascopco.com'],
-  hitachi: ['hitachi.com'],
-  cognizant: ['cognizant.com'],
-  wipro: ['wipro.com'],
-  hexaware: ['hexaware.com'],
-  ibm: ['ibm.com'],
-  lt: ['larsentoubro.com'],
-  tatamotors: ['tatamotors.com'],
-  bajajauto: ['bajajauto.com'],
-  kirloskar: ['kirloskarpneumatic.com', 'kirloskar.com'],
-  hsbc: ['hsbc.com'],
-  linde: ['linde.com'],
-  tejasnetworks: ['tejasnetworks.com'],
-  prajindustries: ['praj.net', 'prajindustries.com'],
-  forvia: ['forvia.com'],
-  unominda: ['unominda.com'],
-  bajajelectricals: ['bajajelectricals.com'],
-  cyient: ['cyient.com'],
-}
-
-function altToKey(alt) {
-  if (!alt) return ''
-  var k = alt.toLowerCase().replace(/[^a-z0-9]/g, '')
-  if (k === 'lt' || k === 'l') return 'lt'
-  if (k === 'hsbc') return 'hsbc'
-  if (k === 'ibm') return 'ibm'
-  return k
-}
-
-/* Inline onerror handler — tries next domain, falls back to text */
-window.rl = function (img) {
-  if (!img._rlAttempts) {
-    var alt = img.getAttribute('alt')
-    if (!alt) { img.style.display = 'none'; return }
-    var key = altToKey(alt)
-    img._rlAttempts = DOMAIN_MAP[key] || (key ? [key + '.com'] : [])
-    img._rlIndex = 0
-  }
-  if (img._rlIndex >= img._rlAttempts.length) {
-    img.style.display = 'none'
-    var fallback = img.nextElementSibling
-    if (fallback) fallback.style.display = 'block'
-    return
-  }
-  img.src = 'https://logo.clearbit.com/' + img._rlAttempts[img._rlIndex]
-  img._rlIndex++
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents()
   initNavbar()
@@ -96,8 +40,10 @@ function injectComponents() {
       (!isHome && href !== '/' && href !== 'index.html' && (currentPath.endsWith(href) || href.endsWith(currentPath)))
     if (isActive) {
       link.classList.add('active')
+      link.setAttribute('aria-current', 'page')
     } else {
       link.classList.remove('active')
+      link.removeAttribute('aria-current')
     }
   })
 }
@@ -148,6 +94,22 @@ function initNavbar() {
       mainNav?.classList.remove('drawer-open')
       hamburger?.classList.remove('is-open')
       hamburger?.setAttribute('aria-expanded', 'false')
+    })
+  })
+
+  // Desktop dropdown toggles (replace javascript:; hrefs)
+  document.querySelectorAll('.nav-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true'
+      btn.setAttribute('aria-expanded', !expanded)
+    })
+    btn.addEventListener('blur', () => {
+      // Close on blur when focus leaves entirely
+      setTimeout(() => {
+        if (!btn.parentElement?.contains(document.activeElement)) {
+          btn.setAttribute('aria-expanded', 'false')
+        }
+      }, 100)
     })
   })
 }
@@ -203,7 +165,7 @@ function initSearch() {
       p.title.toLowerCase().includes(query)
     ).slice(0, 6)
     searchResults.innerHTML = matches.map(m =>
-      `<a href="${m.url}" class="block bg-wit-bg hover:bg-primary hover:text-white px-4 py-3 text-slate-700 transition-colors focus:outline-2 focus:outline-primary">${m.title}</a>`
+      `<a href="${m.url}" class="block bg-wit-bg hover:bg-primary hover:text-white px-4 py-3 text-slate-700 transition-colors focus:outline-2 focus:outline-primary focus:ring-2 focus:ring-primary/50" tabindex="0">${m.title}</a>`
     ).join('') || '<p class="text-slate-400 text-sm">No results found</p>'
   })
 
@@ -296,7 +258,7 @@ function initPreloader() {
   window.addEventListener('load', () => {
     setTimeout(() => {
       preloader.classList.add('hidden')
-    }, 1500)
+    }, 600)
   })
 
   setTimeout(() => {
@@ -401,6 +363,10 @@ function initGallery() {
       window.closeLightbox()
     }
   })
+
+  // Close button (replaces inline onclick)
+  const lightboxClose = document.getElementById('lightboxClose')
+  lightboxClose?.addEventListener('click', () => window.closeLightbox())
 
   // Show Slide
   function showSlide(index) {
@@ -517,8 +483,8 @@ function initCharts() {
 }
 
 function initHomeChart(ctx) {
-  const data = [72, 74, 76, 77, 78, 80]
-  const labels = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  const data = [65, 68, 60, 61, 60]
+  const labels = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25']
   const lastIdx = data.length - 1
 
   const fillGradient = ctx.createLinearGradient(0, 0, 0, 140)
@@ -650,10 +616,10 @@ function initPlacementsChart(ctx) {
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['2021-22', '2022-23', '2023-24'],
+      labels: ['2021-22', '2022-23', '2023-24', '2024-25'],
       datasets: [{
-        label: 'Median Package (₹ LPA)',
-        data: [4.38, 4.81, 5.10],
+        label: 'Average Package (₹ LPA)',
+        data: [4.38, 4.81, 4.12, 4.53],
         borderColor: '#1d5cab',
         backgroundColor: function (context) {
           const chart = context.chart
@@ -676,7 +642,7 @@ function initPlacementsChart(ctx) {
         pointHoverBorderWidth: 3,
       }, {
         label: 'Placement Rate (%)',
-        data: [78, 60.4, 65.8],
+        data: [78, 60.4, 65.8, 60],
         borderColor: '#0a192f',
         backgroundColor: function (context) {
           const chart = context.chart
@@ -747,16 +713,5 @@ function initPlacementsChart(ctx) {
   })
 }
 
-/* Set up error listeners for recruiter logos */
 function initRecruiterLogos() {
-  document.querySelectorAll('.recruiter-card img, .rec-card img').forEach(function (img) {
-    if (!img._rlAttempts) {
-      var alt = img.getAttribute('alt')
-      if (!alt) return
-      var key = altToKey(alt)
-      img._rlAttempts = DOMAIN_MAP[key] || (key ? [key + '.com'] : [])
-      img._rlIndex = 0
-    }
-    img.addEventListener('error', window.rl)
-  })
 }

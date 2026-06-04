@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Placements — Walchand Institute of Technology, Solapur</title>
-  <meta name="description" content="NIRF 2023-24 placement data: Median ₹5.10 LPA, highest ₹12.50 LPA, 65.8% placement rate, 60+ recruiters at WIT Solapur." />
+  <meta name="description" content="2024-25 placement data: Highest ₹12 LPA, average ₹4.53 LPA, 50+ recruiters, 260+ placements at WIT Solapur." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
@@ -39,21 +42,21 @@
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="border border-slate-200 bg-white p-6 md:p-8 text-center">
-            <p class="text-xl md:text-3xl font-bold text-primary">₹12.50 LPA</p>
-            <p class="text-xs md:text-sm text-slate-500 mt-2">Highest On-Campus</p>
+          <div class="card p-6 md:p-8 text-center">
+            <p class="text-xl md:text-3xl font-bold text-primary">₹12 LPA</p>
+            <p class="text-xs md:text-sm text-slate-500 mt-2">Highest On-Campus (2024-25)</p>
           </div>
-          <div class="border border-slate-200 bg-white p-6 md:p-8 text-center">
-            <p class="text-xl md:text-3xl font-bold text-primary">₹5.10 LPA</p>
-            <p class="text-xs md:text-sm text-slate-500 mt-2">Median Package UG (NIRF 2023-24)</p>
+          <div class="card p-6 md:p-8 text-center">
+            <p class="text-xl md:text-3xl font-bold text-primary">₹4.53 LPA</p>
+            <p class="text-xs md:text-sm text-slate-500 mt-2">Average Package (2024-25)</p>
           </div>
-          <div class="border border-slate-200 bg-white p-6 md:p-8 text-center">
-            <p class="text-xl md:text-3xl font-bold text-primary">65.8%</p>
-            <p class="text-xs md:text-sm text-slate-500 mt-2">Placement Rate (NIRF)</p>
+          <div class="card p-6 md:p-8 text-center">
+            <p class="text-xl md:text-3xl font-bold text-primary">260+</p>
+            <p class="text-xs md:text-sm text-slate-500 mt-2">Placements (2024-25)</p>
           </div>
-          <div class="border border-slate-200 bg-white p-6 md:p-8 text-center">
-            <p class="text-xl md:text-3xl font-bold text-primary">60+</p>
-            <p class="text-xs md:text-sm text-slate-500 mt-2">Recruiters</p>
+          <div class="card p-6 md:p-8 text-center">
+            <p class="text-xl md:text-3xl font-bold text-primary">50+</p>
+            <p class="text-xs md:text-sm text-slate-500 mt-2">Recruiters (2024-25)</p>
           </div>
         </div>
       </div>
@@ -63,7 +66,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Placement Trend (NIRF Data)</h2>
         <p class="text-base text-slate-600 max-w-2xl mb-8">Year-over-year improvement in median salary and placement rates as per NIRF reports.</p>
-        <div class="bg-white border border-slate-200 p-4 md:p-6">
+        <div class="card p-4 md:p-6">
           <canvas id="placementChart" height="250"></canvas>
         </div>
       </div>
@@ -75,122 +78,122 @@
         <p class="text-base text-slate-600 max-w-2xl mb-8">Over 60 diverse companies recruit on campus. One student, one job policy.</p>
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
           <a href="https://amdocs.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/amdocs.com" alt="Amdocs" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Amdocs-2017-brand-mark.svg" alt="Amdocs" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Amdocs</span>
             <span>Software</span>
           </a>
           <a href="https://techmahindra.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/techmahindra.com" alt="Tech Mahindra" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Tech_Mahindra_Logo.svg" alt="Tech Mahindra" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Tech Mahindra</span>
             <span>IT Services</span>
           </a>
           <a href="https://atlascopco.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/atlascopco.com" alt="Atlas Copco" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Atlas Copco</span>
             <span>Industrial</span>
           </a>
           <a href="https://infosys.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/infosys.com" alt="Infosys" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Infosys_logo.svg" alt="Infosys" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Infosys</span>
             <span>Technology</span>
           </a>
           <a href="https://tcs.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/tcs.com" alt="TCS" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">TCS</span>
             <span>Consulting</span>
           </a>
           <a href="https://hexaware.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/hexaware.com" alt="Hexaware" onerror="window.rl(this)"/>
+            <img src="https://hexaware.com/favicon.ico" alt="Hexaware" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Hexaware</span>
             <span>Technology</span>
           </a>
           <a href="https://ibm.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/ibm.com" alt="IBM" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">IBM</span>
             <span>Technology</span>
           </a>
           <a href="https://larsentoubro.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/larsentoubro.com" alt="L&amp;T" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">L&amp;T</span>
             <span>Engineering</span>
           </a>
           <a href="https://tatamotors.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/tatamotors.com" alt="Tata Motors" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Tata_Motors_Logo.svg" alt="Tata Motors" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Tata Motors</span>
             <span>Automotive</span>
           </a>
           <a href="https://bajajauto.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/bajajauto.com" alt="Bajaj Auto" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Bajaj Auto</span>
             <span>Automotive</span>
           </a>
           <a href="https://kirloskar.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/kirloskarpneumatic.com" alt="Kirloskar" onerror="window.rl(this)"/>
+            <img src="https://kirloskarpneumatic.com/favicon.ico" alt="Kirloskar" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Kirloskar</span>
             <span>Industrial</span>
           </a>
           <a href="https://wipro.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/wipro.com" alt="Wipro" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Logo_2014.svg" alt="Wipro" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Wipro</span>
             <span>IT Services</span>
           </a>
           <a href="https://hitachi.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/hitachi.com" alt="Hitachi" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Hitachi_Logo_2002.svg" alt="Hitachi" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Hitachi</span>
             <span>Technology</span>
           </a>
           <a href="https://capgemini.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/capgemini.com" alt="Capgemini" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Capgemini</span>
             <span>Consulting</span>
           </a>
           <a href="https://persistent.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/persistentsys.com" alt="Persistent" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Persistent_Systems_Logo.svg" alt="Persistent" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Persistent</span>
             <span>Technology</span>
           </a>
           <a href="https://cognizant.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/cognizant.com" alt="Cognizant" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Cognizant</span>
             <span>Technology</span>
           </a>
           <a href="https://hsbc.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/hsbc.com" alt="HSBC" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/HSBC_logo_2018.svg" alt="HSBC" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">HSBC</span>
             <span>Banking</span>
           </a>
           <a href="https://linde.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/linde.com" alt="Linde" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Linde_plc_logo.png" alt="Linde" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Linde</span>
             <span>Engineering</span>
           </a>
           <a href="https://tejasnetworks.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/tejasnetworks.com" alt="Tejas Networks" onerror="window.rl(this)"/>
+            <img src="https://www.tejasnetworks.com/wp-content/uploads/2023/12/tejas-header.png" alt="Tejas Networks" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Tejas Networks</span>
             <span>Networking</span>
           </a>
           <a href="https://praj.net" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/praj.net" alt="Praj Industries" onerror="window.rl(this)"/>
+            <img src="https://www.praj.net/wp-content/themes/Praj/assets/images/logo.png" alt="Praj Industries" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Praj Industries</span>
             <span>Engineering</span>
           </a>
           <a href="https://forvia.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/forvia.com" alt="Faurecia" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Faurecia_logo.svg" alt="Faurecia" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Faurecia</span>
             <span>Automotive</span>
           </a>
           <a href="https://unominda.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/unominda.com" alt="Uno Minda" onerror="window.rl(this)"/>
+            <img src="https://unominda.com/images/logo.svg" alt="Uno Minda" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Uno Minda</span>
             <span>Automotive</span>
           </a>
           <a href="https://bajajelectricals.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/bajajelectricals.com" alt="Bajaj Electricals" onerror="window.rl(this)"/>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Bajaj_Electricals_logo.jpg" alt="Bajaj Electricals" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Bajaj Electricals</span>
             <span>Electronics</span>
           </a>
           <a href="https://cyient.com" target="_blank" class="recruiter-card">
-            <img src="https://logo.clearbit.com/cyient.com" alt="Cyient" onerror="window.rl(this)"/>
+            <img src="https://www.cyient.com/hubfs/Logo_main_animation1.svg" alt="Cyient" onerror="this.style.display='none'"/>
             <span class="recruiter-fallback">Cyient</span>
             <span>Engineering</span>
           </a>
@@ -204,7 +207,7 @@
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div class="bg-white border border-slate-200 p-6 md:p-8">
+          <div class="card p-6 md:p-8">
             <h3 class="text-lg md:text-xl font-bold text-primary mb-6">Placement Process</h3>
             <div class="space-y-6">
               <div class="flex gap-4">
@@ -237,7 +240,7 @@
               </div>
             </div>
           </div>
-          <div class="bg-white border border-slate-200 p-6 md:p-8">
+          <div class="card p-6 md:p-8">
             <h3 class="text-lg md:text-xl font-bold text-primary mb-4">TPO Message</h3>
             <div class="flex items-center gap-4 mb-4">
               <div class="w-16 h-16 flex items-center justify-center border-2 border-primary text-primary text-2xl font-bold">TP</div>
@@ -246,7 +249,7 @@
                 <p class="text-sm text-slate-500">tpo@witsolapur.org</p>
               </div>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed mb-4">The Training & Placement Cell at WIT Solapur works tirelessly to bridge the gap between industry expectations and academic learning. With over 60 companies visiting annually and a placement rate of 65.8% as per NIRF 2023-24, we are committed to ensuring every student finds the right career path. Our Professional Readiness Program equips students with industry-relevant skills, making them job-ready from day one.</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">The Training & Placement Cell at WIT Solapur works tirelessly to bridge the gap between industry expectations and academic learning. With 50+ companies visiting in 2024-25 and consistent placement growth, we are committed to ensuring every student finds the right career path. Our Professional Readiness Program equips students with industry-relevant skills, making them job-ready from day one.</p>
             <p class="text-sm text-slate-500 italic">— Mr. Prasanna V. Ekhande, TPO</p>
           </div>
         </div>
@@ -255,45 +258,57 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Branch-wise Placement (2023-24)</h2>
+        <h2 class="common__heading">Branch-wise Placement (2024-25)</h2>
         <div class="max-w-3xl mx-auto mt-4 overflow-x-auto">
-          <div class="border border-slate-200 bg-white overflow-hidden min-w-[480px]">
+          <div class="card overflow-hidden min-w-[480px]">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
                   <th class="text-left px-4 md:px-6 py-3 font-semibold">Branch</th>
-                  <th class="text-center px-4 md:px-6 py-3 font-semibold">Placement %</th>
+                  <th class="text-center px-4 md:px-6 py-3 font-semibold">Students Placed</th>
+                  <th class="text-center px-4 md:px-6 py-3 font-semibold">Highest Package</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-200">
                 <tr class="hover:bg-wit-bg">
                   <td class="px-4 md:px-6 py-3 text-slate-700">Mechanical & Automation Engineering</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">88.71%</td>
-                </tr>
-                <tr class="hover:bg-wit-bg">
-                  <td class="px-4 md:px-6 py-3 text-slate-700">Civil Engineering</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">70.97%</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">107</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹8.6 LPA</td>
                 </tr>
                 <tr class="hover:bg-wit-bg">
                   <td class="px-4 md:px-6 py-3 text-slate-700">Computer Science & Engineering</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">61.48%</td>
-                </tr>
-                <tr class="hover:bg-wit-bg">
-                  <td class="px-4 md:px-6 py-3 text-slate-700">Information Technology</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">46.77%</td>
-                </tr>
-                <tr class="hover:bg-wit-bg">
-                  <td class="px-4 md:px-6 py-3 text-slate-700">Electronics & Computer Engineering</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">40.00%</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">85</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹12 LPA</td>
                 </tr>
                 <tr class="hover:bg-wit-bg">
                   <td class="px-4 md:px-6 py-3 text-slate-700">Electronics & Telecommunication Engineering</td>
-                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">28.57%</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">50</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹9 LPA</td>
+                </tr>
+                <tr class="hover:bg-wit-bg">
+                  <td class="px-4 md:px-6 py-3 text-slate-700">Information Technology</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">44</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹9 LPA</td>
+                </tr>
+                <tr class="hover:bg-wit-bg">
+                  <td class="px-4 md:px-6 py-3 text-slate-700">Electronics & Computer Engineering</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">37</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹6 LPA</td>
+                </tr>
+                <tr class="hover:bg-wit-bg">
+                  <td class="px-4 md:px-6 py-3 text-slate-700">Civil Engineering</td>
+                  <td class="px-4 md:px-6 py-3 text-center font-semibold text-primary">24</td>
+                  <td class="px-4 md:px-6 py-3 text-center text-primary">₹7.5 LPA</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="text-xs text-slate-400 mt-2">Source: AICTE / NIRF data, 2024-25</p>
+          <p class="text-xs text-slate-400 mt-2">Source: WIT Placement Tracker, 2024-25</p>
+          <div class="mt-4 text-center">
+            <a href="https://witsolapur.org/wp-content/uploads/2025/09/Placement-Tracker-2024-25.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+              <i class="fas fa-file-pdf"></i> Download Placement Tracker 2024-25 (PDF)
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -301,5 +316,6 @@
 
   <footer-component></footer-component>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -6,7 +6,11 @@
   <title>Contact Us — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Get in touch with WIT Solapur. Admissions inquiries, contact details, and campus location." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
@@ -39,26 +43,26 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <div class="bg-white border border-slate-200 p-8">
+            <div class="card p-8">
               <h2 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
               <form class="space-y-5" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.');">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
-                    <input type="text" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Your full name" />
+                    <label for="contact-name" class="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
+                    <input type="text" id="contact-name" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Your full name" />
                   </div>
                   <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
-                    <input type="email" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="your@email.com" />
+                    <label for="contact-email" class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
+                    <input type="email" id="contact-email" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="your@email.com" />
                   </div>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone</label>
-                  <input type="tel" class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="+91 9X XXX XXXXX" />
+                  <label for="contact-phone" class="block text-sm font-medium text-slate-700 mb-1.5">Phone</label>
+                  <input type="tel" id="contact-phone" class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="+91 9X XXX XXXXX" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Subject *</label>
-                  <select required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white">
+                  <label for="contact-subject" class="block text-sm font-medium text-slate-700 mb-1.5">Subject *</label>
+                  <select id="contact-subject" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white">
                     <option value="">Select a subject</option>
                     <option>Admissions 2026-27</option>
                     <option>Program Information</option>
@@ -68,8 +72,8 @@
                   </select>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-1.5">Message *</label>
-                  <textarea rows="5" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Tell us how we can help..."></textarea>
+                  <label for="contact-message" class="block text-sm font-medium text-slate-700 mb-1.5">Message *</label>
+                  <textarea id="contact-message" rows="5" required class="w-full px-4 py-3 border border-slate-200 focus:border-primary outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Tell us how we can help..."></textarea>
                 </div>
                 <button type="submit" class="btn-primary w-full justify-center text-base py-3.5">
                   <i class="fa-solid fa-paper-plane"></i> Send Message
@@ -79,7 +83,7 @@
           </div>
 
           <div class="space-y-8">
-            <div class="bg-white border border-slate-200 p-8">
+            <div class="card p-8">
               <h2 class="text-2xl font-bold text-primary mb-6">Contact Information</h2>
               <div class="space-y-6">
                 <div class="flex items-start gap-4">
@@ -97,8 +101,8 @@
                   </div>
                   <div>
                     <h3 class="font-bold text-primary mb-1">Phone</h3>
-                    <p class="text-sm text-slate-500">Admissions Helpline:<br/><strong class="text-primary">+91 758 857 1100</strong> / <strong class="text-primary">+91 758 858 1100</strong></p>
-                    <p class="text-sm text-slate-500 mt-1">Office: (0217) 2652700 / 2653040</p>
+                    <p class="text-sm text-slate-500">Admissions Helpline:<br/><strong class="text-primary"><a href="tel:+917588571100" class="hover:underline">+91 758 857 1100</a></strong> / <strong class="text-primary"><a href="tel:+917588581100" class="hover:underline">+91 758 858 1100</a></strong></p>
+                    <p class="text-sm text-slate-500 mt-1">Office: <a href="tel:+912172652700" class="text-primary hover:underline">(0217) 2652700</a> / <a href="tel:+912172653040" class="text-primary hover:underline">2653040</a></p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -113,7 +117,7 @@
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 overflow-hidden">
+            <div class="card overflow-hidden">
               <div class="p-6 border-b border-slate-200">
                 <h3 class="font-bold text-primary">Find Us on Map</h3>
               </div>
@@ -130,35 +134,35 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Frequently Asked Questions</h2>
         <div class="max-w-3xl mx-auto mt-8 space-y-4">
-          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+          <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               How can I apply for admission?
               <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
             </summary>
             <p class="mt-4 text-sm text-slate-600 leading-relaxed">Visit our Admissions page on the official website or contact our admissions helpline at +91 758 857 1100. Applications are accepted through CAP rounds and direct admission based on merit.</p>
           </details>
-          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+          <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               What are the eligibility criteria for B.Tech?
               <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
             </summary>
             <p class="mt-4 text-sm text-slate-600 leading-relaxed">Candidates must have passed HSC (10+2) with Physics and Mathematics as compulsory subjects, along with one of Chemistry/Biotechnology/Biology/Technical subjects with at least 45% marks (40% for reserved categories). JEE Main or MHT-CET scores are considered.</p>
           </details>
-          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+          <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               Does WIT provide hostel facilities?
               <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
             </summary>
             <p class="mt-4 text-sm text-slate-600 leading-relaxed">Yes, separate hostel facilities are available for boys and girls with modern amenities, mess facilities, and 24/7 security. Hostel admission is based on merit and availability.</p>
           </details>
-          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+          <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               What is the placement record of WIT?
               <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
             </summary>
             <p class="mt-4 text-sm text-slate-600 leading-relaxed">WIT has an excellent placement record with over 60+ companies visiting annually. The highest on-campus package is ₹12.5 LPA, with a median package of ₹5.10 LPA. Our placement rate has been consistently growing year-over-year.</p>
           </details>
-          <details class="bg-white border border-slate-200 p-6 group cursor-pointer">
+          <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               Are scholarships available?
               <i class="fa-solid fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
