@@ -2,6 +2,62 @@ import './input.css'
 import headerHtml from './components/header.html?raw'
 import footerHtml from './components/footer.html?raw'
 
+/* ── Logo resolver: tries multiple Clearbit domains before showing text ── */
+var DOMAIN_MAP = {
+  tcs: ['tcs.com'],
+  infosys: ['infosys.com'],
+  capgemini: ['capgemini.com'],
+  persistent: ['persistentsys.com', 'persistent.com'],
+  techmahindra: ['techmahindra.com'],
+  amdocs: ['amdocs.com'],
+  atlascopco: ['atlascopco.com'],
+  hitachi: ['hitachi.com'],
+  cognizant: ['cognizant.com'],
+  wipro: ['wipro.com'],
+  hexaware: ['hexaware.com'],
+  ibm: ['ibm.com'],
+  lt: ['larsentoubro.com'],
+  tatamotors: ['tatamotors.com'],
+  bajajauto: ['bajajauto.com'],
+  kirloskar: ['kirloskarpneumatic.com', 'kirloskar.com'],
+  hsbc: ['hsbc.com'],
+  linde: ['linde.com'],
+  tejasnetworks: ['tejasnetworks.com'],
+  prajindustries: ['praj.net', 'prajindustries.com'],
+  forvia: ['forvia.com'],
+  unominda: ['unominda.com'],
+  bajajelectricals: ['bajajelectricals.com'],
+  cyient: ['cyient.com'],
+}
+
+function altToKey(alt) {
+  if (!alt) return ''
+  var k = alt.toLowerCase().replace(/[^a-z0-9]/g, '')
+  if (k === 'lt' || k === 'l') return 'lt'
+  if (k === 'hsbc') return 'hsbc'
+  if (k === 'ibm') return 'ibm'
+  return k
+}
+
+/* Inline onerror handler — tries next domain, falls back to text */
+window.rl = function (img) {
+  if (!img._rlAttempts) {
+    var alt = img.getAttribute('alt')
+    if (!alt) { img.style.display = 'none'; return }
+    var key = altToKey(alt)
+    img._rlAttempts = DOMAIN_MAP[key] || (key ? [key + '.com'] : [])
+    img._rlIndex = 0
+  }
+  if (img._rlIndex >= img._rlAttempts.length) {
+    img.style.display = 'none'
+    var fallback = img.nextElementSibling
+    if (fallback) fallback.style.display = 'block'
+    return
+  }
+  img.src = 'https://logo.clearbit.com/' + img._rlAttempts[img._rlIndex]
+  img._rlIndex++
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents()
   initNavbar()
@@ -13,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery()
   initCharts()
   initProgressiveImages()
+  initRecruiterLogos()
 })
 
 function injectComponents() {
@@ -687,5 +744,19 @@ function initPlacementsChart(ctx) {
         easing: 'easeOutQuart'
       }
     }
+  })
+}
+
+/* Set up error listeners for recruiter logos */
+function initRecruiterLogos() {
+  document.querySelectorAll('.recruiter-card img, .rec-card img').forEach(function (img) {
+    if (!img._rlAttempts) {
+      var alt = img.getAttribute('alt')
+      if (!alt) return
+      var key = altToKey(alt)
+      img._rlAttempts = DOMAIN_MAP[key] || (key ? [key + '.com'] : [])
+      img._rlIndex = 0
+    }
+    img.addEventListener('error', window.rl)
   })
 }

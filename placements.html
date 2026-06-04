@@ -73,144 +73,126 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Top Recruiters</h2>
         <p class="text-base text-slate-600 max-w-2xl mb-8">Over 60 diverse companies recruit on campus. One student, one job policy.</p>
-        <style>
-          .rec-card {
-            display:flex; flex-direction:column; align-items:center; justify-content:center;
-            padding:12px 8px; background:#fff; border:1px solid #e2e8f0;
-            height:90px; text-decoration:none; gap:6px;
-            transition:box-shadow 0.2s ease, transform 0.2s ease;
-          }
-          .rec-card:hover { box-shadow:0 6px 20px rgba(29,92,171,0.14); transform:translateY(-3px); }
-          .rec-card img { height:40px; width:auto; max-width:110px; object-fit:contain; }
-          .rec-card .rec-name {
-            font-size:10px; color:#64748b; font-weight:600;
-            letter-spacing:0.04em; text-align:center; line-height:1.2;
-            display:none;
-          }
-          .rec-card .rec-label {
-            font-size:9px; color:#94a3b8; font-weight:500; text-align:center;
-          }
-        </style>
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
-          <a href="https://amdocs.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/amdocs.com" alt="Amdocs" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Amdocs</span>
-            <span class="rec-label">Software</span>
+          <a href="https://amdocs.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/amdocs.com" alt="Amdocs" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Amdocs</span>
+            <span>Software</span>
           </a>
-          <a href="https://techmahindra.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/techmahindra.com" alt="Tech Mahindra" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Tech Mahindra</span>
-            <span class="rec-label">IT Services</span>
+          <a href="https://techmahindra.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/techmahindra.com" alt="Tech Mahindra" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Tech Mahindra</span>
+            <span>IT Services</span>
           </a>
-          <a href="https://atlascopco.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/atlascopco.com" alt="Atlas Copco" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Atlas Copco</span>
-            <span class="rec-label">Industrial</span>
+          <a href="https://atlascopco.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/atlascopco.com" alt="Atlas Copco" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Atlas Copco</span>
+            <span>Industrial</span>
           </a>
-          <a href="https://infosys.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/infosys.com" alt="Infosys" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Infosys</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://infosys.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/infosys.com" alt="Infosys" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Infosys</span>
+            <span>Technology</span>
           </a>
-          <a href="https://tcs.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/tcs.com" alt="TCS" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">TCS</span>
-            <span class="rec-label">Consulting</span>
+          <a href="https://tcs.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/tcs.com" alt="TCS" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">TCS</span>
+            <span>Consulting</span>
           </a>
-          <a href="https://hexaware.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/hexaware.com" alt="Hexaware" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Hexaware</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://hexaware.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/hexaware.com" alt="Hexaware" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Hexaware</span>
+            <span>Technology</span>
           </a>
-          <a href="https://ibm.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/ibm.com" alt="IBM" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">IBM</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://ibm.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/ibm.com" alt="IBM" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">IBM</span>
+            <span>Technology</span>
           </a>
-          <a href="https://larsentoubro.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/larsentoubro.com" alt="L&amp;T" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">L&amp;T</span>
-            <span class="rec-label">Engineering</span>
+          <a href="https://larsentoubro.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/larsentoubro.com" alt="L&amp;T" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">L&amp;T</span>
+            <span>Engineering</span>
           </a>
-          <a href="https://tatamotors.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/tatamotors.com" alt="Tata Motors" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Tata Motors</span>
-            <span class="rec-label">Automotive</span>
+          <a href="https://tatamotors.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/tatamotors.com" alt="Tata Motors" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Tata Motors</span>
+            <span>Automotive</span>
           </a>
-          <a href="https://bajajauto.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/bajajauto.com" alt="Bajaj Auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Bajaj Auto</span>
-            <span class="rec-label">Automotive</span>
+          <a href="https://bajajauto.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/bajajauto.com" alt="Bajaj Auto" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Bajaj Auto</span>
+            <span>Automotive</span>
           </a>
-          <a href="https://kirloskar.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/kirloskar.com" alt="Kirloskar" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Kirloskar</span>
-            <span class="rec-label">Industrial</span>
+          <a href="https://kirloskar.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/kirloskarpneumatic.com" alt="Kirloskar" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Kirloskar</span>
+            <span>Industrial</span>
           </a>
-          <a href="https://wipro.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/wipro.com" alt="Wipro" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Wipro</span>
-            <span class="rec-label">IT Services</span>
+          <a href="https://wipro.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/wipro.com" alt="Wipro" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Wipro</span>
+            <span>IT Services</span>
           </a>
-          <a href="https://hitachi.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/hitachi.com" alt="Hitachi" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Hitachi</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://hitachi.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/hitachi.com" alt="Hitachi" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Hitachi</span>
+            <span>Technology</span>
           </a>
-          <a href="https://capgemini.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/capgemini.com" alt="Capgemini" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Capgemini</span>
-            <span class="rec-label">Consulting</span>
+          <a href="https://capgemini.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/capgemini.com" alt="Capgemini" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Capgemini</span>
+            <span>Consulting</span>
           </a>
-          <a href="https://persistent.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/persistent.com" alt="Persistent" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Persistent</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://persistent.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/persistentsys.com" alt="Persistent" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Persistent</span>
+            <span>Technology</span>
           </a>
-          <a href="https://cognizant.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/cognizant.com" alt="Cognizant" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Cognizant</span>
-            <span class="rec-label">Technology</span>
+          <a href="https://cognizant.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/cognizant.com" alt="Cognizant" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Cognizant</span>
+            <span>Technology</span>
           </a>
-          <a href="https://hsbc.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/hsbc.com" alt="HSBC" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">HSBC</span>
-            <span class="rec-label">Banking</span>
+          <a href="https://hsbc.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/hsbc.com" alt="HSBC" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">HSBC</span>
+            <span>Banking</span>
           </a>
-          <a href="https://linde.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/linde.com" alt="Linde Engineering" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Linde</span>
-            <span class="rec-label">Engineering</span>
+          <a href="https://linde.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/linde.com" alt="Linde" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Linde</span>
+            <span>Engineering</span>
           </a>
-          <a href="https://tejasnetworks.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/tejasnetworks.com" alt="Tejas Networks" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Tejas Networks</span>
-            <span class="rec-label">Networking</span>
+          <a href="https://tejasnetworks.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/tejasnetworks.com" alt="Tejas Networks" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Tejas Networks</span>
+            <span>Networking</span>
           </a>
-          <a href="https://prajindustries.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/prajindustries.com" alt="Praj Industries" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Praj Industries</span>
-            <span class="rec-label">Engineering</span>
+          <a href="https://praj.net" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/praj.net" alt="Praj Industries" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Praj Industries</span>
+            <span>Engineering</span>
           </a>
-          <a href="https://forvia.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/forvia.com" alt="Forvia Faurecia" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Faurecia</span>
-            <span class="rec-label">Automotive</span>
+          <a href="https://forvia.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/forvia.com" alt="Faurecia" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Faurecia</span>
+            <span>Automotive</span>
           </a>
-          <a href="https://unominda.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/unominda.com" alt="Uno Minda" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Uno Minda</span>
-            <span class="rec-label">Automotive</span>
+          <a href="https://unominda.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/unominda.com" alt="Uno Minda" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Uno Minda</span>
+            <span>Automotive</span>
           </a>
-          <a href="https://bajajelectricals.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/bajajelectricals.com" alt="Bajaj Electricals" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Bajaj Electricals</span>
-            <span class="rec-label">Electronics</span>
+          <a href="https://bajajelectricals.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/bajajelectricals.com" alt="Bajaj Electricals" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Bajaj Electricals</span>
+            <span>Electronics</span>
           </a>
-          <a href="https://cyient.com" target="_blank" class="rec-card">
-            <img src="https://logo.clearbit.com/cyient.com" alt="Cyient" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-            <span class="rec-name">Cyient</span>
-            <span class="rec-label">Engineering</span>
+          <a href="https://cyient.com" target="_blank" class="recruiter-card">
+            <img src="https://logo.clearbit.com/cyient.com" alt="Cyient" onerror="window.rl(this)"/>
+            <span class="recruiter-fallback">Cyient</span>
+            <span>Engineering</span>
           </a>
         </div>
       </div>
