@@ -36,11 +36,14 @@
             <img src="./images/wit-logo.png" alt="WIT Solapur" width="64" height="64">
           </a>
           <div>
-            <div class="font-lora text-primary font-bold" style="font-family:Lora,Georgia,serif;font-size:19px;font-weight:700;color:#1d5cab;line-height:1.2;">
-              Walchand Institute of Technology
+            <div style="font:600 11px/1.2 'Lato',sans-serif;color:#64748B;letter-spacing:0.3px;text-transform:uppercase;">
+              S. A. P. D. Jain Pathshala&rsquo;s
             </div>
-            <div style="font:11px/1 'Lato',sans-serif;color:#64748B;margin-top:3px;">
-              Solapur, Maharashtra &middot; Est. 1983 &middot; NAAC A+ Accredited
+            <div class="font-lora text-primary font-bold" style="font-family:Lora,Georgia,serif;font-size:18px;font-weight:700;color:#1d5cab;line-height:1.2;">
+              Walchand Institute of Technology, Solapur
+            </div>
+            <div style="font:11px/1.2 'Lato',sans-serif;color:#64748B;margin-top:2px;">
+              An Autonomous Institute <span class="max-sm:hidden">&middot; NAAC A+ Accredited &middot; Est. 1983</span>
             </div>
           </div>
         </div>
@@ -102,7 +105,10 @@
     @media (max-width: 767px) {
       .header__topmenu { display: none; }
       .navigation__menu { display: none; }
-      .header__middlesec > div > div { min-height: 60px !important; }
+      .header__middlesec > div > div { min-height: 68px !important; }
+    }
+    @media (max-width: 420px) {
+      .header__logo img { width: 48px; height: 48px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .header__topmenu, .header__middlesec, .header__bottomsec,
