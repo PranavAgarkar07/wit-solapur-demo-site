@@ -2,31 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="view-transition" content="same-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Walchand Institute of Technology, Solapur - An Autonomous Institute affiliated to Solapur University. NAAC A+ Accredited. Established in 1983." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://logo.clearbit.com" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="./images/hero-slide-1.jpg" />
+  <link rel="preload" as="image" href="./images/hero-slide-1.webp" />
   <script type="module" src="/src/main.js"></script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <div id="preloader">
-    <div id="spinner">
-      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
-      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
-    </div>
-  </div>
+</div>
 
   <header-component></header-component>
 
@@ -83,9 +85,24 @@
         </div>
       </div>
       <div class="hero__visual">
-        <div class="hero-slide active" style="background-image: url('./images/hero-slide-1.jpg');" role="img" aria-label="WIT Solapur campus entrance and main building"></div>
-        <div class="hero-slide" style="background-image: url('./images/campus-hero-1.jpg');" role="img" aria-label="WIT Solapur academic block and green campus"></div>
-        <div class="hero-slide" style="background-image: url('./images/campus-hero-2.jpg');" role="img" aria-label="WIT Solapur central courtyard and gardens"></div>
+        <div class="hero-slide active" role="img" aria-label="WIT Solapur campus entrance and main building">
+            <picture>
+              <source srcset="./images/hero-slide-1.webp" type="image/webp" />
+              <img src="./images/hero-slide-1.jpg" alt="" class="hero-bg-img" fetchpriority="high" />
+            </picture>
+          </div>
+        <div class="hero-slide" role="img" aria-label="WIT Solapur academic block and green campus">
+            <picture>
+              <source srcset="./images/campus-hero-1.webp" type="image/webp" />
+              <img src="./images/campus-hero-1.jpg" alt="" class="hero-bg-img" loading="lazy" />
+            </picture>
+          </div>
+        <div class="hero-slide" role="img" aria-label="WIT Solapur central courtyard and gardens">
+            <picture>
+              <source srcset="./images/campus-hero-2.webp" type="image/webp" />
+              <img src="./images/campus-hero-2.jpg" alt="" class="hero-bg-img" loading="lazy" />
+            </picture>
+          </div>
         <div class="hero__visual-overlay"></div>
         <button type="button" class="hero-slide-btn hero-slide-prev" aria-label="Previous slide">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
@@ -409,92 +426,125 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between mb-6 md:mb-8">
         <h2 class="common__heading !mb-0 !text-white">Research &amp; Innovation</h2>
-          <span class="section__viewlink !text-white opacity-60 cursor-default" title="Coming soon">View Research <i class="fas fa-arrow-right !text-white"></i></span>
+          <a href="https://witsolapur.org/research/" target="_blank" class="section__viewlink !text-white hover:!text-primary transition-colors">View Research <i class="fas fa-arrow-right !text-white"></i></a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <div class="p-5 md:p-6 border border-white/20 bg-white/5">
+        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Research-Projects.pdf" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
           <i class="fas fa-flask text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2">Sponsored Research</h4>
+          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Sponsored Research</h4>
           <p class="text-white/70 text-sm leading-relaxed">Ongoing funded projects from DST, AICTE, and UGC with total grants exceeding ₹2.5 Crores.</p>
-        </div>
-        <div class="p-5 md:p-6 border border-white/20 bg-white/5">
+          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">Download Projects PDF →</span>
+        </a>
+        <a href="https://witsolapur.org/research-publications/" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
           <i class="fas fa-book text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2">Publications</h4>
+          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Publications</h4>
           <p class="text-white/70 text-sm leading-relaxed">Faculty and students publish 150+ research papers annually in Scopus/SCI indexed journals.</p>
-        </div>
-        <div class="p-5 md:p-6 border border-white/20 bg-white/5">
+          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">View Publications →</span>
+        </a>
+        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Patent.pdf" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
           <i class="fas fa-brain text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2">Innovation Cell</h4>
+          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Innovation Cell</h4>
           <p class="text-white/70 text-sm leading-relaxed">WIT Innovation Cell fosters startups and patents — 12 patents filed and 3 startups incubated in 2025-26.</p>
-        </div>
+          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">Download Patents PDF →</span>
+        </a>
       </div>
     </div>
   </div>
 
   <!-- TOP RECRUITERS -->
-  <div class="section__block">
+  <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="common__heading">Our Top Recruiters</h2>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
-        <a href="https://tcs.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">TCS</span>
-          <span>IT Consulting</span>
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div>
+          <h2 class="common__heading !mb-0">Our Top Recruiters</h2>
+          <p class="text-slate-500 text-sm mt-1">50+ companies from IT, engineering, and consulting sectors recruit on campus</p>
+        </div>
+        <a href="./placements.html" class="section__viewlink shrink-0">View Placement Details <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+        <a href="https://tcs.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">TCS</span>
+          <span class="recruiter-tag recruiter-tag--it">IT Services</span>
         </a>
-        <a href="https://infosys.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Infosys_logo.svg" alt="Infosys" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Infosys</span>
-          <span>Technology</span>
+        <a href="https://infosys.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="./images/infosys-logo-PNG.png" alt="Infosys" loading="lazy" decoding="async" width="120" height="40" />
+          </div>
+          <span class="recruiter-name">Infosys</span>
+          <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
-        <a href="https://capgemini.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Capgemini</span>
-          <span>Consulting</span>
+        <a href="https://capgemini.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">Capgemini</span>
+          <span class="recruiter-tag recruiter-tag--consult">Consulting</span>
         </a>
-        <a href="https://persistent.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Persistent_Systems_Logo.svg" alt="Persistent" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Persistent</span>
-          <span>Technology</span>
+        <a href="https://persistent.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="./images/persistant.avif" alt="Persistent" loading="lazy" decoding="async" width="120" height="40" />
+          </div>
+          <span class="recruiter-name">Persistent</span>
+          <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
-        <a href="https://techmahindra.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Tech_Mahindra_Logo.svg" alt="Tech Mahindra" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Tech Mahindra</span>
-          <span>IT Services</span>
+        <a href="https://techmahindra.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="./images/tech%20mahindra.png" alt="Tech Mahindra" loading="lazy" decoding="async" width="120" height="40" />
+          </div>
+          <span class="recruiter-name">Tech Mahindra</span>
+          <span class="recruiter-tag recruiter-tag--it">IT Services</span>
         </a>
-        <a href="https://amdocs.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Amdocs-2017-brand-mark.svg" alt="Amdocs" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Amdocs</span>
-          <span>Software</span>
+        <a href="https://ibm.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">IBM</span>
+          <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
-        <a href="https://atlascopco.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Atlas Copco</span>
-          <span>Industrial</span>
+        <a href="https://atlascopco.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">Atlas Copco</span>
+          <span class="recruiter-tag recruiter-tag--eng">Industrial</span>
         </a>
-        <a href="https://hitachi.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Hitachi_Logo_2002.svg" alt="Hitachi" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Hitachi</span>
-          <span>Technology</span>
+        <a href="https://larsentoubro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">L&amp;T</span>
+          <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
         </a>
-        <a href="https://cognizant.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Cognizant</span>
-          <span>Technology</span>
+        <a href="https://wipro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="./images/wipro_logo_new.webp" alt="Wipro" loading="lazy" decoding="async" width="120" height="40" />
+          </div>
+          <span class="recruiter-name">Wipro</span>
+          <span class="recruiter-tag recruiter-tag--it">IT Services</span>
         </a>
-        <a href="https://wipro.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Logo_2014.svg" alt="Wipro" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Wipro</span>
-          <span>IT Services</span>
+        <a href="https://cognizant.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">Cognizant</span>
+          <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
-        <a href="https://hexaware.com" target="_blank" class="recruiter-card">
-          <img src="https://hexaware.com/favicon.ico" alt="Hexaware" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">Hexaware</span>
-          <span>Technology</span>
+        <a href="https://hsbc.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="./images/HSBC_logo_(2018).svg.png" alt="HSBC" loading="lazy" decoding="async" width="120" height="40" />
+          </div>
+          <span class="recruiter-name">HSBC</span>
+          <span class="recruiter-tag recruiter-tag--banking">Banking</span>
         </a>
-        <a href="https://ibm.com" target="_blank" class="recruiter-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'" />
-          <span class="recruiter-fallback">IBM</span>
-          <span>Technology</span>
+        <a href="https://bajajauto.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+          <div class="recruiter-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" onerror="this.style.display='none'" />
+          </div>
+          <span class="recruiter-name">Bajaj Auto</span>
+          <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
         </a>
       </div>
     </div>
@@ -504,7 +554,8 @@
 
   <footer-component></footer-component>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" as="script" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
 
   <!-- ADMISSION ENQUIRY POPUP -->
   <div id="admissionPopup" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300" style="opacity:0;pointer-events:none;">

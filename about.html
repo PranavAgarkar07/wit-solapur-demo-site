@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="view-transition" content="same-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Learn about WIT Solapur's history, vision, mission, leadership, and accreditations." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://logo.clearbit.com" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <div id="preloader">
-    <div id="spinner">
-      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
-      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
-    </div>
-  </div>
+</div>
   <header-component></header-component>
 
   <main id="main-content">
@@ -127,8 +129,8 @@
         <h2 class="common__heading">Principal's Desk</h2>
         <div class="max-w-4xl mx-auto mt-4">
           <div class="card p-8 flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-32 h-32 border-2 border-primary flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-user-tie text-6xl text-primary/40"></i>
+            <div class="w-32 h-32 border-2 border-primary overflow-hidden shrink-0">
+              <img src="./images/principal.jpg" alt="Dr. Sachin Ratikant Gengaje" class="w-full h-full object-cover object-top" loading="lazy" decoding="async" width="128" height="128" />
             </div>
             <div>
               <h3 class="text-xl font-bold text-primary">Dr. Sachin Ratikant Gengaje</h3>

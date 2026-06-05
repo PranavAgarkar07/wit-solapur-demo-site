@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="view-transition" content="same-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Placements — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="2024-25 placement data: Highest ₹12 LPA, average ₹4.53 LPA, 50+ recruiters, 260+ placements at WIT Solapur." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://logo.clearbit.com" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <div id="preloader">
-    <div id="spinner">
-      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
-      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
-    </div>
-  </div>
+</div>
   <header-component></header-component>
 
   <main id="main-content">
@@ -75,130 +77,178 @@
       </div>
     </section>
 
-    <section class="section__block">
+    <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Top Recruiters</h2>
-        <p class="text-base text-slate-600 max-w-2xl mb-8">Over 60 diverse companies recruit on campus. One student, one job policy.</p>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
-          <a href="https://amdocs.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Amdocs-2017-brand-mark.svg" alt="Amdocs" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Amdocs</span>
-            <span>Software</span>
+        <p class="text-base text-slate-600 max-w-2xl mb-8">Over 60 diverse companies spanning IT, engineering, automotive, and consulting sectors recruit WITians every year.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+          <a href="https://tcs.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">TCS</span>
+            <span class="recruiter-tag recruiter-tag--it">IT Services</span>
           </a>
-          <a href="https://techmahindra.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Tech_Mahindra_Logo.svg" alt="Tech Mahindra" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Tech Mahindra</span>
-            <span>IT Services</span>
+          <a href="https://infosys.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/infosys-logo-PNG.png" alt="Infosys" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Infosys</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://atlascopco.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Atlas Copco</span>
-            <span>Industrial</span>
+          <a href="https://capgemini.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Capgemini</span>
+            <span class="recruiter-tag recruiter-tag--consult">Consulting</span>
           </a>
-          <a href="https://infosys.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Infosys_logo.svg" alt="Infosys" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Infosys</span>
-            <span>Technology</span>
+          <a href="https://wipro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/wipro_logo_new.webp" alt="Wipro" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Wipro</span>
+            <span class="recruiter-tag recruiter-tag--it">IT Services</span>
           </a>
-          <a href="https://tcs.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">TCS</span>
-            <span>Consulting</span>
+          <a href="https://persistent.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/persistant.avif" alt="Persistent" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Persistent</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://hexaware.com" target="_blank" class="recruiter-card">
-            <img src="https://hexaware.com/favicon.ico" alt="Hexaware" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Hexaware</span>
-            <span>Technology</span>
+          <a href="https://techmahindra.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/tech%20mahindra.png" alt="Tech Mahindra" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Tech Mahindra</span>
+            <span class="recruiter-tag recruiter-tag--it">IT Services</span>
           </a>
-          <a href="https://ibm.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">IBM</span>
-            <span>Technology</span>
+          <a href="https://ibm.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">IBM</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://larsentoubro.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">L&amp;T</span>
-            <span>Engineering</span>
+          <a href="https://cognizant.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Cognizant</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://tatamotors.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Tata_Motors_Logo.svg" alt="Tata Motors" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Tata Motors</span>
-            <span>Automotive</span>
+          <a href="https://amdocs.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Amdocs-2017-brand-mark.svg" alt="Amdocs" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Amdocs</span>
+            <span class="recruiter-tag recruiter-tag--it">Software</span>
           </a>
-          <a href="https://bajajauto.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Bajaj Auto</span>
-            <span>Automotive</span>
+          <a href="https://hexaware.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/hexaware.svg" alt="Hexaware" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Hexaware</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://kirloskar.com" target="_blank" class="recruiter-card">
-            <img src="https://kirloskarpneumatic.com/favicon.ico" alt="Kirloskar" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Kirloskar</span>
-            <span>Industrial</span>
+          <a href="https://hitachi.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/hitachi.svg" alt="Hitachi" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Hitachi</span>
+            <span class="recruiter-tag recruiter-tag--it">Technology</span>
           </a>
-          <a href="https://wipro.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Logo_2014.svg" alt="Wipro" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Wipro</span>
-            <span>IT Services</span>
+          <a href="https://hsbc.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/HSBC_logo_(2018).svg.png" alt="HSBC" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">HSBC</span>
+            <span class="recruiter-tag recruiter-tag--banking">Banking</span>
           </a>
-          <a href="https://hitachi.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Hitachi_Logo_2002.svg" alt="Hitachi" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Hitachi</span>
-            <span>Technology</span>
+          <a href="https://larsentoubro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">L&amp;T</span>
+            <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
           </a>
-          <a href="https://capgemini.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Capgemini</span>
-            <span>Consulting</span>
+          <a href="https://tatamotors.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Tata_Motors_Logo.svg" alt="Tata Motors" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Tata Motors</span>
+            <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
           </a>
-          <a href="https://persistent.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Persistent_Systems_Logo.svg" alt="Persistent" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Persistent</span>
-            <span>Technology</span>
+          <a href="https://atlascopco.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Atlas Copco</span>
+            <span class="recruiter-tag recruiter-tag--eng">Industrial</span>
           </a>
-          <a href="https://cognizant.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Cognizant</span>
-            <span>Technology</span>
+          <a href="https://bajajauto.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Bajaj Auto</span>
+            <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
           </a>
-          <a href="https://hsbc.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/HSBC_logo_2018.svg" alt="HSBC" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">HSBC</span>
-            <span>Banking</span>
+          <a href="https://forvia.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/faurecia.svg" alt="Faurecia" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Faurecia</span>
+            <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
           </a>
-          <a href="https://linde.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Linde_plc_logo.png" alt="Linde" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Linde</span>
-            <span>Engineering</span>
+          <a href="https://unominda.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/unominda.png" alt="Uno Minda" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Uno Minda</span>
+            <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
           </a>
-          <a href="https://tejasnetworks.com" target="_blank" class="recruiter-card">
-            <img src="https://www.tejasnetworks.com/wp-content/uploads/2023/12/tejas-header.png" alt="Tejas Networks" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Tejas Networks</span>
-            <span>Networking</span>
+          <a href="https://linde.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Linde_plc_logo.png" alt="Linde" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Linde</span>
+            <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
           </a>
-          <a href="https://praj.net" target="_blank" class="recruiter-card">
-            <img src="https://www.praj.net/wp-content/themes/Praj/assets/images/logo.png" alt="Praj Industries" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Praj Industries</span>
-            <span>Engineering</span>
+          <a href="https://praj.net" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/praj.svg" alt="Praj Industries" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Praj Industries</span>
+            <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
           </a>
-          <a href="https://forvia.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Faurecia_logo.svg" alt="Faurecia" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Faurecia</span>
-            <span>Automotive</span>
+          <a href="https://kirloskar.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/kirloskar.svg" alt="Kirloskar" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Kirloskar</span>
+            <span class="recruiter-tag recruiter-tag--eng">Industrial</span>
           </a>
-          <a href="https://unominda.com" target="_blank" class="recruiter-card">
-            <img src="https://unominda.com/images/logo.svg" alt="Uno Minda" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Uno Minda</span>
-            <span>Automotive</span>
+          <a href="https://bajajelectricals.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Bajaj_Electricals_logo.jpg" alt="Bajaj Electricals" onerror="this.style.display='none'" />
+            </div>
+            <span class="recruiter-name">Bajaj Electricals</span>
+            <span class="recruiter-tag recruiter-tag--eng">Electronics</span>
           </a>
-          <a href="https://bajajelectricals.com" target="_blank" class="recruiter-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Bajaj_Electricals_logo.jpg" alt="Bajaj Electricals" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Bajaj Electricals</span>
-            <span>Electronics</span>
+          <a href="https://cyient.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/cyient.svg" alt="Cyient" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Cyient</span>
+            <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
           </a>
-          <a href="https://cyient.com" target="_blank" class="recruiter-card">
-            <img src="https://www.cyient.com/hubfs/Logo_main_animation1.svg" alt="Cyient" onerror="this.style.display='none'"/>
-            <span class="recruiter-fallback">Cyient</span>
-            <span>Engineering</span>
+          <a href="https://tejasnetworks.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
+            <div class="recruiter-logo-wrap">
+              <img src="./images/tejasnetworks.png" alt="Tejas Networks" loading="lazy" decoding="async" width="120" height="40" />
+            </div>
+            <span class="recruiter-name">Tejas Networks</span>
+            <span class="recruiter-tag recruiter-tag--it">Networking</span>
           </a>
         </div>
       </div>
@@ -319,6 +369,7 @@
 
   <footer-component></footer-component>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" as="script" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

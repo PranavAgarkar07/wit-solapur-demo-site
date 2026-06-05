@@ -2,34 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="view-transition" content="same-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Science & Engineering — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Department of Computer Science & Engineering at WIT Solapur — B.Tech, M.Tech & Ph.D. programs with NBA accreditation, 10 advanced labs, AI/ML research." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://logo.clearbit.com" />
-  <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="preconnect" href="https://encrypted-tbn0.gstatic.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preload" as="image" href="./images/campus-hero-2.webp" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <script type="module" src="/src/main.js"></script>
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .card, .card-hover, .album-card { transition: none !important; }
+      .card:hover, .card-hover:hover { transform: none !important; }
+    }
+  </style>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <div id="preloader">
-    <div id="spinner">
-      <img id="preloader-logo" class="preloader-logo" src="./images/wit-logo.png" alt="WIT Solapur" />
-      <h2 class="font-25 mt-10">Walchand Institute of Technology, Solapur</h2>
-    </div>
-  </div>
   <header-component></header-component>
 
   <main id="main-content">
-    <section class="page-banner" style="background-image: url(./images/campus-hero-2.jpg);">
+    <section class="page-banner">
+      <picture class="absolute inset-0">
+        <source srcset="./images/campus-hero-2.webp" type="image/webp" />
+        <img src="./images/campus-hero-2.jpg" alt="" class="w-full h-full object-cover" fetchpriority="high" />
+      </picture>
       <div class="page-banner-content">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center gap-2 text-sm mb-4">
@@ -58,20 +67,20 @@
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
-            <div class="card p-8">
-              <span class="text-4xl font-bold text-primary block mb-2">180</span>
+            <div class="card p-8 text-center card-hover">
+              <span class="text-4xl font-bold text-[#0369A1] block mb-2">180</span>
               <p class="text-sm text-slate-500 font-medium">UG Intake</p>
             </div>
-            <div class="card p-8">
-              <span class="text-4xl font-bold text-primary block mb-2">1985</span>
+            <div class="card p-8 text-center card-hover">
+              <span class="text-4xl font-bold text-[#0369A1] block mb-2">1985</span>
               <p class="text-sm text-slate-500 font-medium">Established</p>
             </div>
-            <div class="card p-8">
-              <span class="text-4xl font-bold text-primary block mb-2">25+</span>
+            <div class="card p-8 text-center card-hover">
+              <span class="text-4xl font-bold text-[#0369A1] block mb-2">25+</span>
               <p class="text-sm text-slate-500 font-medium">Faculty Members</p>
             </div>
-            <div class="card p-8">
-              <span class="text-4xl font-bold text-primary block mb-2">10</span>
+            <div class="card p-8 text-center card-hover">
+              <span class="text-4xl font-bold text-[#0369A1] block mb-2">10</span>
               <p class="text-sm text-slate-500 font-medium">Computer Labs</p>
             </div>
           </div>
@@ -84,7 +93,7 @@
         <h2 class="common__heading">HOD's Desk</h2>
         <div class="max-w-4xl mx-auto mt-4">
           <div class="card p-8 flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-32 h-32 border-2 border-primary overflow-hidden shrink-0">
+            <div class="w-32 h-32 border-2 border-primary overflow-hidden shrink-0 rounded-lg">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoEmfLz0sD2yroAmoFckKblY56BpdiV-nkw&s" alt="HOD, CSE Department" style="width:100%;height:100%;object-fit:cover;object-position:top center;" loading="lazy" decoding="async" width="128" height="128" />
             </div>
             <div>
@@ -103,16 +112,16 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Vision & Mission</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-          <div class="card p-8">
-            <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary">
-              <i class="fa-solid fa-eye text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary transition-colors duration-300">
+              <i class="fa-solid fa-eye text-2xl text-primary transition-colors duration-300"></i>
             </div>
             <h3 class="text-xl font-bold text-primary mb-3">Vision</h3>
             <p class="text-slate-600 text-sm leading-relaxed">To impart quality education in the field of Computer Science & Engineering and to produce globally competent engineers who will aim for the overall sustainable development of society.</p>
           </div>
-          <div class="card p-8">
-            <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary">
-              <i class="fa-solid fa-bullseye text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary transition-colors duration-300">
+              <i class="fa-solid fa-bullseye text-2xl text-primary transition-colors duration-300"></i>
             </div>
             <h3 class="text-xl font-bold text-primary mb-3">Mission</h3>
             <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
@@ -131,37 +140,37 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Programs Offered</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          <div class="card p-8">
-            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary">
-              <i class="fa-solid fa-graduation-cap text-3xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary transition-colors duration-300">
+              <i class="fa-solid fa-graduation-cap text-3xl text-primary transition-colors duration-300"></i>
             </div>
             <h3 class="text-xl font-bold text-primary mb-2">B.Tech CSE</h3>
             <p class="text-sm text-slate-500 mb-3">4 Years | Intake: 180</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">Honors Available</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Honors Available</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">B.Tech with Honors in AI & ML or Data Science. Comprehensive curriculum covering algorithms, systems, security, and modern computing paradigms.</p>
           </div>
-          <div class="card p-8">
-            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary">
-              <i class="fa-solid fa-flask text-3xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary transition-colors duration-300">
+              <i class="fa-solid fa-flask text-3xl text-primary transition-colors duration-300"></i>
             </div>
             <h3 class="text-xl font-bold text-primary mb-2">M.Tech CSE</h3>
             <p class="text-sm text-slate-500 mb-3">2 Years | Started 2009-10</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Research Focused</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Research Focused</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">Advanced specialization with research thesis. Covers advanced algorithms, machine learning, distributed computing, and systems research.</p>
           </div>
-          <div class="card p-8">
-            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary">
-              <i class="fa-solid fa-book-open text-3xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary transition-colors duration-300">
+              <i class="fa-solid fa-book-open text-3xl text-primary transition-colors duration-300"></i>
             </div>
             <h3 class="text-xl font-bold text-primary mb-2">Ph.D. Program</h3>
             <p class="text-sm text-slate-500 mb-3">Research Centre (PAHSU)</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Doctoral Research</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Doctoral Research</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">Recognized research centre of PAH Solapur University. Research areas include AI, ML, data science, networks, and software engineering.</p>
           </div>
@@ -174,54 +183,54 @@
         <h2 class="common__heading">Labs & Facilities</h2>
         <p class="text-sm text-slate-500 mt-1 mb-6">The department is equipped with 10 state-of-the-art computer laboratories with latest terminals, peripherals, and legal software licenses.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-network-wired text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-network-wired text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">Networking Lab</h4>
               <p class="text-xs text-slate-500">Cisco routers, switches, simulation tools for hands-on networking experience.</p>
             </div>
           </div>
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-database text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-database text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">Databases Lab</h4>
               <p class="text-xs text-slate-500">Oracle, MySQL, MongoDB for relational and NoSQL database training.</p>
             </div>
           </div>
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-robot text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-robot text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">AI & ML Lab</h4>
               <p class="text-xs text-slate-500">GPU-enabled workstations for deep learning, computer vision, NLP experiments.</p>
             </div>
           </div>
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-mobile-screen-button text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-mobile-screen-button text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">Mobile App Lab</h4>
               <p class="text-xs text-slate-500">Android/iOS development environment with emulators and testing frameworks.</p>
             </div>
           </div>
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-chart-bar text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-chart-bar text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">Data Science Lab</h4>
               <p class="text-xs text-slate-500">Python, R, Jupyter, Tableau for statistical analysis and data visualization.</p>
             </div>
           </div>
-          <div class="card p-6 flex items-start gap-4">
-            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
-              <i class="fa-solid fa-cubes text-xl text-primary"></i>
+          <div class="card p-6 flex items-start gap-4 card-hover">
+            <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+              <i class="fa-solid fa-cubes text-xl text-primary transition-colors duration-300"></i>
             </div>
             <div>
               <h4 class="font-bold text-primary text-sm mb-1">Multimedia Lab</h4>
@@ -236,36 +245,36 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="common__heading">Research Areas</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-          <div class="card p-6">
-            <i class="fa-solid fa-brain text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-brain text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Artificial Intelligence</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-microchip text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-microchip text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Machine Learning</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-shield-halved text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-shield-halved text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Network Security</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-chart-line text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-chart-line text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Data Science & Big Data</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-cloud text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-cloud text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Distributed Systems</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-file-code text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-file-code text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Software Engineering</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-diagram-project text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-diagram-project text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Algorithms & Theory</h4>
           </div>
-          <div class="card p-6">
-            <i class="fa-solid fa-database text-3xl text-primary mb-3 block"></i>
+          <div class="card p-6 text-center card-hover">
+            <i class="fa-solid fa-database text-3xl text-primary mb-3 block transition-colors duration-300"></i>
             <h4 class="font-bold text-sm text-primary">Modern Databases</h4>
           </div>
         </div>
@@ -276,18 +285,18 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="common__heading">Accreditations</h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4 max-w-4xl mx-auto">
-          <div class="card p-8">
-            <i class="fa-solid fa-certificate text-5xl text-primary mb-4 block"></i>
+          <div class="card p-8 card-hover">
+            <i class="fa-solid fa-certificate text-5xl text-primary mb-4 block transition-colors duration-300"></i>
             <h4 class="font-bold text-primary">NBA Accredited</h4>
             <p class="text-sm text-slate-500">UG Program — CSE</p>
           </div>
-          <div class="card p-8">
-            <i class="fa-solid fa-building-columns text-5xl text-primary mb-4 block"></i>
+          <div class="card p-8 card-hover">
+            <i class="fa-solid fa-building-columns text-5xl text-primary mb-4 block transition-colors duration-300"></i>
             <h4 class="font-bold text-primary">PAHSU Research Centre</h4>
             <p class="text-sm text-slate-500">Recognized Doctoral Research</p>
           </div>
-          <div class="card p-8">
-            <i class="fa-solid fa-award text-5xl text-primary mb-4 block"></i>
+          <div class="card p-8 card-hover">
+            <i class="fa-solid fa-award text-5xl text-primary mb-4 block transition-colors duration-300"></i>
             <h4 class="font-bold text-primary">University Ranks</h4>
             <p class="text-sm text-slate-500">Gold Medalists & Toppers</p>
           </div>
