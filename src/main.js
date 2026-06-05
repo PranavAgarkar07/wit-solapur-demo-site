@@ -258,7 +258,7 @@ function initPreloader() {
   window.addEventListener('load', () => {
     setTimeout(() => {
       preloader.classList.add('hidden')
-    }, 600)
+    }, 200)
   })
 
   setTimeout(() => {
