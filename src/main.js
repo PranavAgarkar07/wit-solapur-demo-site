@@ -273,20 +273,31 @@ function initHeroSlideshow() {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (prefersReduced) return
   let current = 0
-  let interval = setInterval(() => {
-    slides[current].classList.remove('active')
-    current = (current + 1) % slides.length
+  let interval
+
+  function goTo(index) {
+    slides.forEach(s => s.classList.remove('active'))
+    current = (index + slides.length) % slides.length
     slides[current].classList.add('active')
-  }, 5000)
-  section?.addEventListener('mouseenter', () => clearInterval(interval))
-  section?.addEventListener('focusin', () => clearInterval(interval))
-  section?.addEventListener('mouseleave', () => {
-    interval = setInterval(() => {
-      slides[current].classList.remove('active')
-      current = (current + 1) % slides.length
-      slides[current].classList.add('active')
-    }, 5000)
-  })
+  }
+
+  function startAuto() {
+    stopAuto()
+    interval = setInterval(() => goTo(current + 1), 5000)
+  }
+
+  function stopAuto() { clearInterval(interval); interval = null }
+
+  startAuto()
+
+  section?.addEventListener('mouseenter', stopAuto)
+  section?.addEventListener('focusin', stopAuto)
+  section?.addEventListener('mouseleave', () => { if (!interval) interval = startAuto() })
+
+  const prevBtn = section?.querySelector('.hero-slide-prev')
+  const nextBtn = section?.querySelector('.hero-slide-next')
+  prevBtn?.addEventListener('click', () => { goTo(current - 1); stopAuto() })
+  nextBtn?.addEventListener('click', () => { goTo(current + 1); stopAuto() })
 }
 
 function initGallery() {

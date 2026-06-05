@@ -87,6 +87,12 @@
         <div class="hero-slide" style="background-image: url('./images/campus-hero-1.jpg');" role="img" aria-label="WIT Solapur academic block and green campus"></div>
         <div class="hero-slide" style="background-image: url('./images/campus-hero-2.jpg');" role="img" aria-label="WIT Solapur central courtyard and gardens"></div>
         <div class="hero__visual-overlay"></div>
+        <button type="button" class="hero-slide-btn hero-slide-prev" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+        </button>
+        <button type="button" class="hero-slide-btn hero-slide-next" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -174,27 +180,33 @@
   </div>
 
   <!-- WHY CHOOSE WIT -->
-  <div class="section__block">
+  <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="common__heading">Why Choose WIT, Solapur?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-4 md:mt-6">
         <div class="feature-card">
-          <div class="feature-card-icon">
-            <i class="fas fa-chalkboard-teacher"></i>
+          <div class="feature-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
+            </svg>
           </div>
           <h4 class="feature-card-title">Experienced Faculty</h4>
           <p class="feature-card-desc">Learn from highly qualified faculty with decades of teaching and industry experience. Our professors hold doctorates from premier institutions and bring global perspective to the classroom.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-icon">
-            <i class="fas fa-briefcase"></i>
+          <div class="feature-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14.754.064 1.462.384 2.037.959.574.575.895 1.283.959 2.037.049.58.025 1.193-.14 1.743m-.074-4.604-5.196-1.984A3.921 3.921 0 0 0 12 6.75c-.475 0-.934.066-1.366.19l-5.196 1.984c-.683.26-1.113.91-1.113 1.633 0 .722.43 1.372 1.113 1.633l5.196 1.984c.432.124.891.19 1.366.19.475 0 .934-.066 1.366-.19l5.196-1.984c.683-.26 1.113-.91 1.113-1.633 0-.722-.43-1.372-1.113-1.633Z" />
+            </svg>
           </div>
           <h4 class="feature-card-title">Industry-Ready Skills</h4>
           <p class="feature-card-desc">Curriculum designed in collaboration with industry partners. Hands-on labs, live projects, internships, and certification programs ensure you graduate with skills that recruiters demand.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-icon">
-            <i class="fas fa-globe"></i>
+          <div class="feature-card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+            </svg>
           </div>
           <h4 class="feature-card-title">Global Career Support</h4>
           <p class="feature-card-desc">Dedicated Training &amp; Placement Cell with multinational career advancement services. 50+ recruiters, 260+ placements in 2024-25, and alumni network of 5,000+ professionals worldwide.</p>
@@ -208,18 +220,29 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between mb-6 md:mb-8">
         <h2 class="common__heading !mb-0">News &amp; Events</h2>
-        <a href="#" class="section__viewlink" onclick="return false;">View All <i class="fas fa-arrow-right"></i></a>
+        <a href="https://witsolapur.org/gallary/" target="_blank" rel="noopener noreferrer" class="section__viewlink">View All <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <article class="section__card">
           <div class="section__cardimg">
-            <img src="./images/award-ceremony.jpg" alt="Award Ceremony" loading="lazy" decoding="async" width="1000" height="800" />
+            <img src="./images/annual-prize.jpg" alt="40th Annual Prize Distribution Ceremony" loading="lazy" decoding="async" width="1000" height="800" />
           </div>
           <div class="section__cardbody">
-            <div class="section__carddate"><i class="far fa-calendar-alt"></i> June 2, 2026</div>
-            <h4 class="section__cardheadtext">WIT Student Team Wins National Robotics Championship</h4>
-            <p class="section__carddesc">Team RoboWIT from the Department of Electronics &amp; Telecommunication secured first place at the National Robotics Championship held at IIT Bombay, defeating 60+ teams from across the country.</p>
-            <span class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></span>
+            <div class="section__carddate"><i class="far fa-calendar-alt"></i> April 2026</div>
+            <h4 class="section__cardheadtext">40th Annual Prize Distribution Ceremony</h4>
+            <p class="section__carddesc">WIT Solapur celebrated its 40th Annual Prize Distribution Ceremony, honoring student achievements across academic excellence, sports, cultural activities, and technical innovation for the academic year.</p>
+            <a href="https://witsolapur.org/gallary/" target="_blank" rel="noopener noreferrer" class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="section__card">
+          <div class="section__cardimg">
+            <img src="./images/isro-exhibition.jpg" alt="ISRO Exhibition at WIT Solapur" loading="lazy" decoding="async" width="1000" height="750" />
+          </div>
+          <div class="section__cardbody">
+            <div class="section__carddate"><i class="far fa-calendar-alt"></i> October 2025</div>
+            <h4 class="section__cardheadtext">World Space Week: ISRO Exhibition &amp; Competitions</h4>
+            <p class="section__carddesc">WIT Solapur hosted World Space Week 2025 featuring an ISRO exhibition, space-themed competitions, guest lectures from scientists, and interactive sessions for students across the region.</p>
+            <a href="https://witsolapur.org/wp-content/uploads/2025/10/ISRO-Exhibition-Competitions.jpeg" target="_blank" rel="noopener noreferrer" class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
         <article class="section__card">
@@ -227,24 +250,13 @@
             <img src="./images/india-today-rank.jpg" alt="India Today Ranking" loading="lazy" decoding="async" width="1000" height="707" />
           </div>
           <div class="section__cardbody">
-            <div class="section__carddate"><i class="far fa-calendar-alt"></i> May 25, 2026</div>
-            <h4 class="section__cardheadtext">WIT Ranked Among Top 150 Engineering Colleges by India Today</h4>
-            <p class="section__carddesc">WIT Solapur has been ranked among the top 150 engineering colleges in India by the India Today MDRA Survey 2026, climbing 12 spots from last year.</p>
-            <span class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></span>
+            <div class="section__carddate"><i class="far fa-calendar-alt"></i> June 2025</div>
+            <h4 class="section__cardheadtext">WIT Ranked Among Top Engineering Colleges by India Today</h4>
+            <p class="section__carddesc">WIT Solapur has been recognized in the India Today MDRA Survey 2025, securing its position among the top engineering colleges in India with improved rankings across multiple parameters.</p>
+            <a href="https://witsolapur.org/nirf/" target="_blank" rel="noopener noreferrer" class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
-        <article class="section__card">
-          <div class="section__cardimg">
-            <div class="section__cardimg--center">
-              <i class="fas fa-microchip"></i>
-            </div>
-          </div>
-          <div class="section__cardbody">
-            <div class="section__carddate"><i class="far fa-calendar-alt"></i> May 18, 2026</div>
-            <h4 class="section__cardheadtext">International Conference on VLSI &amp; Embedded Systems</h4>
-            <p class="section__carddesc">WIT Solapur announces ICVLSI-2026 in collaboration with IEEE. Call for papers open until August 15, 2026 — featuring keynote sessions from industry leaders.</p>
-            <span class="section__cardreadmore">Read More <i class="fas fa-arrow-right"></i></span>
-          </div>
+      </div>
         </article>
       </div>
     </div>
@@ -260,33 +272,45 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           <a href="./cse.html" class="branch-card">
           <img src="./images/cse-icon.png" alt="Computer Science" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Computer Science &amp; Engineering</h4>
-          <span class="branch-card-intake">Intake: 180</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Computer Science &amp; Engineering</h4>
+            <span class="branch-card-intake">Intake: 180</span>
+          </div>
         </a>
           <div class="branch-card">
           <img src="./images/entc-icon.png" alt="ENTC" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Electronics &amp; Telecommunication</h4>
-          <span class="branch-card-intake">Intake: 120</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Electronics &amp; Telecommunication</h4>
+            <span class="branch-card-intake">Intake: 120</span>
+          </div>
         </div>
           <div class="branch-card">
           <img src="./images/mechanical-icon.png" alt="Mechanical" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Mechanical &amp; Automation Engineering</h4>
-          <span class="branch-card-intake">Intake: 60</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Mechanical &amp; Automation Engineering</h4>
+            <span class="branch-card-intake">Intake: 60</span>
+          </div>
         </div>
           <div class="branch-card">
           <img src="./images/civil-icon.png" alt="Civil" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Civil Engineering</h4>
-          <span class="branch-card-intake">Intake: 60</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Civil Engineering</h4>
+            <span class="branch-card-intake">Intake: 60</span>
+          </div>
         </div>
           <div class="branch-card">
           <img src="./images/it-icon.png" alt="IT" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Information Technology</h4>
-          <span class="branch-card-intake">Intake: 120</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Information Technology</h4>
+            <span class="branch-card-intake">Intake: 120</span>
+          </div>
         </div>
           <div class="branch-card">
           <img src="./images/ecm-icon.png" alt="ECM" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
-          <h4 class="branch-card-name">Electronics &amp; Computer Engineering</h4>
-          <span class="branch-card-intake">Intake: 60</span>
+          <div class="branch-card-body">
+            <h4 class="branch-card-name">Electronics &amp; Computer Engineering</h4>
+            <span class="branch-card-intake">Intake: 60</span>
+          </div>
         </div>
       </div>
     </div>

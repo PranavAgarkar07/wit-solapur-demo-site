@@ -928,6 +928,7 @@
 .branch-card:hover .branch-card-icon { transform: scale(1.12); }
 .branch-card:hover .branch-card-name { color: theme(colors.primary); }
 .branch-card-icon { width: 140px; height: 140px; object-fit: contain; margin-bottom: 14px; transition: transform 0.3s ease; }
+.branch-card-body { display: flex; flex-direction: column; align-items: center; }
 .branch-card-name {
   font-size: 14px; line-height: 1.3; font-weight: 900;
   color: theme(colors.secondary); margin: 0 0 8px;
@@ -941,6 +942,7 @@
 @media (max-width: 767px) {
   .branch-card { flex-direction: row; align-items: center; text-align: left; gap: 16px; padding: 20px 16px 18px; }
   .branch-card-icon { width: 100px; height: 100px; margin-bottom: 0; flex-shrink: 0; }
+  .branch-card-body { align-items: flex-start; }
   .branch-card-name { font-size: 13px; margin-bottom: 6px; }
   .branch-card-intake { font-size: 10px; }
 }
