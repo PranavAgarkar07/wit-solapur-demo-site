@@ -7,12 +7,11 @@
   <title>Computer Science & Engineering — Walchand Institute of Technology, Solapur</title>
   <meta name="description" content="Department of Computer Science & Engineering at WIT Solapur — B.Tech, M.Tech & Ph.D. programs with NBA accreditation, 10 advanced labs, AI/ML research." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
-  <link rel="preload" as="image" href="./images/campus-hero-2.webp" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script type="module" src="/src/main.js"></script>
   <style>
     @media (prefers-reduced-motion: reduce) {
@@ -28,59 +27,76 @@
     }]
   }
   </script>
+
 </head>
 <body>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
+</div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header-component></header-component>
 
   <main id="main-content">
     <section class="page-banner">
-      <picture class="absolute inset-0">
-        <source srcset="./images/campus-hero-2.webp" type="image/webp" />
-        <img src="./images/campus-hero-2.jpg" alt="" class="w-full h-full object-cover" fetchpriority="high" />
+      <picture class="absolute inset-0 z-0">
+        <source srcset="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" type="image/webp" />
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" alt="Computer Science and Engineering" class="w-full h-full object-cover" fetchpriority="high" loading="eager" decoding="sync" />
       </picture>
       <div class="page-banner-content">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center gap-2 text-sm mb-4">
-            <a href="./" class="breadcrumb-link">Home</a>
-            <span class="text-white/40">/</span>
-            <a href="./departments.html" class="breadcrumb-link">Departments</a>
-            <span class="text-white/40">/</span>
-            <span class="breadcrumb-current">Computer Science & Engineering</span>
+          <div class="flex items-center gap-2 text-[11px] mb-6 tracking-widest font-bold">
+            <a href="./" class="breadcrumb-link"><i class="fas fa-home mr-1"></i> HOME</a>
+            <span class="text-white/30">/</span>
+            <a href="./departments.html" class="breadcrumb-link">DEPARTMENTS</a>
+            <span class="text-white/30">/</span>
+            <span class="breadcrumb-current">COMPUTER SCIENCE & ENGINEERING</span>
           </div>
-          <h1 class="text-4xl md:text-5xl font-bold text-white">Computer Science & Engineering</h1>
-          <p class="text-lg text-white/80 max-w-2xl mt-2">Est. 1985 — Shaping the next generation of computing professionals through innovation, research, and academic excellence.</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 drop-shadow-sm">Computer Science &amp; Engineering</h1>
+          <p class="text-lg md:text-xl text-white/80 max-w-3xl leading-relaxed font-medium">Est. 1985 — Shaping the next generation of computing professionals through innovation, research, and rigorous academic excellence.</p>
         </div>
       </div>
     </section>
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">About the Department</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">One of WIT's flagship departments — established 1985, NBA-accredited, with active research.</p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="common__heading">About the Department</h2>
-            <div class="space-y-4 text-slate-600 leading-relaxed">
+          <div class="space-y-4 text-slate-600 leading-relaxed">
               <p>The Department of Computer Science & Engineering at WIT Solapur is one of the most sought-after departments, established in 1985. It offers a comprehensive UG program (B.Tech) and a PG program (M.Tech started in 2009-10), along with Doctoral research programs.</p>
               <p>The department's research laboratory is a recognized research centre of Punyashlok Ahilyadevi Holkar Solapur University (PAHSU), contributing significantly to the advancement of computing knowledge.</p>
               <p>The academic curriculum covers a wide spectrum of subjects — computer programming, networking, algorithms, theory of computation, software engineering, distributed systems, network security, modern databases, data mining, big data analytics, artificial intelligence and machine learning.</p>
               <p>With an intake of 180 students and a dedicated faculty of experienced scholars, the department maintains excellent academic records with consistent university ranks and gold medalists.</p>
-            </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="card p-8 text-center card-hover">
-              <span class="text-4xl font-bold text-[#0369A1] block mb-2">180</span>
+              <span class="text-4xl font-bold text-primary block mb-2">180</span>
               <p class="text-sm text-slate-500 font-medium">UG Intake</p>
             </div>
             <div class="card p-8 text-center card-hover">
-              <span class="text-4xl font-bold text-[#0369A1] block mb-2">1985</span>
+              <span class="text-4xl font-bold text-primary block mb-2">1985</span>
               <p class="text-sm text-slate-500 font-medium">Established</p>
             </div>
             <div class="card p-8 text-center card-hover">
-              <span class="text-4xl font-bold text-[#0369A1] block mb-2">25+</span>
+              <span class="text-4xl font-bold text-primary block mb-2">25+</span>
               <p class="text-sm text-slate-500 font-medium">Faculty Members</p>
             </div>
             <div class="card p-8 text-center card-hover">
-              <span class="text-4xl font-bold text-[#0369A1] block mb-2">10</span>
+              <span class="text-4xl font-bold text-primary block mb-2">10</span>
               <p class="text-sm text-slate-500 font-medium">Computer Labs</p>
             </div>
           </div>
@@ -90,27 +106,441 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">HOD's Desk</h2>
-        <div class="max-w-4xl mx-auto mt-4">
-          <div class="card p-8 flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-32 h-32 border-2 border-primary overflow-hidden shrink-0 rounded-lg">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoEmfLz0sD2yroAmoFckKblY56BpdiV-nkw&s" alt="HOD, CSE Department" style="width:100%;height:100%;object-fit:cover;object-position:top center;" loading="lazy" decoding="async" width="128" height="128" />
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-primary">Dr. Anita Mukund Pujar</h3>
-              <p class="text-sm text-slate-500 mb-4">Head of Department & Professor, Computer Science & Engineering</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">It gives me great pleasure to introduce the Computer Science and Engineering department as one of the best departments of Walchand Institute of Technology. It has always been one of the top in-demand career choices for young aspirants, branching out into numerous specializations and creating a host of career paths for Computer Engineers.</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">Our sound teaching and learning process takes care of the students' all-round development, preparing them for the rapidly evolving technologies in software industries. We run computational courses that make students aware of the latest industry trends.</p>
-              <p class="text-sm text-slate-600 leading-relaxed font-semibold">I welcome all aspiring engineers to join us and be part of this exciting journey in computing.</p>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">HOD's Desk</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">A message from the Head of the Computer Science &amp; Engineering Department.</p>
+        <div class="max-w-5xl mx-auto mt-8">
+          <div class="card p-6 md:p-8 lg:p-10 relative bg-white overflow-hidden rounded-none border border-slate-100 shadow-md">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <!-- Left Column: HOD Image & Badges -->
+              <div class="lg:col-span-5 flex flex-col items-center">
+                <!-- Outer Frame with sharp corners -->
+                <div class="relative group w-full max-w-sm">
+                  <!-- Main Image container in landscape format -->
+                  <div class="relative w-full aspect-[4/3] rounded-none overflow-hidden shadow-md border-4 border-white bg-white">
+                    <img src="./images/faculty/anita-pujar-desk.webp" alt="Dr. Anita Mukund Pujar at her desk" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
+                  </div>
+                  <!-- Floating Badge with 0px corners -->
+                  <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-none shadow-md whitespace-nowrap border border-white">
+                    <i class="fa-solid fa-user-tie mr-1"></i> Head of Department
+                  </div>
+                </div>
+                
+                <!-- Trust & Authority Credentials list (0px corners) -->
+                <div class="mt-8 w-full max-w-sm space-y-2.5">
+                  <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 px-4.5 py-2.5 rounded-none">
+                    <div class="w-8 h-8 rounded-none bg-primary-100 flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-graduation-cap text-xs text-primary"></i>
+                    </div>
+                    <div class="text-left">
+                      <p class="text-[10px] text-slate-400 font-semibold uppercase leading-none mb-0.5">Qualifications</p>
+                      <p class="text-xs text-slate-700 font-bold leading-tight">Ph.D. in Computer Science</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 px-4.5 py-2.5 rounded-none">
+                    <div class="w-8 h-8 rounded-none bg-primary-100 flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-briefcase text-xs text-primary"></i>
+                    </div>
+                    <div class="text-left">
+                      <p class="text-[10px] text-slate-400 font-semibold uppercase leading-none mb-0.5">Experience</p>
+                      <p class="text-xs text-slate-700 font-bold leading-tight">25+ Years in Academia</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 px-4.5 py-2.5 rounded-none">
+                    <div class="w-8 h-8 rounded-none bg-primary-100 flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-microchip text-xs text-primary"></i>
+                    </div>
+                    <div class="text-left">
+                      <p class="text-[10px] text-slate-400 font-semibold uppercase leading-none mb-0.5">Research Areas</p>
+                      <p class="text-xs text-slate-700 font-bold leading-tight">AI, ML & Database Systems</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Message & Details -->
+              <div class="lg:col-span-7 relative">
+                <!-- Large Decorative Quote Mark in background -->
+                <div class="absolute -top-6 -left-4 text-primary-100/40 text-7xl font-serif pointer-events-none select-none">“</div>
+                
+                <div class="relative z-10">
+                  <h3 class="text-2xl md:text-3xl font-bold text-primary mb-1">Dr. Anita Mukund Pujar</h3>
+                  <p class="text-xs sm:text-sm text-slate-500 font-medium mb-6">Professor & Head of Department, Computer Science & Engineering</p>
+                  
+                  <!-- Message blockquote -->
+                  <div class="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base font-sans italic">
+                    <p class="relative pl-6 border-l-2 border-primary-200">
+                      "It gives me great pleasure to introduce the Computer Science and Engineering department as one of the best departments of Walchand Institute of Technology. It has always been one of the top in-demand career choices for young aspirants, branching out into numerous specializations and creating a host of career paths for Computer Engineers."
+                    </p>
+                    <p class="relative pl-6 border-l-2 border-primary-200">
+                      "Our sound teaching and learning process takes care of the students' all-round development, preparing them for the rapidly evolving technologies in software industries. We run computational courses that make students aware of the latest industry trends."
+                    </p>
+                  </div>
+                  
+                  <!-- Highlighted Callout for the Welcome Statement -->
+                  <div class="mt-6 border-l-4 border-accent pl-4 py-3 bg-slate-50 rounded-none">
+                    <p class="text-sm md:text-base text-primary-900 font-bold leading-relaxed">
+                      I welcome all aspiring engineers to join us and be part of this exciting journey in computing.
+                    </p>
+                  </div>
+                  
+                  <!-- Cursive Signature Mock -->
+                  <div class="mt-8 flex flex-col items-end">
+                    <p class="font-serif italic text-lg text-primary-800 font-semibold">Dr. A. M. Pujar</p>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">HOD, CSE Department</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="faculty-section" class="section__block section__block--bgsandal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Our Faculty</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Experienced educators and active researchers shaping the next generation of engineers.</p>
+        <p class="text-sm text-slate-500 mt-1 mb-6">The department is home to a dedicated team of 29 faculty members, including PhD holders, with expertise spanning algorithms, AI, networks, security, and software engineering.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/shrishailappa-patil.webp" alt="Dr. Shrishailappa Tatyasaheb Patil" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Shrishailappa Tatyasaheb Patil</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Professor & Dean Research</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/anita-pujar.webp" alt="Dr. Anita Mukund Pujar" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Anita Mukund Pujar</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Head of Department & Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/rajesh-argiddi.webp" alt="Dr. Rajesh Vyankatesh Argiddi" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Rajesh Vyankatesh Argiddi</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Associate Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/pratibha-kaladeep.webp" alt="Dr. Pratibha Chidanand Kaladeep" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Pratibha Chidanand Kaladeep</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Associate Professor & COE</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/rashmi-dixit.webp" alt="Dr. Rashmi Kamalakar Dixit" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Rashmi Kamalakar Dixit</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/sunita-dol.webp" alt="Dr. Sunita Milind Dol" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Sunita Milind Dol</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/patnaikuni-shrinivasan.webp" alt="Dr. Patnaikuni Shrinivasan R." loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Patnaikuni Shrinivasan R.</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/mahesh-mahant.webp" alt="Mr. Mahesh Ashok Mahant" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Mahesh Ashok Mahant</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/vishwanath-chavan.webp" alt="Mr. Vishwanath Digambar Chavan" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Vishwanath Digambar Chavan</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/supriya-ambarkar.webp" alt="Mrs. Supriya Shrinivas Ambarkar" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mrs. Supriya Shrinivas Ambarkar</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/komal-pardeshi.webp" alt="Mrs. Komal Rahul Pardeshi" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mrs. Komal Rahul Pardeshi</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/kanchan-khedikar.webp" alt="Mrs. Kanchan Ashish Khedikar" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mrs. Kanchan Ashish Khedikar</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/darshan-pandit.webp" alt="Dr. Darshan Pradeep Pandit" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Darshan Pradeep Pandit</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/babruvan-solunke.webp" alt="Dr. Babruvan Ramrao Solunke" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Babruvan Ramrao Solunke</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/anil-chinchawade.webp" alt="Mr. Anil Rajendra Chinchawade" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Anil Rajendra Chinchawade</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/nikhil-gajjam.webp" alt="Mr. Nikhil Shivkumar Gajjam" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Nikhil Shivkumar Gajjam</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/farooque-sayyed.webp" alt="Mr. Farooque Rashid Sayyed" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Farooque Rashid Sayyed</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/shivappa-metagar.webp" alt="Dr. Shivappa Mallappa Metagar" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Dr. Shivappa Mallappa Metagar</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/samprit-patel.webp" alt="Mr. Samprit Tanuj Patel" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Samprit Tanuj Patel</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/priyanka-channapattan.webp" alt="Mrs. Priyanka Madanlal Channapattan" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mrs. Priyanka Madanlal Channapattan</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/vinayak-kulkarni.webp" alt="Mr. Vinayak Vijay Kulkarni" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Vinayak Vijay Kulkarni</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/pushpa-jadhav.webp" alt="Mrs. Pushpa Digambar Jadhav" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mrs. Pushpa Digambar Jadhav</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/sharanabasava-raddi.webp" alt="Mr. Sharanabasava Raddi" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Sharanabasava Raddi</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/sanjana-nazare.webp" alt="Ms. Sanjana S Nazare" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Ms. Sanjana S Nazare</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/dhananjay-mane.webp" alt="Mr. Dhananjay Subhash Mane" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Dhananjay Subhash Mane</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/mahesh-patil.webp" alt="Mr. Mahesh Patil" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Mahesh Patil</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/shreya-mathpati.webp" alt="Ms. Shreya Shivkumar Mathpati" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Ms. Shreya Shivkumar Mathpati</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/ajinkya-babar.webp" alt="Mr. Ajinkya Anil Babar" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Mr. Ajinkya Anil Babar</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+            <div class="group card card-hover flex flex-col overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 max-w-[200px] mx-auto w-full">
+              <div class="faculty-card-image relative overflow-hidden aspect-[3/4]">
+                <img src="./images/faculty/dnyaneshwari-narale.webp" alt="Ms. Dnyaneshwari Babasaheb Narale" loading="lazy" decoding="async" width="200" height="275" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div class="p-3 sm:p-3.5 text-center">
+                <h4 class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Ms. Dnyaneshwari Babasaheb Narale</h4>
+                <div class="w-5 h-[2px] bg-primary/40 mx-auto my-1.5 sm:my-2"></div>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Assistant Professor</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Vision & Mission</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Vision &amp; Mission</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">The guiding principles that drive the department's teaching, research, and outcomes.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           <div class="card p-8 card-hover">
             <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary transition-colors duration-300">
@@ -138,7 +568,11 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Programs Offered</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Programs Offered</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Undergraduate, postgraduate, and doctoral pathways in computing.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
           <div class="card p-8 card-hover">
             <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-primary transition-colors duration-300">
@@ -147,8 +581,8 @@
             <h3 class="text-xl font-bold text-primary mb-2">B.Tech CSE</h3>
             <p class="text-sm text-slate-500 mb-3">4 Years | Intake: 180</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">NBA Accredited</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Honors Available</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">Honors Available</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">B.Tech with Honors in AI & ML or Data Science. Comprehensive curriculum covering algorithms, systems, security, and modern computing paradigms.</p>
           </div>
@@ -159,7 +593,7 @@
             <h3 class="text-xl font-bold text-primary mb-2">M.Tech CSE</h3>
             <p class="text-sm text-slate-500 mb-3">2 Years | Started 2009-10</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Research Focused</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Research Focused</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">Advanced specialization with research thesis. Covers advanced algorithms, machine learning, distributed computing, and systems research.</p>
           </div>
@@ -170,7 +604,7 @@
             <h3 class="text-xl font-bold text-primary mb-2">Ph.D. Program</h3>
             <p class="text-sm text-slate-500 mb-3">Research Centre (PAHSU)</p>
             <div class="flex flex-wrap justify-center gap-2 mb-3">
-              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Doctoral Research</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Doctoral Research</span>
             </div>
             <p class="text-sm text-slate-600 leading-relaxed">Recognized research centre of PAH Solapur University. Research areas include AI, ML, data science, networks, and software engineering.</p>
           </div>
@@ -180,8 +614,11 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Labs & Facilities</h2>
-        <p class="text-sm text-slate-500 mt-1 mb-6">The department is equipped with 10 state-of-the-art computer laboratories with latest terminals, peripherals, and legal software licenses.</p>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Labs &amp; Facilities</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">10 state-of-the-art computer laboratories with latest terminals, peripherals, and legal software licenses.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="card p-6 flex items-start gap-4 card-hover">
             <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
@@ -243,7 +680,11 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Research Areas</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Research Areas</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Core research domains where the department has ongoing projects and publications.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
           <div class="card p-6 text-center card-hover">
             <i class="fa-solid fa-brain text-3xl text-primary mb-3 block transition-colors duration-300"></i>
@@ -283,7 +724,11 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="common__heading">Accreditations</h2>
+        <div class="flex items-center justify-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Accreditations</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Recognized by national and international bodies for academic quality.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4 max-w-4xl mx-auto">
           <div class="card p-8 card-hover">
             <i class="fa-solid fa-certificate text-5xl text-primary mb-4 block transition-colors duration-300"></i>
@@ -306,8 +751,11 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="common__heading">Explore More</h2>
-        <p class="text-slate-600 text-sm max-w-xl mx-auto mt-1 mb-6">Discover the curriculum, faculty, and research opportunities at the CSE department.</p>
+        <div class="flex items-center justify-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Explore More</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm max-w-xl mx-auto mb-4 md:mb-6">Discover the curriculum, faculty, and research opportunities at the CSE department.</p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="https://witsolapur.org/faculty-cse/" target="_blank" class="btn-primary">
             <i class="fa-solid fa-users"></i> View Faculty

@@ -8,12 +8,12 @@
   <meta name="description" content="Get in touch with WIT Solapur. Admissions inquiries, contact details, and campus location." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script type="module" src="/src/main.js"></script>
   <script type="speculationrules">
   {
@@ -23,10 +23,24 @@
     }]
   }
   </script>
+
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
 </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header-component></header-component>
 
   <main id="main-content">
@@ -49,7 +63,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <div class="card p-8">
-              <h2 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
+              <h3 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
               <form class="space-y-5" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.');">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -89,7 +103,7 @@
 
           <div class="space-y-8">
             <div class="card p-8">
-              <h2 class="text-2xl font-bold text-primary mb-6">Contact Information</h2>
+              <h3 class="text-2xl font-bold text-primary mb-6">Contact Information</h3>
               <div class="space-y-6">
                 <div class="flex items-start gap-4">
                   <div class="w-12 h-12 flex items-center justify-center border border-primary shrink-0">
@@ -137,8 +151,12 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Frequently Asked Questions</h2>
-        <div class="max-w-3xl mx-auto mt-8 space-y-4">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Frequently Asked Questions</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Quick answers to the most common questions about admissions, campus, and academics.</p>
+        <div class="max-w-3xl mx-auto space-y-4">
           <details class="card p-6 group cursor-pointer">
             <summary class="flex items-center justify-between font-bold text-primary list-none">
               How can I apply for admission?

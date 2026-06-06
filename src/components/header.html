@@ -2,58 +2,86 @@
 <header id="site-header">
 
   <!-- ═══════════════════════════════════════
-       TIER 1 — UTILITY BAR
+       TIER 1 — AUDIENCE GATE
        ═══════════════════════════════════════ -->
   <div class="header__topmenu">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-9">
-      <ul class="header__topleftmenu flex items-center" style="list-style:none;margin:0;padding:0;">
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./departments.html">Academics</a></li>
-        <li><a href="./placements.html">Placements</a></li>
-        <li><a href="./about.html#nirf">NIRF</a></li>
-        <li><a href="https://witsolapur.org/webmail/" target="_blank" rel="noopener noreferrer">Webmail</a></li>
-      </ul>
-      <div class="flex items-center gap-3" style="list-style:none;margin:0;padding:0;">
-        <a href="https://facebook.com/wit.solapur" target="_blank" aria-label="Facebook" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://instagram.com/wit_solapur" target="_blank" aria-label="Instagram" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://linkedin.com/school/walchand-institute-of-technology-solapur" target="_blank" aria-label="LinkedIn" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://x.com/WIT_Solapur" target="_blank" aria-label="X / Twitter" style="color:#FFFFFF;font-size:13px;"><i class="fa-brands fa-x-twitter"></i></a>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-10 gap-4">
+
+      <!-- I AM A… persona chips -->
+      <nav class="flex items-center gap-2 min-w-0 overflow-hidden" aria-label="Audience">
+        <span class="text-slate-500 font-bold tracking-[0.15em] uppercase text-[10px] hidden sm:inline shrink-0">I am a</span>
+        <ul class="flex items-center gap-1 min-w-0 overflow-x-auto scrollbar-hide" style="list-style:none;margin:0;padding:0;scrollbar-width:none;-ms-overflow-style:none;">
+          <li><a href="./contact.html" class="header__persona-chip">Prospective Student</a></li>
+          <li><a href="./about.html" class="header__persona-chip">Parent</a></li>
+          <li><a href="#" class="header__persona-chip">Current Student</a></li>
+          <li class="hidden md:inline-flex"><a href="#" class="header__persona-chip">Alumni</a></li>
+          <li class="hidden md:inline-flex"><a href="./placements.html" class="header__persona-chip">Recruiter</a></li>
+          <li class="hidden lg:inline-flex"><a href="./cse.html" class="header__persona-chip">Faculty</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language + social -->
+      <div class="flex items-center gap-3 shrink-0" style="list-style:none;margin:0;padding:0;">
+        <button type="button" class="header__lang-toggle hidden sm:inline-flex" aria-label="Toggle language">
+          <span class="header__lang-active">EN</span>
+          <span class="header__lang-sep">|</span>
+          <span class="header__lang-mr">मराठी</span>
+        </button>
+        <div class="header__social-group">
+          <a href="https://facebook.com/wit.solapur" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="header__social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/wit_solapur" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="header__social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com/school/walchand-institute-of-technology-solapur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="header__social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/WIT_Solapur" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" class="header__social-link hidden sm:inline-flex"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
       </div>
+
     </div>
   </div>
 
   <!-- ═══════════════════════════════════════
-       TIER 2 — LOGO SECTION
+       TIER 2 — IDENTITY
        ═══════════════════════════════════════ -->
   <div class="header__middlesec">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 border-b border-border">
-      <div class="flex items-center justify-between min-h-[88px]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between min-h-[92px] md:min-h-[104px] gap-4">
 
-        <!-- Logo + name -->
-        <div class="flex items-center gap-4">
-          <a href="./" class="header__logo" aria-label="WIT Solapur Home">
-            <img src="./images/wit-logo.png" alt="WIT Solapur" width="64" height="64">
-          </a>
-          <div>
-            <div style="font:600 11px/1.2 'Lato',sans-serif;color:#64748B;letter-spacing:0.3px;text-transform:uppercase;">
-              S. A. P. D. Jain Pathshala&rsquo;s
+        <!-- Logo + wordmark -->
+        <a href="./" class="flex items-center gap-3 md:gap-5 group min-w-0" aria-label="WIT Solapur Home">
+          <div class="header__logo shrink-0">
+            <img src="./images/wit-logo.png" alt="WIT Solapur" width="64" height="64" class="w-12 h-12 md:w-16 md:h-16 block">
+          </div>
+          <div class="hidden sm:block w-px h-12 md:h-14 bg-primary/30"></div>
+          <div class="min-w-0 flex-1">
+            <div class="text-[9px] md:text-[10px] font-semibold tracking-[0.18em] uppercase text-slate-500 leading-none">
+              S. A. P. D. Jain Pathshala's
             </div>
-            <div class="font-lora text-primary font-bold" style="font-family:Lora,Georgia,serif;font-size:18px;font-weight:700;color:#1d5cab;line-height:1.2;">
-              Walchand Institute of Technology, Solapur
+            <div class="font-lora text-primary text-base md:text-[22px] font-bold leading-tight mt-1 relative inline-block">
+              <span>Walchand Institute of Technology, Solapur</span>
+              <span class="header__name-underline" aria-hidden="true"></span>
             </div>
-            <div style="font:11px/1.2 'Lato',sans-serif;color:#64748B;margin-top:2px;">
-              An Autonomous Institute <span class="max-sm:hidden">&middot; NAAC A+ Accredited &middot; Est. 1983</span>
+            <div class="text-[10px] md:text-[11px] text-slate-500 mt-1 leading-none tracking-wide">
+              Autonomous <span class="text-primary mx-1">·</span> NAAC A+ <span class="text-primary mx-1">·</span> NBA <span class="text-primary mx-1">·</span> NIRF Ranked <span class="text-primary mx-1">·</span> Est. 1983
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Actions -->
-        <div class="flex items-center gap-4">
-          <a href="./placements.html" class="header--links flex items-center gap-1.5 text-primary font-semibold border-2 border-primary px-3.5 py-1.5 text-xs hover:bg-primary hover:text-white transition-all duration-300 no-underline">
-            <i class="fa-solid fa-chart-line"></i> NIRF Ranked
+        <div class="flex items-center gap-2 md:gap-3 shrink-0">
+          <a href="./contact.html" class="header__cta-primary hidden md:inline-flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-xs"></i>
+            <span>Admissions 2026</span>
           </a>
-          <button class="search__tab" id="searchToggle" aria-label="Open search">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="https://forms.gle/zz2rvRaEuvwVtPCR7" target="_blank" rel="noopener noreferrer" class="header__cta-outline hidden sm:inline-flex items-center gap-2">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <span>Apply Now</span>
+          </a>
+          <button class="header__icon-btn" id="searchToggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+          <button class="header__icon-btn md:hidden" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="navigation__iconBbar"></span>
+            <span class="navigation__iconBbar"></span>
+            <span class="navigation__iconBbar"></span>
           </button>
         </div>
 
@@ -102,17 +130,19 @@
       .navigation__menu > li > a { font-size: 13px; padding: 14px 10px; }
     }
     @media (max-width: 767px) {
-      .header__topmenu { display: none; }
       .navigation__menu { display: none; }
-      .header__middlesec > div > div { min-height: 68px !important; }
+      .header__middlesec > div > div { min-height: 72px !important; }
+      .header__lang-toggle { display: none !important; }
+      .header__social-group { padding-left: 0; border-left: none; }
+      .header__cta-outline { display: none !important; }
     }
     @media (max-width: 420px) {
-      .header__logo img { width: 48px; height: 48px; }
+      .header__logo img { width: 44px; height: 44px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .header__topmenu, .header__middlesec, .header__bottomsec,
       .header__submenu, .mobile-drawer, .navigation__iconBbar,
-      .nav-dropdown-btn {
+      .nav-dropdown-btn, .header__persona-chip, .header__social-link {
         transition: none !important;
       }
     }
@@ -170,14 +200,6 @@
         <li><a href="./contact.html">Contact</a></li>
       </ul>
       </nav>
-
-      <!-- Mobile hamburger (hidden on md+) -->
-      <button class="navigation__menuMobile md:hidden" id="hamburger"
-              aria-label="Toggle navigation" aria-expanded="false">
-        <span class="navigation__iconBbar"></span>
-        <span class="navigation__iconBbar"></span>
-        <span class="navigation__iconBbar"></span>
-      </button>
 
     </div>
   </div>

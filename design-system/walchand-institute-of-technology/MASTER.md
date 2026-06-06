@@ -71,7 +71,7 @@
   background: #1d5cab;
   color: white;
   padding: 12px 24px;
-  border-radius: 4px;
+  border-radius: 0px;
   font-weight: 600;
   transition: all 250ms ease;
   cursor: pointer;
@@ -90,7 +90,7 @@
   color: #1d5cab;
   border: 2px solid #1d5cab;
   padding: 12px 24px;
-  border-radius: 4px;
+  border-radius: 0px;
   font-weight: 600;
   transition: all 250ms ease;
   cursor: pointer;
@@ -108,7 +108,7 @@
 .card {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 6px;
+  border-radius: 0px;
   padding: 24px;
   box-shadow: var(--shadow-sm);
   transition: all 250ms ease;
@@ -128,7 +128,7 @@
 .input {
   padding: 12px 16px;
   border: 1px solid #CBD5E1;
-  border-radius: 4px;
+  border-radius: 0px;
   font-size: 16px;
   transition: border-color 200ms ease;
 }
@@ -150,7 +150,7 @@
 
 .modal {
   background: white;
-  border-radius: 8px;
+  border-radius: 0px;
   padding: 32px;
   box-shadow: var(--shadow-xl);
   max-width: 500px;

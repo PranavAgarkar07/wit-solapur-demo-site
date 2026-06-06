@@ -8,12 +8,12 @@
   <meta name="description" content="Learn about WIT Solapur's history, vision, mission, leadership, and accreditations." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script type="module" src="/src/main.js"></script>
   <script type="speculationrules">
   {
@@ -23,10 +23,24 @@
     }]
   }
   </script>
+
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
 </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header-component></header-component>
 
   <main id="main-content">
@@ -46,18 +60,20 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Overview</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Four decades of engineering excellence, named after industrial pioneer Seth Walchand Hirachand.</p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="common__heading">Overview</h2>
-            <div class="space-y-4 text-slate-600 leading-relaxed">
+          <div class="space-y-4 text-slate-600 leading-relaxed">
               <p>Shri Aillak Pannalal Digambar Jain Pathashala Trust, established in 1885, started this college in July 1983 which is appropriately named after Seth Walchand Hirachand, one of our country's pioneers of industrial development.</p>
               <p>It is the sincere desire of the trust and the Governing Body of the Institute to maintain high academic and technological standards. This would indeed be a fitting tribute to the celebrated industrial giant. It is hoped that Seth Walchand's name and achievements will inspire the students passing through the portals of this college to attain high degree of proficiency in their academic and professional career.</p>
               <p>The institute began with Production Engg., Environmental Engg., Electronics Engg. branches. The Institute is affiliated to the Punyashlok Ahilyadevi Holkar Solapur University (PAHSU), Solapur and approved by the All India Council for Technical Education, New Delhi (AICTE).</p>
               <p>WIT is recognized as an Autonomous Institute by the University Grants Commission (UGC) and holds NAAC A+ accreditation with a CGPA of 3.26/4.0, along with NBA accreditation for all its undergraduate programs.</p>
-            </div>
           </div>
           <div class="border border-slate-200 aspect-[4/3] md:aspect-auto md:h-[400px]">
-            <img src="./images/campus-hero-2.jpg" alt="WIT Solapur Campus" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1600" height="1200" />
+            <img src="./images/campus-hero-2.jpg" alt="WIT Solapur Campus" class="w-full h-full object-cover" fetchpriority="high" loading="eager" decoding="async" width="1600" height="1200" />
           </div>
         </div>
       </div>
@@ -65,7 +81,11 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Vision & Mission</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Vision &amp; Mission</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">The aspirations and commitments that guide the institute's long-term direction.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           <div class="card p-8">
             <div class="w-14 h-14 flex items-center justify-center mb-4 border border-primary">
@@ -94,7 +114,11 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Core Values</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Core Values</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">The principles that define how we teach, learn, and grow as a community.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
           <div class="card p-6">
             <div class="w-16 h-16 flex items-center justify-center mx-auto mb-3 border-2 border-primary">
@@ -124,30 +148,14 @@
       </div>
     </section>
 
-    <section class="section__block section__block--bgsandal">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Principal's Desk</h2>
-        <div class="max-w-4xl mx-auto mt-4">
-          <div class="card p-8 flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-32 h-32 border-2 border-primary overflow-hidden shrink-0">
-              <img src="./images/principal.jpg" alt="Dr. Sachin Ratikant Gengaje" class="w-full h-full object-cover object-top" loading="lazy" decoding="async" width="128" height="128" />
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-primary">Dr. Sachin Ratikant Gengaje</h3>
-              <p class="text-sm text-slate-500 mb-4">Incharge Principal, Walchand Institute of Technology, Solapur</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">Right from its inception in 1983, Walchand Institute of Technology (WIT) is on its fast track of growth and academic contribution. WIT surged ahead purely due to its crystal clear vision, mission and commitment of the staff ensuring that we continue to shape our students to higher quality professionals; who are competent in their chosen field, follow morals and ethics and contribute to the development of our society.</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">WIT has State of the Art infrastructure with the best of the faculty to ensure the transformation of our students to world class professionals. The testimony to this is the quality certification of the college by NAAC, NBA and Autonomy! We are looking forward to developing in each of our faculty, staff, and student, the ability and passion to work wisely, creatively and, effectively for the betterment of mankind.</p>
-              <p class="text-sm text-slate-600 leading-relaxed font-semibold">I welcome you to be a part of WIT to usher in an era of paradise on earth.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Quality Policy</h2>
-        <div class="max-w-3xl mx-auto mt-4">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Quality Policy</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Our commitment to continuous improvement in teaching, learning, and outcomes.</p>
+        <div class="max-w-3xl mx-auto">
           <div class="card card--surface p-10 text-center">
             <i class="fa-solid fa-quote-left text-4xl text-primary/30 mb-4 block"></i>
             <p class="text-lg text-slate-700 leading-relaxed italic">To empower Faculty and Students by subscribing to Total Quality Management (TQM) and by adopting dynamically improving teaching-learning process in the field of Science and Technology to become a force to be reckoned with.</p>
@@ -158,7 +166,11 @@
 
     <section class="section__block section__block--bgsandal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Accreditations & Recognition</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Accreditations &amp; Recognition</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">National and international accreditations that validate our academic quality.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           <div class="card p-8">
             <span class="text-5xl font-bold text-primary block mb-4">A+</span>

@@ -3,15 +3,17 @@ import headerHtml from './components/header.html?raw'
 import footerHtml from './components/footer.html?raw'
 
 document.addEventListener('DOMContentLoaded', () => {
+  initSplashScreen()
   injectComponents()
   initNavbar()
   initSearch()
   initCounters()
   initMarquee()
   initHeroSlideshow()
+  initAnnouncements()
   initGallery()
-  initCharts()
   initProgressiveImages()
+  initBranchCards()
   initRecruiterLogos()
 })
 
@@ -78,7 +80,8 @@ function initNavbar() {
 
   // Close mobile drawer on outside click
   document.addEventListener('click', (e) => {
-    if (mainNav && !mainNav.contains(e.target) && hamburger && !hamburger.contains(e.target)) {
+    if (!mainNav || !hamburger) return
+    if (!mainNav.contains(e.target) && !hamburger.contains(e.target)) {
       if (mainNav.classList.contains('drawer-open')) {
         mainNav.classList.remove('drawer-open')
         hamburger.classList.remove('is-open')
@@ -250,53 +253,136 @@ function initMarquee() {
   }
 }
 
-function initPreloader() {
-  const preloader = document.getElementById('preloader')
-  if (!preloader) return
+function initSplashScreen() {
+  const splash = document.getElementById('splash-screen')
+  if (!splash) return
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  window.addEventListener('load', () => {
+  const minDisplayTime = prefersReduced ? 200 : 1700
+  const maxWaitTime = 5000
+  const startTime = performance.now()
+  let hidden = false
+
+  document.documentElement.classList.add('splash-active')
+
+  const hide = () => {
+    if (hidden) return
+    hidden = true
+    splash.classList.add('hidden')
     setTimeout(() => {
-      preloader.classList.add('hidden')
-    }, 200)
-  })
+      splash.remove()
+      document.documentElement.classList.remove('splash-active')
+    }, 450)
+  }
 
-  setTimeout(() => {
-    preloader.classList.add('hidden')
-  }, 5000)
+  const onReady = () => {
+    const elapsed = performance.now() - startTime
+    const delay = Math.max(minDisplayTime - elapsed, 0)
+    requestAnimationFrame(() => setTimeout(hide, delay))
+  }
+
+  if (document.readyState === 'complete') {
+    onReady()
+  } else {
+    window.addEventListener('load', onReady, { once: true })
+  }
+
+  setTimeout(hide, maxWaitTime)
 }
 
 function initHeroSlideshow() {
   const slides = document.querySelectorAll('.hero-slide')
   if (slides.length < 2) return
   const section = document.getElementById('heroSection')
+  const dots = document.querySelectorAll('.hero-dot')
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (prefersReduced) return
   let current = 0
   let interval
+  let isPaused = false
+
+  const controls = document.getElementById('heroSlideControls')
+  const playPauseBtn = document.getElementById('heroPlayPauseBtn')
+  const playIcon = document.getElementById('heroPlayIcon')
+  const pauseIcon = document.getElementById('heroPauseIcon')
 
   function goTo(index) {
     slides.forEach(s => s.classList.remove('active'))
+    dots.forEach(d => {
+      d.classList.remove('active')
+      // Reset animation
+      const progress = d.querySelector('.hero-dot-progress')
+      if (progress) {
+        progress.style.animation = 'none'
+        void progress.offsetWidth // trigger reflow
+        progress.style.animation = ''
+      }
+    })
     current = (index + slides.length) % slides.length
     slides[current].classList.add('active')
+    if (dots[current]) dots[current].classList.add('active')
   }
 
   function startAuto() {
     stopAuto()
-    interval = setInterval(() => goTo(current + 1), 5000)
+    if (!isPaused) {
+      interval = setInterval(() => goTo(current + 1), 5000)
+    }
   }
 
   function stopAuto() { clearInterval(interval); interval = null }
 
   startAuto()
 
-  section?.addEventListener('mouseenter', stopAuto)
-  section?.addEventListener('focusin', stopAuto)
-  section?.addEventListener('mouseleave', () => { if (!interval) interval = startAuto() })
+  playPauseBtn?.addEventListener('click', () => {
+    isPaused = !isPaused
+    if (isPaused) {
+      stopAuto()
+      controls?.classList.add('is-paused')
+      playIcon?.classList.remove('hidden')
+      pauseIcon?.classList.add('hidden')
+    } else {
+      startAuto()
+      controls?.classList.remove('is-paused')
+      playIcon?.classList.add('hidden')
+      pauseIcon?.classList.remove('hidden')
+    }
+  })
 
   const prevBtn = section?.querySelector('.hero-slide-prev')
   const nextBtn = section?.querySelector('.hero-slide-next')
-  prevBtn?.addEventListener('click', () => { goTo(current - 1); stopAuto() })
-  nextBtn?.addEventListener('click', () => { goTo(current + 1); stopAuto() })
+  prevBtn?.addEventListener('click', () => { goTo(current - 1); startAuto() })
+  nextBtn?.addEventListener('click', () => { goTo(current + 1); startAuto() })
+
+  // Dot click navigation
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const slideIndex = parseInt(dot.getAttribute('data-slide'))
+      if (!isNaN(slideIndex)) {
+        goTo(slideIndex)
+        startAuto()
+      }
+    })
+  })
+}
+
+function initAnnouncements() {
+  const panel = document.getElementById('announcementsPanel')
+  const toggle = document.getElementById('announcementsToggle')
+  if (!panel || !toggle) return
+
+  // Restore saved state
+  const savedState = localStorage.getItem('wit_announcements_collapsed')
+  if (savedState === 'true') {
+    panel.classList.add('is-collapsed')
+    toggle.setAttribute('aria-expanded', 'false')
+  }
+
+  toggle.addEventListener('click', () => {
+    const isCollapsed = panel.classList.toggle('is-collapsed')
+    toggle.setAttribute('aria-expanded', !isCollapsed)
+    localStorage.setItem('wit_announcements_collapsed', isCollapsed)
+  })
 }
 
 function initGallery() {
@@ -478,250 +564,27 @@ function initProgressiveImages() {
   })
 }
 
-function initCharts() {
-  const canvas = document.getElementById('placementChart')
-  if (!canvas || typeof Chart === 'undefined') return
-
-  const ctx = canvas.getContext('2d')
-  const isPlacementsPage = window.location.pathname.includes('placements')
-
-  if (isPlacementsPage) {
-    initPlacementsChart(ctx)
-  } else {
-    initHomeChart(ctx)
-  }
-}
-
-function initHomeChart(ctx) {
-  const data = [65, 68, 60, 61, 60]
-  const labels = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25']
-  const lastIdx = data.length - 1
-
-  const fillGradient = ctx.createLinearGradient(0, 0, 0, 140)
-  fillGradient.addColorStop(0, 'rgba(29,92,171,0.28)')
-  fillGradient.addColorStop(0.6, 'rgba(29,92,171,0.06)')
-  fillGradient.addColorStop(1, 'rgba(29,92,171,0)')
-
-  const pointBg = data.map((_, i) => i === lastIdx ? '#1d5cab' : '#FFFFFF')
-  const pointBorder = data.map((_, i) => i === lastIdx ? '#FFFFFF' : '#1d5cab')
-  const pointRadius = data.map((_, i) => i === lastIdx ? 6 : 4)
-
-  const referenceLine = {
-    id: 'referenceLine',
-    afterDatasetsDraw(chart) {
-      const { ctx, chartArea, scales } = chart
-      const y = scales.y.getPixelForValue(75)
-      ctx.save()
-      ctx.strokeStyle = '#F59E0B'
-      ctx.setLineDash([4, 4])
-      ctx.lineWidth = 1
-      ctx.beginPath()
-      ctx.moveTo(chartArea.left, y)
-      ctx.lineTo(chartArea.right, y)
-      ctx.stroke()
-      ctx.fillStyle = '#F59E0B'
-      ctx.font = '600 10px Lato'
-      ctx.textAlign = 'right'
-      ctx.textBaseline = 'bottom'
-      ctx.fillText('Industry Avg 75%', chartArea.right, y - 2)
-      ctx.restore()
-    }
-  }
-
-  const valueLabels = {
-    id: 'valueLabels',
-    afterDatasetsDraw(chart) {
-      const { ctx } = chart
-      const meta = chart.getDatasetMeta(0)
-      ctx.save()
-      ctx.font = '700 10px Lato'
-      ctx.textAlign = 'center'
-      meta.data.forEach((pt, i) => {
-        ctx.fillStyle = i === lastIdx ? '#1d5cab' : '#475569'
-        ctx.fillText(data[i] + '%', pt.x, pt.y - 10)
-      })
-      ctx.restore()
-    }
-  }
-
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        label: 'Placements',
-        data,
-        backgroundColor: fillGradient,
-        borderColor: '#1d5cab',
-        borderWidth: 2.5,
-        pointBackgroundColor: pointBg,
-        pointBorderColor: pointBorder,
-        pointBorderWidth: 2,
-        pointRadius: pointRadius,
-        pointHoverRadius: 7,
-        pointHoverBackgroundColor: '#1d5cab',
-        pointHoverBorderColor: '#FFFFFF',
-        pointHoverBorderWidth: 3,
-        tension: 0.4,
-        fill: true,
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      layout: { padding: { top: 18, right: 8, bottom: 4, left: 4 } },
-      animation: {
-        duration: 1400,
-        easing: 'easeOutQuart',
-      },
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#0a192f',
-          titleFont: { family: 'Lato', weight: '700', size: 12 },
-          bodyFont: { family: 'Lato', size: 12 },
-          padding: 10,
-          cornerRadius: 0,
-          displayColors: false,
-          callbacks: {
-            title: items => items[0].label,
-            label: item => item.parsed.y + '% students placed',
-          }
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 100,
-          ticks: {
-            callback: v => v + '%',
-            font: { family: 'Lato', size: 10 },
-            color: '#94A3B8',
-            stepSize: 25,
-            padding: 4,
-          },
-          grid: {
-            color: 'rgba(0,0,0,0.05)',
-            drawTicks: false,
-          },
-          border: { display: false }
-        },
-        x: {
-          ticks: {
-            font: { family: 'Lato', size: 10, weight: '600' },
-            color: '#64748B',
-            padding: 4,
-          },
-          grid: { display: false },
-          border: { display: false }
-        }
-      }
-    },
-    plugins: [referenceLine, valueLabels]
-  })
-}
-
-function initPlacementsChart(ctx) {
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['2021-22', '2022-23', '2023-24', '2024-25'],
-      datasets: [{
-        label: 'Average Package (₹ LPA)',
-        data: [4.38, 4.81, 4.12, 4.53],
-        borderColor: '#1d5cab',
-        backgroundColor: function (context) {
-          const chart = context.chart
-          const { ctx, chartArea } = chart
-          if (!chartArea) return 'rgba(29, 92, 171, 0.1)'
-          const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom)
-          gradient.addColorStop(0, 'rgba(29, 92, 171, 0.2)')
-          gradient.addColorStop(1, 'rgba(29, 92, 171, 0.02)')
-          return gradient
-        },
-        fill: true,
-        tension: 0.4,
-        pointBackgroundColor: '#1d5cab',
-        pointBorderColor: '#fff',
-        pointBorderWidth: 2,
-        pointRadius: 5,
-        pointHoverRadius: 8,
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: '#1d5cab',
-        pointHoverBorderWidth: 3,
-      }, {
-        label: 'Placement Rate (%)',
-        data: [78, 60.4, 65.8, 60],
-        borderColor: '#0a192f',
-        backgroundColor: function (context) {
-          const chart = context.chart
-          const { ctx, chartArea } = chart
-          if (!chartArea) return 'rgba(10, 25, 47, 0.05)'
-          const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom)
-          gradient.addColorStop(0, 'rgba(10, 25, 47, 0.15)')
-          gradient.addColorStop(1, 'rgba(10, 25, 47, 0.01)')
-          return gradient
-        },
-        fill: true,
-        tension: 0.4,
-        pointBackgroundColor: '#0a192f',
-        pointBorderColor: '#fff',
-        pointBorderWidth: 2,
-        pointRadius: 5,
-        pointHoverRadius: 8,
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: '#0a192f',
-        pointHoverBorderWidth: 3,
-        yAxisID: 'y1',
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20, font: { family: 'Lato' } } },
-        tooltip: {
-          backgroundColor: '#0a192f',
-          titleFont: { family: 'Lato', weight: '700' },
-          bodyFont: { family: 'Lato' },
-          padding: 12,
-          cornerRadius: 0,
-          callbacks: {
-            label: function (context) {
-              const label = context.dataset.label || ''
-              const val = context.parsed.y
-              if (label.includes('Package')) return label + ': ₹' + val + ' LPA'
-              return label + ': ' + val + '%'
-            }
-          }
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: { font: { family: 'Lato' } },
-          grid: { color: 'rgba(0,0,0,0.05)' }
-        },
-        y1: {
-          beginAtZero: true,
-          position: 'right',
-          grid: { display: false },
-          max: 100,
-          ticks: { callback: function (v) { return v + '%' }, font: { family: 'Lato' } }
-        },
-        x: {
-          grid: { display: false },
-          ticks: { font: { family: 'Lato', size: 12 } }
-        }
-      },
-      animation: {
-        duration: 1200,
-        easing: 'easeOutQuart'
-      }
-    }
-  })
-}
-
 function initRecruiterLogos() {
+}
+
+function initBranchCards() {
+  const cards = document.querySelectorAll('.branch-card')
+  if (!cards.length) return
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (prefersReduced) {
+    cards.forEach(c => c.classList.add('branch-card-visible'))
+    return
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('branch-card-visible')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.15 })
+
+  cards.forEach(card => observer.observe(card))
 }

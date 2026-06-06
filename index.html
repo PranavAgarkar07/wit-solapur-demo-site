@@ -8,13 +8,13 @@
   <meta name="description" content="Walchand Institute of Technology, Solapur - An Autonomous Institute affiliated to Solapur University. NAAC A+ Accredited. Established in 1983." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="./images/hero-slide-1.webp" />
+  <link rel="preload" as="image" href="./images/wit-main-building.jpg" fetchpriority="high" />
   <script type="module" src="/src/main.js"></script>
   <script type="speculationrules">
   {
@@ -24,92 +24,97 @@
     }]
   }
   </script>
+
 </head>
 <body>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
+</div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
-</div>
 
   <header-component></header-component>
 
   <main id="main-content">
 
-  <!-- ANNOUNCEMENTS -->
-  <div class="announcements overflow-hidden">
-    <div class="max-w-7xl mx-auto announcements__inner">
-      <p class="announcements__text">
-        <i class="fas fa-bullhorn mr-2"></i> Announcements
-      </p>
-      <div class="announcements__marquee" aria-live="polite" aria-label="Latest announcements">
-        <div class="flex marquee-track" style="white-space: nowrap;">
-          <div class="flex marquee-group">
-            <span class="marquee__list"><a href="#">Admissions Open for B.Tech 2026-27 — Application deadline extended to June 30</a></span>
-            <span class="marquee__list"><a href="#">B.Tech III Semester (ICT-based) Academic Calendar 2026-27 released</a></span>
-            <span class="marquee__list"><a href="#">Results declared for B.Tech II Semester Examinations — May 2026</a></span>
-            <span class="marquee__list"><a href="#">IEEE WIT Student Chapter wins Best Technical Event at National Symposium</a></span>
-            <span class="marquee__list"><a href="#">Internship Drive: Amazon, TCS, Infosys hiring WIT students for Summer 2026</a></span>
-            <span class="marquee__list"><a href="#">International Conference on Emerging Technologies — Call for Papers</a></span>
-            <span class="marquee__list"><a href="#">WIT Innovation Cell Hackathon 2026 — Register by July 10</a></span>
-            <span class="marquee__list"><a href="#">Merit Scholarships announced for First Year B.Tech 2026-27</a></span>
+  <!-- HERO SECTION — Full-Width Cinematic -->
+  <section class="hero-section" id="heroSection">
+    <!-- Background Slideshow (full-width) -->
+    <div class="hero__visual">
+      <div class="hero-slide active" role="img" aria-label="WIT Solapur main building facade">
+        <img src="./images/wit-main-building.jpg" alt="" class="hero-bg-img" fetchpriority="high" loading="eager" />
+      </div>
+      <div class="hero-slide" role="img" aria-label="WIT Solapur library building">
+        <img src="./images/wit-library.avif" alt="" class="hero-bg-img" loading="lazy" decoding="async" />
+      </div>
+      <div class="hero-slide" role="img" aria-label="WIT Solapur campus entrance and main building">
+        <picture>
+          <source srcset="./images/hero-slide-1.webp" type="image/webp" />
+          <img src="./images/hero-slide-1.jpg" alt="" class="hero-bg-img" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+      <div class="hero-slide" role="img" aria-label="WIT Solapur yoga day celebration">
+        <img src="./images/wit-yoga-day.jpg" alt="" class="hero-bg-img" loading="lazy" decoding="async" />
+      </div>
+      <div class="hero-slide" role="img" aria-label="WIT Solapur academic block and green campus">
+        <picture>
+          <source srcset="./images/campus-hero-1.webp" type="image/webp" />
+          <img src="./images/campus-hero-1.jpg" alt="" class="hero-bg-img" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </div>
+    <!-- Subtle base overlay for overall image darkening -->
+    <div class="hero__overlay"></div>
+    <!-- Foreground Content aligned to bottom -->
+    <div class="hero__content">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="hero__text">
+          <div class="hero-badge-row">
+            <span class="hero-badge"><i class="fas fa-star"></i> NAAC A+</span>
+            <span class="hero-badge"><i class="fas fa-check-circle"></i> NBA Accredited</span>
+            <span class="hero-badge"><i class="fas fa-university"></i> Autonomous</span>
+            <span class="hero-badge"><i class="fas fa-calendar-alt"></i> Est. 1983</span>
           </div>
-          <div class="flex marquee-group" aria-hidden="true">
-            <span class="marquee__list"><a href="#">Admissions Open for B.Tech 2026-27 — Application deadline extended to June 30</a></span>
-            <span class="marquee__list"><a href="#">B.Tech III Semester (ICT-based) Academic Calendar 2026-27 released</a></span>
-            <span class="marquee__list"><a href="#">Results declared for B.Tech II Semester Examinations — May 2026</a></span>
-            <span class="marquee__list"><a href="#">IEEE WIT Student Chapter wins Best Technical Event at National Symposium</a></span>
-            <span class="marquee__list"><a href="#">Internship Drive: Amazon, TCS, Infosys hiring WIT students for Summer 2026</a></span>
-            <span class="marquee__list"><a href="#">International Conference on Emerging Technologies — Call for Papers</a></span>
-            <span class="marquee__list"><a href="#">WIT Innovation Cell Hackathon 2026 — Register by July 10</a></span>
-            <span class="marquee__list"><a href="#">Merit Scholarships announced for First Year B.Tech 2026-27</a></span>
+          <h1 class="hero-heading">Walchand Institute of Technology, Solapur</h1>
+          <p class="hero-heading-sub">Empowering minds since 1983 — shaping future engineers and innovators through academic excellence, research, and industry collaboration.</p>
+          <div class="hero-cta-row">
+            <a href="./contact.html" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Admissions 2026-27</a>
+            <a href="./departments.html" class="btn-hero-secondary"><i class="fas fa-book-open"></i> Explore Programs</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="heroSection">
-    <div class="hero__layout">
-      <div class="hero__text">
-        <div class="hero-badge-row">
-          <span class="hero-badge"><i class="fas fa-star"></i> NAAC A+</span>
-          <span class="hero-badge"><i class="fas fa-check-circle"></i> NBA Accredited</span>
-          <span class="hero-badge"><i class="fas fa-university"></i> Autonomous</span>
-          <span class="hero-badge"><i class="fas fa-calendar-alt"></i> Est. 1983</span>
-        </div>
-        <h1 class="hero-heading">Walchand Institute of Technology, Solapur</h1>
-        <p class="hero-heading-sub">Empowering minds since 1983 — shaping future engineers and innovators through academic excellence, research, and industry collaboration.</p>
-        <div class="hero-cta-row">
-          <a href="./contact.html" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Admissions 2026-27</a>
-          <a href="./departments.html" class="btn-hero-secondary"><i class="fas fa-book-open"></i> Explore Programs</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="hero-slide active" role="img" aria-label="WIT Solapur campus entrance and main building">
-            <picture>
-              <source srcset="./images/hero-slide-1.webp" type="image/webp" />
-              <img src="./images/hero-slide-1.jpg" alt="" class="hero-bg-img" fetchpriority="high" />
-            </picture>
-          </div>
-        <div class="hero-slide" role="img" aria-label="WIT Solapur academic block and green campus">
-            <picture>
-              <source srcset="./images/campus-hero-1.webp" type="image/webp" />
-              <img src="./images/campus-hero-1.jpg" alt="" class="hero-bg-img" loading="lazy" />
-            </picture>
-          </div>
-        <div class="hero-slide" role="img" aria-label="WIT Solapur central courtyard and gardens">
-            <picture>
-              <source srcset="./images/campus-hero-2.webp" type="image/webp" />
-              <img src="./images/campus-hero-2.jpg" alt="" class="hero-bg-img" loading="lazy" />
-            </picture>
-          </div>
-        <div class="hero__visual-overlay"></div>
-        <button type="button" class="hero-slide-btn hero-slide-prev" aria-label="Previous slide">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
-        </button>
-        <button type="button" class="hero-slide-btn hero-slide-next" aria-label="Next slide">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
-        </button>
+    <!-- Slide Controls -->
+    <button type="button" class="hero-slide-btn hero-slide-prev" aria-label="Previous slide">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+    </button>
+    <button type="button" class="hero-slide-btn hero-slide-next" aria-label="Next slide">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+    </button>
+    <!-- Slide Controls & Indicators -->
+    <div class="hero-slide-controls" id="heroSlideControls">
+      <button type="button" id="heroPlayPauseBtn" class="hero-play-pause-btn" aria-label="Pause slideshow">
+        <svg id="heroPauseIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5"/></svg>
+        <svg id="heroPlayIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg>
+      </button>
+      <div class="hero-dot-divider"></div>
+      <div class="hero-slide-dots" aria-label="Slide navigation">
+        <button type="button" class="hero-dot active" aria-label="Go to slide 1" data-slide="0"><span class="hero-dot-progress"></span></button>
+        <button type="button" class="hero-dot" aria-label="Go to slide 2" data-slide="1"><span class="hero-dot-progress"></span></button>
+        <button type="button" class="hero-dot" aria-label="Go to slide 3" data-slide="2"><span class="hero-dot-progress"></span></button>
+        <button type="button" class="hero-dot" aria-label="Go to slide 4" data-slide="3"><span class="hero-dot-progress"></span></button>
+        <button type="button" class="hero-dot" aria-label="Go to slide 5" data-slide="4"><span class="hero-dot-progress"></span></button>
       </div>
     </div>
   </section>
@@ -138,95 +143,111 @@
     </div>
   </div>
 
+  <!-- ANNOUNCEMENTS PANEL (Collapsible) -->
+  <div class="announcements-panel" id="announcementsPanel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <button type="button" class="announcements-panel__header" id="announcementsToggle" aria-expanded="true" aria-controls="announcementsList">
+        <div class="announcements-panel__title">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg>
+          <span>Announcements</span>
+          <span class="announcements-panel__count">8 new</span>
+        </div>
+        <svg class="announcements-panel__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"/></svg>
+      </button>
+      <div class="announcements-panel__body" id="announcementsList">
+        <ul class="announcements-panel__list">
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> Admissions Open for B.Tech 2026-27 — Application deadline extended to June 30</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> B.Tech III Semester (ICT-based) Academic Calendar 2026-27 released</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> Results declared for B.Tech II Semester Examinations — May 2026</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> IEEE WIT Student Chapter wins Best Technical Event at National Symposium</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> Internship Drive: Amazon, TCS, Infosys hiring WIT students for Summer 2026</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> International Conference on Emerging Technologies — Call for Papers</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> WIT Innovation Cell Hackathon 2026 — Register by July 10</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg> Merit Scholarships announced for First Year B.Tech 2026-27</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ACCREDITATION & RECOGNITION -->
   <div class="section__block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="common__heading">Accreditation &amp; Recognition</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-4 md:mt-6">
+      <div class="flex items-center gap-3 mb-1">
+        <span class="w-1 h-7 bg-primary block"></span>
+        <h2 class="common__heading !mb-0">Accreditation &amp; Recognition</h2>
+      </div>
+      <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Accredited and approved by India's top academic and professional bodies.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         <div class="accreditation-card">
-          <img src="https://witsolapur.org/wp-content/uploads/2022/07/naac-logo.png" alt="NAAC A+" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
-          <span class="recruiter-fallback">NAAC</span>
+          <img src="https://witsolapur.org/wp-content/uploads/2022/07/naac-logo.png" alt="NAAC A+" loading="lazy" decoding="async" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
+          <span class="recruiter-fallback">NAAC A+</span>
           <p class="accred-name">NAAC A+</p>
-          <p class="accred-detail">CGPA 3.26</p>
+          <p class="accred-detail">CGPA 3.26 / 4</p>
         </div>
         <div class="accreditation-card">
-          <img src="https://witsolapur.org/wp-content/uploads/2024/12/NBA-Logo-1.png" alt="NBA" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
+          <img src="https://witsolapur.org/wp-content/uploads/2024/12/NBA-Logo-1.png" alt="NBA" loading="lazy" decoding="async" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
           <span class="recruiter-fallback">NBA</span>
-          <p class="accred-name">NBA Accredited</p>
-          <p class="accred-detail">4 Programs</p>
+          <p class="accred-name">NBA</p>
+          <p class="accred-detail">All 6 UG Programs</p>
         </div>
         <div class="accreditation-card">
-          <img src="https://witsolapur.org/wp-content/uploads/2022/06/nirf-logo.png" alt="NIRF" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
+          <img src="https://witsolapur.org/wp-content/uploads/2022/06/nirf-logo.png" alt="NIRF" loading="lazy" decoding="async" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
           <span class="recruiter-fallback">NIRF</span>
-          <p class="accred-name">NIRF Ranked</p>
-          <p class="accred-detail">Top 150</p>
+          <p class="accred-name">NIRF</p>
+          <p class="accred-detail">Ranked Institution</p>
         </div>
         <div class="accreditation-card">
-          <img src="https://witsolapur.org/wp-content/uploads/2022/07/Autonomous-Logo.png" alt="Autonomous" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
+          <img src="https://witsolapur.org/wp-content/uploads/2022/07/Autonomous-Logo.png" alt="Autonomous" loading="lazy" decoding="async" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block'" />
           <span class="recruiter-fallback">Autonomous</span>
           <p class="accred-name">Autonomous</p>
-          <p class="accred-detail">UGC Status</p>
+          <p class="accred-detail">Status Since 2021</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PRINCIPAL'S MESSAGE -->
-  <div class="section__block section__block--bgsandal">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-14 items-center">
-        <div class="lg:col-span-1">
-          <div class="card overflow-hidden" style="aspect-ratio:3/4;">
-            <img src="./images/principal.jpg" alt="Principal, WIT Solapur" style="width:100%;height:100%;object-fit:cover;object-position:top center;" loading="lazy" decoding="async" width="400" height="600" />
-          </div>
-        </div>
-        <div class="lg:col-span-2">
-          <h2 class="common__heading !mb-6">From the Principal's Desk</h2>
-          <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
-            <p>At Walchand Institute of Technology, Solapur, we believe in nurturing not just engineers — but innovators, leaders, and responsible citizens. Our commitment to academic excellence, research, and holistic development has positioned WIT as one of the premier engineering institutions in the region.</p>
-            <p>With NAAC A+ accreditation, NBA-accredited programs, and a dedicated faculty committed to mentoring, WIT offers an environment where students thrive. Our state-of-the-art laboratories, innovation cell, and strong industry partnerships ensure that our graduates are industry-ready from day one.</p>
-            <p>I invite you to explore our campus, interact with our community, and experience the WIT difference. Together, let us build a future of excellence.</p>
-          </div>
-          <div class="mt-6 pt-6 border-t border-gray-200">
-            <p class="font-bold text-primary text-lg">Prof. (Dr.) P. N. Athavale</p>
-            <p class="text-sm text-gray-500">Principal, Walchand Institute of Technology, Solapur</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- WHY CHOOSE WIT -->
   <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="common__heading">Why Choose WIT, Solapur?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-4 md:mt-6">
-        <div class="feature-card">
-          <div class="feature-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
-            </svg>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Why Choose WIT, Solapur?</h2>
           </div>
-          <h4 class="feature-card-title">Experienced Faculty</h4>
-          <p class="feature-card-desc">Learn from highly qualified faculty with decades of teaching and industry experience. Our professors hold doctorates from premier institutions and bring global perspective to the classroom.</p>
+          <p class="text-slate-500 text-xs md:text-sm">Four pillars that make WIT a leading engineering destination.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14.754.064 1.462.384 2.037.959.574.575.895 1.283.959 2.037.049.58.025 1.193-.14 1.743m-.074-4.604-5.196-1.984A3.921 3.921 0 0 0 12 6.75c-.475 0-.934.066-1.366.19l-5.196 1.984c-.683.26-1.113.91-1.113 1.633 0 .722.43 1.372 1.113 1.633l5.196 1.984c.432.124.891.19 1.366.19.475 0 .934-.066 1.366-.19l5.196-1.984c.683-.26 1.113-.91 1.113-1.633 0-.722-.43-1.372-1.113-1.633Z" />
-            </svg>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card p-5 group cursor-pointer">
+          <div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+            <i class="fas fa-chalkboard-user text-xl"></i>
           </div>
-          <h4 class="feature-card-title">Industry-Ready Skills</h4>
-          <p class="feature-card-desc">Curriculum designed in collaboration with industry partners. Hands-on labs, live projects, internships, and certification programs ensure you graduate with skills that recruiters demand.</p>
+          <h4 class="font-black text-primary text-base mb-1.5 leading-tight">Experienced Faculty</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">Doctorate holders from premier institutions with decades of teaching &amp; industry experience.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-            </svg>
+        <div class="card p-5 group cursor-pointer">
+          <div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+            <i class="fas fa-laptop-code text-xl"></i>
           </div>
-          <h4 class="feature-card-title">Global Career Support</h4>
-          <p class="feature-card-desc">Dedicated Training &amp; Placement Cell with multinational career advancement services. 50+ recruiters, 260+ placements in 2024-25, and alumni network of 5,000+ professionals worldwide.</p>
+          <h4 class="font-black text-primary text-base mb-1.5 leading-tight">Industry-Ready Curriculum</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">Hands-on labs, live projects, internships &amp; certifications aligned with recruiter demands.</p>
+        </div>
+        <div class="card p-5 group cursor-pointer">
+          <div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+            <i class="fas fa-briefcase text-xl"></i>
+          </div>
+          <h4 class="font-black text-primary text-base mb-1.5 leading-tight">Strong Placements</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">50+ recruiters, 260+ placements in 2024-25, ₹12 LPA highest package.</p>
+        </div>
+        <div class="card p-5 group cursor-pointer">
+          <div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+            <i class="fas fa-flask text-xl"></i>
+          </div>
+          <h4 class="font-black text-primary text-base mb-1.5 leading-tight">Research &amp; Innovation</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">ISRO collaborations, funded projects, publications in indexed journals.</p>
         </div>
       </div>
     </div>
@@ -235,9 +256,15 @@
   <!-- NEWS & EVENTS -->
   <div class="section__block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-6 md:mb-8">
-        <h2 class="common__heading !mb-0">News &amp; Events</h2>
-        <a href="https://witsolapur.org/gallary/" target="_blank" rel="noopener noreferrer" class="section__viewlink">View All <i class="fas fa-arrow-right"></i></a>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">News &amp; Events</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">Latest happenings, achievements, and announcements from campus.</p>
+        </div>
+        <a href="https://witsolapur.org/gallary/" target="_blank" rel="noopener noreferrer" class="section__viewlink shrink-0">View All <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <article class="section__card">
@@ -282,51 +309,81 @@
   <!-- STUDY AT WIT -->
   <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-6 md:mb-8">
-        <h2 class="common__heading !mb-0">Study @ WIT</h2>
-        <a href="./departments.html" class="section__viewlink">All Programs <i class="fas fa-arrow-right"></i></a>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Study @ WIT</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">Explore our diverse undergraduate and postgraduate engineering programs.</p>
+        </div>
+        <a href="./departments.html" class="section__viewlink shrink-0">All Programs <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <a href="./cse.html" class="branch-card">
-          <img src="./images/cse-icon.png" alt="Computer Science" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Computer Science" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">CSE</span>
             <h4 class="branch-card-name">Computer Science &amp; Engineering</h4>
             <span class="branch-card-intake">Intake: 180</span>
+            <p class="branch-card-desc">Est. 1985 with UG course; PG (M.Tech) started in 2009-10. Recognized research centre of PAHSU. Curriculum covers programming, networking, algorithms, software engineering, distributed systems, network security, data mining, big data analytics and AI/ML. Runs Honors in AI &amp; ML and Data Science.</p>
           </div>
         </a>
           <div class="branch-card">
-          <img src="./images/entc-icon.png" alt="ENTC" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="ENTC" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">ENTC</span>
             <h4 class="branch-card-name">Electronics &amp; Telecommunication</h4>
             <span class="branch-card-intake">Intake: 120</span>
+            <p class="branch-card-desc">Est. 1999 with intake 40, now 120 seats. Offers Honors in IoT, Data Science and AI &amp; ML. 12 major labs including Audio/Video, Microwave, Communication, IoT and Signal Processing. Recognized research centre for doctoral studies.</p>
           </div>
         </div>
           <div class="branch-card">
-          <img src="./images/mechanical-icon.png" alt="Mechanical" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="Mechanical" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">ME</span>
             <h4 class="branch-card-name">Mechanical &amp; Automation Engineering</h4>
             <span class="branch-card-intake">Intake: 60</span>
+            <p class="branch-card-desc">AICTE-CII recognized Best Industry Linked Institute. NBA re-accredited UG (intake 60) and PG in Design Engineering. Focus on automation, 3D printing, Industry 4.0, AI/ML and digital twin technologies.</p>
           </div>
         </div>
           <div class="branch-card">
-          <img src="./images/civil-icon.png" alt="Civil" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Civil" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">CE</span>
             <h4 class="branch-card-name">Civil Engineering</h4>
             <span class="branch-card-intake">Intake: 60</span>
+            <p class="branch-card-desc">Est. 1987. B.Tech with Honors in Infrastructure or Sustainability Engineering. M.Tech in Structural Engineering and Ph.D. NBA accredited 4 times. National Award from AICTE-CII. 13 labs with ₹1.2 Cr in research grants.</p>
           </div>
         </div>
           <div class="branch-card">
-          <img src="./images/it-icon.png" alt="IT" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="IT" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">IT</span>
             <h4 class="branch-card-name">Information Technology</h4>
             <span class="branch-card-intake">Intake: 120</span>
+            <p class="branch-card-desc">Est. 1999. 10 computer labs with latest software and licensed copies. Specializes in AI/ML, data science, cloud computing, cybersecurity, mobile app development and networking. MOUs with IBM, Cognizant and Infosys.</p>
           </div>
         </div>
           <div class="branch-card">
-          <img src="./images/ecm-icon.png" alt="ECM" class="branch-card-icon" loading="lazy" decoding="async" width="256" height="256" />
+          <div class="branch-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800&auto=format&fit=crop" alt="ECM" class="branch-card-image" loading="lazy" decoding="async" />
+          </div>
           <div class="branch-card-body">
+            <span class="branch-code">ECM</span>
             <h4 class="branch-card-name">Electronics &amp; Computer Engineering</h4>
             <span class="branch-card-intake">Intake: 60</span>
+            <p class="branch-card-desc">Est. 1983; PG from 2009-10. Recognized for doctoral research. Renamed to Electronics &amp; Computer Engineering in 2021-22. Focus on embedded systems, VLSI, IoT, ML and data analytics. Sponsored labs by Texas Instruments, Cypress and ARM.</p>
           </div>
         </div>
       </div>
@@ -336,7 +393,16 @@
   <!-- CAMPUS LIFE -->
   <div class="section__block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="common__heading">Life @ WIT Campus</h2>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Life @ WIT Campus</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">Architecture, sports, events, and achievements that define the campus experience.</p>
+        </div>
+        <a href="./gallery.html" class="section__viewlink shrink-0">View Gallery <i class="fas fa-arrow-right"></i></a>
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         <div class="relative group overflow-hidden aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 cursor-pointer border border-slate-200">
           <img src="./images/campus-hero-1.jpg" alt="WIT Campus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="1600" height="1200" />
@@ -364,7 +430,7 @@
         </div>
       </div>
       <div class="text-center mt-6">
-        <a href="./gallery.html" class="btn-outline text-sm">View Full Gallery <i class="fas fa-arrow-right ml-1"></i></a>
+        <a href="./gallery.html" class="btn-outline text-sm hidden">View Full Gallery <i class="fas fa-arrow-right ml-1"></i></a>
       </div>
     </div>
   </div>
@@ -372,81 +438,217 @@
   <!-- PLACEMENTS PREVIEW -->
   <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-6 md:mb-8">
-        <h2 class="common__heading !mb-0 pr-2">Placements</h2>
-        <a href="./placements.html" class="section__viewlink whitespace-nowrap">Placement Details <i class="fas fa-arrow-right"></i></a>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Placements</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">Where talent meets opportunity — 22+ recruiters across 6 sectors recruit on campus.</p>
+        </div>
+        <a href="./placements.html" class="section__viewlink shrink-0">Placement Details <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 items-stretch">
-        <div class="lg:col-span-2 flex flex-col justify-between gap-3 md:gap-4">
-           <p class="text-gray-600 text-xs md:text-sm leading-relaxed">WIT Solapur has a dedicated Training &amp; Placement Cell that works round the year to prepare students for campus recruitment. In 2024-25, 50+ companies recruited on campus with a highest package of ₹12 LPA. Our alumni are placed in leading multinational corporations across domains.</p>
-          <div class="grid grid-cols-3 gap-2 md:gap-3">
-            <div class="text-center p-2.5 md:p-3 bg-wit-bg border border-gray-100 min-h-[72px] flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
-              <div class="text-lg md:text-2xl font-black text-primary">260+</div>
-              <div class="text-[9px] md:text-xs text-gray-500 mt-0.5 leading-tight">Placements</div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+        <a href="https://witsolapur.org/wp-content/uploads/2025/09/Placement-Tracker-2024-25.pdf" target="_blank" rel="noopener noreferrer" class="lg:col-span-2 card card-hover overflow-hidden group block">
+          <div class="relative h-56 md:h-full md:min-h-[18rem] overflow-hidden">
+            <img src="./images/wit placements.jpeg" alt="WIT Solapur Civil Engineering students placed at Shapoorji Pallonji (E&C) in 2022-23" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="800" height="450" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/40 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="inline-block px-2 py-0.5 bg-white text-primary text-[9px] font-bold tracking-widest">FEATURED</span>
             </div>
-            <div class="text-center p-2.5 md:p-3 bg-wit-bg border border-gray-100 min-h-[72px] flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
-              <div class="text-lg md:text-2xl font-black text-primary">50+</div>
-              <div class="text-[9px] md:text-xs text-gray-500 mt-0.5 leading-tight">Recruiters</div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-5 text-white">
+              <p class="text-[10px] font-bold tracking-widest text-white/70 mb-1">CIVIL ENGINEERING 2022-23</p>
+              <p class="text-3xl md:text-4xl font-black leading-none">8 Placed</p>
+              <p class="text-[11px] text-white/80 mt-1.5 leading-snug">Shapoorji Pallonji (E&amp;C) — 3.75 LPA</p>
             </div>
-            <div class="text-center p-2.5 md:p-3 bg-wit-bg border border-gray-100 min-h-[72px] flex flex-col items-center justify-center cursor-pointer hover:shadow-md transition-shadow">
-              <div class="text-lg md:text-2xl font-black text-primary">₹12L</div>
-              <div class="text-[9px] md:text-xs text-gray-500 mt-0.5 leading-tight">Highest Pkg</div>
+          </div>
+        </a>
+
+        <div class="lg:col-span-3 grid grid-cols-2 gap-4">
+          <div class="group p-4 md:p-5 text-center bg-white border border-slate-200 hover:border-primary transition-colors">
+            <i class="fas fa-building text-2xl md:text-3xl text-primary mb-1.5 block"></i>
+            <p class="text-2xl md:text-3xl font-black text-primary leading-none">22+</p>
+            <p class="text-[10px] md:text-xs text-slate-500 mt-1 leading-snug">Recruiters</p>
+          </div>
+          <div class="group p-4 md:p-5 text-center bg-white border border-slate-200 hover:border-primary transition-colors">
+            <i class="fas fa-user-graduate text-2xl md:text-3xl text-primary mb-1.5 block"></i>
+            <p class="text-2xl md:text-3xl font-black text-primary leading-none">358</p>
+            <p class="text-[10px] md:text-xs text-slate-500 mt-1 leading-snug">Students Placed</p>
+          </div>
+          <div class="group p-4 md:p-5 text-center bg-white border border-slate-200 hover:border-primary transition-colors">
+            <i class="fas fa-indian-rupee-sign text-2xl md:text-3xl text-primary mb-1.5 block"></i>
+            <p class="text-2xl md:text-3xl font-black text-primary leading-none">₹5.10 LPA</p>
+            <p class="text-[10px] md:text-xs text-slate-500 mt-1 leading-snug">Median Salary</p>
+          </div>
+          <div class="group p-4 md:p-5 text-center bg-white border border-slate-200 hover:border-primary transition-colors">
+            <i class="fas fa-graduation-cap text-2xl md:text-3xl text-primary mb-1.5 block"></i>
+            <p class="text-2xl md:text-3xl font-black text-primary leading-none">85%</p>
+            <p class="text-[10px] md:text-xs text-slate-500 mt-1 leading-snug">Training Coverage</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+        <div class="card p-4 md:p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+          <i class="fas fa-layer-group text-xl md:text-2xl text-primary shrink-0"></i>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-bold text-primary text-sm mb-1.5">6 Industry Sectors</h4>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-blue-50 text-blue-700">IT</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-orange-50 text-orange-700">Engineering</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-emerald-50 text-emerald-700">Consulting</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-red-50 text-red-700">Banking</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-purple-50 text-purple-700">Auto</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.5 bg-slate-100 text-slate-600">Industrial</span>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-3 card p-4 md:p-5">
-          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
-                <span class="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-500">Placement Rate Trend</span>
-              </div>
-              <div class="flex items-baseline gap-2 md:gap-3">
-                <span class="text-2xl md:text-3xl font-black text-primary-dark leading-none">65%</span>
-                <span class="inline-flex items-center gap-1 text-[10px] md:text-xs font-bold text-emerald-700 bg-emerald-50 px-1.5 md:px-2 py-0.5 rounded-full">
-                  <i class="fas fa-arrow-up text-[8px] md:text-[9px]"></i> +5%
-                </span>
-              </div>
-              <p class="text-[10px] md:text-xs text-gray-500 mt-1">vs 60% in 2022-23</p>
-            </div>
-            <div class="flex items-center gap-1.5 text-[9px] md:text-[10px] text-gray-500 shrink-0">
-              <span class="inline-block w-2.5 md:w-3 h-0.5 bg-amber-500"></span> Industry Avg
-            </div>
+        <a href="mailto:tpo@witsolapur.org" class="card card-hover p-4 md:p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 group">
+          <i class="fas fa-handshake text-xl md:text-2xl text-primary shrink-0 group-hover:scale-110 transition-transform"></i>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-bold text-primary text-sm mb-0.5">Industry Connect</h4>
+            <p class="text-[10px] text-slate-500 leading-snug">Live projects, internships &amp; partnerships year-round.</p>
           </div>
-          <div class="relative h-[14vh] md:h-[18vh] min-h-[60px] md:min-h-[80px] max-h-[120px] md:max-h-[160px]">
-            <canvas id="placementChart"></canvas>
-          </div>
-        </div>
+          <span class="text-[11px] text-primary inline-flex items-center gap-1 font-bold shrink-0 sm:ml-auto">Contact TPO <i class="fas fa-arrow-right text-[9px]"></i></span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- RESEARCH -->
-  <div class="section__block section__block--research text-white" style="background-image:linear-gradient(135deg, rgba(22,5,4,0.92), rgba(22,5,4,0.8)), url('./images/campus-banner.jpg');">
+  <!-- RESEARCH & INNOVATION -->
+  <div class="section__block">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-6 md:mb-8">
-        <h2 class="common__heading !mb-0 !text-white">Research &amp; Innovation</h2>
-          <a href="https://witsolapur.org/research/" target="_blank" class="section__viewlink !text-white hover:!text-primary transition-colors">View Research <i class="fas fa-arrow-right !text-white"></i></a>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Research &amp; Innovation</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">Translating academic excellence into tangible outcomes for industry and society.</p>
+        </div>
+        <a href="https://witsolapur.org/research/" target="_blank" rel="noopener noreferrer" class="section__viewlink shrink-0">View Research <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Research-Projects.pdf" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
-          <i class="fas fa-flask text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Sponsored Research</h4>
-          <p class="text-white/70 text-sm leading-relaxed">Ongoing funded projects from DST, AICTE, and UGC with total grants exceeding ₹2.5 Crores.</p>
-          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">Download Projects PDF →</span>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 border border-slate-200 divide-x divide-slate-200 mb-6 md:mb-8">
+        <div class="group p-5 md:p-6 text-center hover:bg-white transition-colors">
+          <i class="fas fa-award text-2xl md:text-3xl text-primary mb-2 block"></i>
+          <p class="text-xl md:text-2xl font-black text-primary leading-none">NAAC A+</p>
+          <p class="text-[10px] md:text-xs text-slate-500 mt-1.5 leading-snug">CGPA 3.26 / 4</p>
+        </div>
+        <div class="group p-5 md:p-6 text-center hover:bg-white transition-colors">
+          <i class="fas fa-certificate text-2xl md:text-3xl text-primary mb-2 block"></i>
+          <p class="text-xl md:text-2xl font-black text-primary leading-none">NBA</p>
+          <p class="text-[10px] md:text-xs text-slate-500 mt-1.5 leading-snug">All 6 UG Programs</p>
+        </div>
+        <div class="group p-5 md:p-6 text-center hover:bg-white transition-colors">
+          <i class="fas fa-handshake text-2xl md:text-3xl text-primary mb-2 block"></i>
+          <p class="text-xl md:text-2xl font-black text-primary leading-none">AICTE-CII</p>
+          <p class="text-[10px] md:text-xs text-slate-500 mt-1.5 leading-snug">Best Industry-Linked</p>
+        </div>
+        <div class="group p-5 md:p-6 text-center hover:bg-white transition-colors">
+          <i class="fas fa-university text-2xl md:text-3xl text-primary mb-2 block"></i>
+          <p class="text-xl md:text-2xl font-black text-primary leading-none">Autonomous</p>
+          <p class="text-[10px] md:text-xs text-slate-500 mt-1.5 leading-snug">Status Since 2021</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Research-Projects.pdf" target="_blank" rel="noopener noreferrer" class="card card-hover overflow-hidden group block">
+          <div class="relative h-32 md:h-40 overflow-hidden bg-primary/5">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fas fa-flask text-5xl md:text-6xl text-primary/20 group-hover:text-primary/40 transition-colors"></i>
+            </div>
+            <div class="absolute top-3 left-3">
+              <span class="inline-block px-2 py-0.5 bg-white text-primary text-[10px] font-bold tracking-widest">FUNDED</span>
+            </div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h4 class="font-bold text-base md:text-lg text-primary mb-2">Sponsored Research</h4>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">Ongoing funded projects from DST, AICTE, and UGC with total grants exceeding ₹2.5 Crores across departments.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-200">
+              <span class="text-2xl font-black text-primary">₹2.5 Cr+</span>
+              <span class="text-xs text-primary font-bold inline-flex items-center gap-1">Projects PDF <i class="fas fa-arrow-right text-[10px]"></i></span>
+            </div>
+          </div>
         </a>
-        <a href="https://witsolapur.org/research-publications/" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
-          <i class="fas fa-book text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Publications</h4>
-          <p class="text-white/70 text-sm leading-relaxed">Faculty and students publish 150+ research papers annually in Scopus/SCI indexed journals.</p>
-          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">View Publications →</span>
+        <a href="https://witsolapur.org/research-publications/" target="_blank" rel="noopener noreferrer" class="card card-hover overflow-hidden group block">
+          <div class="relative h-32 md:h-40 overflow-hidden bg-primary/5">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fas fa-book-open text-5xl md:text-6xl text-primary/20 group-hover:text-primary/40 transition-colors"></i>
+            </div>
+            <div class="absolute top-3 left-3">
+              <span class="inline-block px-2 py-0.5 bg-white text-primary text-[10px] font-bold tracking-widest">INDEXED</span>
+            </div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h4 class="font-bold text-base md:text-lg text-primary mb-2">Publications</h4>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">Faculty and students publish 150+ research papers annually in Scopus and SCI indexed journals. 20+ copyrights registered.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-200">
+              <span class="text-2xl font-black text-primary">150+</span>
+              <span class="text-xs text-primary font-bold inline-flex items-center gap-1">View Publications <i class="fas fa-arrow-right text-[10px]"></i></span>
+            </div>
+          </div>
         </a>
-        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Patent.pdf" target="_blank" class="p-5 md:p-6 border border-white/20 bg-white/5 hover:bg-white/10 transition-colors group block">
-          <i class="fas fa-brain text-2xl md:text-3xl text-primary mb-3 md:mb-4"></i>
-          <h4 class="font-bold text-base md:text-lg text-white mb-2 group-hover:text-primary transition-colors">Innovation Cell</h4>
-          <p class="text-white/70 text-sm leading-relaxed">WIT Innovation Cell fosters startups and patents — 12 patents filed and 3 startups incubated in 2025-26.</p>
-          <span class="text-xs text-white/40 mt-2 inline-block group-hover:text-primary transition-colors">Download Patents PDF →</span>
+        <a href="https://witsolapur.org/wp-content/uploads/2025/01/Patent.pdf" target="_blank" rel="noopener noreferrer" class="card card-hover overflow-hidden group block">
+          <div class="relative h-32 md:h-40 overflow-hidden bg-primary/5">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fas fa-lightbulb text-5xl md:text-6xl text-primary/20 group-hover:text-primary/40 transition-colors"></i>
+            </div>
+            <div class="absolute top-3 left-3">
+              <span class="inline-block px-2 py-0.5 bg-white text-primary text-[10px] font-bold tracking-widest">IP</span>
+            </div>
+          </div>
+          <div class="p-5 md:p-6">
+            <h4 class="font-bold text-base md:text-lg text-primary mb-2">Innovation &amp; IP</h4>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">WIT Innovation Cell fosters patents and startups — 12 patents filed, 20+ copyrights, and 3 startups incubated on campus.</p>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-200">
+              <span class="text-2xl font-black text-primary">12+</span>
+              <span class="text-xs text-primary font-bold inline-flex items-center gap-1">Patents PDF <i class="fas fa-arrow-right text-[10px]"></i></span>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6">
+        <a href="https://witsolapur.org/isro/" target="_blank" rel="noopener noreferrer" class="lg:col-span-3 card card-hover overflow-hidden group block">
+          <div class="relative h-56 md:h-72 overflow-hidden">
+            <img src="./images/isro-exhibition.webp" alt="ISRO Exhibition at WIT Solapur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="800" height="450" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/40 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="inline-block px-2.5 py-1 bg-white text-primary text-[10px] font-bold tracking-widest">FEATURED</span>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+              <p class="text-xs font-bold tracking-widest text-white/70 mb-1">RESEARCH HIGHLIGHT</p>
+              <p class="text-2xl md:text-3xl font-black leading-tight">ISRO Exhibition &amp; Space Tech</p>
+              <p class="text-sm md:text-base text-white/85 mt-2 max-w-xl">Hosting India's premier space agency for World Space Week — exhibitions, competitions, and interactive sessions that connect students to frontier research.</p>
+            </div>
+          </div>
+        </a>
+        <div class="lg:col-span-2 flex flex-col gap-4 md:gap-6">
+          <div class="card p-5 md:p-6 flex-1">
+            <div class="flex items-start gap-4">
+              <div class="shrink-0 w-12 h-12 flex items-center justify-center bg-primary text-white">
+                <i class="fas fa-microscope text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base mb-2">Research Centres</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">All 6 departments are recognized research centres of PAHSU Solapur — enabling Ph.D. programmes and doctoral research across engineering disciplines.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-5 md:p-6 flex-1">
+            <div class="flex items-start gap-4">
+              <div class="shrink-0 w-12 h-12 flex items-center justify-center bg-primary text-white">
+                <i class="fas fa-network-wired text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary text-base mb-2">Industry Partnerships</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Sponsored labs by Texas Instruments, Cypress, and ARM. Live projects with Atlas Copco, TCS, Infosys, IBM, and other industry leaders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -454,94 +656,62 @@
   <!-- TOP RECRUITERS -->
   <div class="section__block section__block--bgsandal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 md:mb-6 gap-2">
         <div>
-          <h2 class="common__heading !mb-0">Our Top Recruiters</h2>
-          <p class="text-slate-500 text-sm mt-1">50+ companies from IT, engineering, and consulting sectors recruit on campus</p>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="w-1 h-7 bg-primary block"></span>
+            <h2 class="common__heading !mb-0">Our Top Recruiters</h2>
+          </div>
+          <p class="text-slate-500 text-xs md:text-sm">50+ companies from IT, engineering, and consulting sectors recruit on campus.</p>
         </div>
         <a href="./placements.html" class="section__viewlink shrink-0">View Placement Details <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
         <a href="https://tcs.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Tata_Consultancy_Services.svg" alt="TCS" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">TCS</span>
           <span class="recruiter-tag recruiter-tag--it">IT Services</span>
         </a>
-        <a href="https://infosys.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
-          <div class="recruiter-logo-wrap">
-            <img src="./images/infosys-logo-PNG.png" alt="Infosys" loading="lazy" decoding="async" width="120" height="40" />
-          </div>
-          <span class="recruiter-name">Infosys</span>
-          <span class="recruiter-tag recruiter-tag--it">Technology</span>
-        </a>
         <a href="https://capgemini.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Capgemini_New_logo.svg" alt="Capgemini" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">Capgemini</span>
-          <span class="recruiter-tag recruiter-tag--consult">Consulting</span>
-        </a>
-        <a href="https://persistent.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
-          <div class="recruiter-logo-wrap">
-            <img src="./images/persistant.avif" alt="Persistent" loading="lazy" decoding="async" width="120" height="40" />
-          </div>
-          <span class="recruiter-name">Persistent</span>
-          <span class="recruiter-tag recruiter-tag--it">Technology</span>
-        </a>
-        <a href="https://techmahindra.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
-          <div class="recruiter-logo-wrap">
-            <img src="./images/tech%20mahindra.png" alt="Tech Mahindra" loading="lazy" decoding="async" width="120" height="40" />
-          </div>
-          <span class="recruiter-name">Tech Mahindra</span>
-          <span class="recruiter-tag recruiter-tag--it">IT Services</span>
+          <span class="recruiter-tag recruiter-tag--it">Consulting</span>
         </a>
         <a href="https://ibm.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">IBM</span>
           <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
         <a href="https://atlascopco.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Atlas_Copco_Group_logo.svg" alt="Atlas Copco" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">Atlas Copco</span>
           <span class="recruiter-tag recruiter-tag--eng">Industrial</span>
         </a>
         <a href="https://larsentoubro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg" alt="L&amp;T" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">L&amp;T</span>
           <span class="recruiter-tag recruiter-tag--eng">Engineering</span>
         </a>
-        <a href="https://wipro.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
-          <div class="recruiter-logo-wrap">
-            <img src="./images/wipro_logo_new.webp" alt="Wipro" loading="lazy" decoding="async" width="120" height="40" />
-          </div>
-          <span class="recruiter-name">Wipro</span>
-          <span class="recruiter-tag recruiter-tag--it">IT Services</span>
-        </a>
         <a href="https://cognizant.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg" alt="Cognizant" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">Cognizant</span>
           <span class="recruiter-tag recruiter-tag--it">Technology</span>
         </a>
-        <a href="https://hsbc.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
-          <div class="recruiter-logo-wrap">
-            <img src="./images/HSBC_logo_(2018).svg.png" alt="HSBC" loading="lazy" decoding="async" width="120" height="40" />
-          </div>
-          <span class="recruiter-name">HSBC</span>
-          <span class="recruiter-tag recruiter-tag--banking">Banking</span>
-        </a>
         <a href="https://bajajauto.com" target="_blank" rel="noopener noreferrer" class="recruiter-card">
           <div class="recruiter-logo-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" onerror="this.style.display='none'" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bajaj_Auto_Ltd_logo.svg" alt="Bajaj Auto" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <span class="recruiter-name">Bajaj Auto</span>
           <span class="recruiter-tag recruiter-tag--eng">Automotive</span>
@@ -554,15 +724,12 @@
 
   <footer-component></footer-component>
 
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" as="script" crossorigin="anonymous" />
-  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin="anonymous"></script>
-
   <!-- ADMISSION ENQUIRY POPUP -->
   <div id="admissionPopup" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300" style="opacity:0;pointer-events:none;">
-    <div class="bg-white rounded-2xl max-w-lg w-full mx-4 overflow-hidden shadow-2xl relative">
-      <button id="closePopup" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/90 rounded-full text-gray-500 hover:text-gray-800 transition-colors z-10 text-lg leading-none">&times;</button>
+    <div class="bg-white max-w-lg w-full mx-4 overflow-hidden shadow-2xl relative">
+      <button id="closePopup" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/90 text-gray-500 hover:text-gray-800 transition-colors z-10 text-lg leading-none">&times;</button>
       <div class="p-6 md:p-8 text-center">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-primary/10">
           <i class="fas fa-graduation-cap text-3xl text-primary"></i>
         </div>
         <h3 class="text-xl md:text-2xl font-black text-gray-900 mb-1">Engineering Admission 2026-27</h3>

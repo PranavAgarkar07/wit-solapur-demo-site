@@ -8,13 +8,12 @@
   <meta name="description" content="Photo gallery showcasing campus, events, labs, sports, cultural activities, and achievements at WIT Solapur." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://witsolapur.org" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script type="module" src="/src/main.js"></script>
   <style>
     .gallery-filter .active { background: #1d5cab; color: white; border-color: #1d5cab; }
@@ -30,10 +29,24 @@
     }]
   }
   </script>
+
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
 </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header-component></header-component>
 
   <main id="main-content">

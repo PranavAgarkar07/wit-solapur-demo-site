@@ -8,12 +8,12 @@
   <meta name="description" content="Explore the engineering departments at WIT Solapur — B.Tech, M.Tech & Ph.D. programs across 7 departments." />
   <link rel="icon" type="image/x-icon" href="./images/favicon.jpg" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" href="./fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <script type="module" src="/src/main.js"></script>
   <script type="speculationrules">
   {
@@ -23,10 +23,24 @@
     }]
   }
   </script>
+
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="splash-screen" role="status" aria-label="Loading" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#FAF7F2">
+  <div class="splash__inner">
+    <div class="splash__logo-wrap">
+      <img src="./images/wit-logo.png" alt="WIT Solapur" class="splash__logo" width="140" height="256" loading="eager" />
+    </div>
+    <h1 class="splash__title">Walchand Institute of Technology, Solapur</h1>
+    <p class="splash__tagline">An Autonomous Institute &middot; Est. 1983</p>
+    <div class="splash__loader">
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+      <div class="splash__loader-bar"></div>
+    </div>
+  </div>
 </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header-component></header-component>
 
   <main id="main-content">
@@ -46,127 +60,131 @@
 
     <section class="section__block">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="common__heading">Undergraduate Programs</h2>
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-1 h-7 bg-primary block"></span>
+          <h2 class="common__heading !mb-0">Undergraduate Programs</h2>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6">Six NBA-accredited B.Tech programs covering the major engineering disciplines.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           <!-- CIVIL - Est. 1987 -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-hard-hat text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-hard-hat text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Civil Engineering</h2>
+                <h3 class="text-xl font-bold text-primary">Civil Engineering</h2>
                 <p class="text-sm text-slate-400">Est. 1987 | Intake: 60</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">M.Tech</span>
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Ph.D.</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">M.Tech</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Ph.D.</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">Offers B.Tech with Honors in Infrastructure Engineering or Sustainability Engineering, M.Tech in Structural Engineering, and Ph.D. programs. Accredited by NBA and NAAC A+.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">B.Tech with Honors in Infrastructure Engineering or Sustainability Engineering. M.Tech in Structural Engineering. Ph.D. programs in advanced construction materials, structural analysis, and environmental engineering. NBA accredited with strong industry partnerships and hands-on laboratory experience.</p>
           </div>
 
           <!-- CSE - Est. 1985 -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-laptop-code text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-laptop-code text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Computer Science & Engineering</h2>
+                <h3 class="text-xl font-bold text-primary">Computer Science & Engineering</h2>
                 <p class="text-sm text-slate-400">Est. 1985 | Intake: 180</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">M.Tech</span>
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Ph.D.</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">M.Tech</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Ph.D.</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">PG course started in 2009-10. Research laboratory recognized research centre of PAHSU. Curriculum covers computer programming, networking, algorithms, theory of computation, software engineering, distributed systems, network security, modern databases, data mining, big data analytics and AI/ML.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">M.Tech (2009-10) and Ph.D. through PAHSU-recognized research centre. Curriculum spans AI/ML, data science, distributed systems, network security, algorithms, and software engineering. 10 advanced labs with GPU-enabled workstations for deep learning research.</p>
           </div>
 
           <!-- ECM - Est. 1983 (original Electronics Engg) -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-microchip text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-microchip text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Electronics & Computer Engineering</h2>
+                <h3 class="text-xl font-bold text-primary">Electronics & Computer Engineering</h2>
                 <p class="text-sm text-slate-400">Est. 1983 | Intake: 60</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">M.Tech</span>
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Ph.D.</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">M.Tech</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Ph.D.</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">PG course started in 2009-10. Research laboratory recognized for Doctoral Research. Focus on embedded systems, computer-electronics convergence, IoT, and VLSI design. With the evolution of computer age, walls between engineering branches are diminishing.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">M.Tech (2009-10) with doctoral research centre. Specializes in embedded systems, VLSI design, IoT architecture, and the convergence of hardware and software engineering. Strong foundation in both electronics and computing with modern lab facilities.</p>
           </div>
 
           <!-- E&TC - Est. 1999 -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-tower-cell text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-tower-cell text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Electronics & Telecommunication</h2>
+                <h3 class="text-xl font-bold text-primary">Electronics & Telecommunication</h2>
                 <p class="text-sm text-slate-400">Est. 1999 | Intake: 120</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">Established with intake of 40 seats, increased to 60 in 2002, and 120 in 2010. Strong focus on signal processing, communication systems, wireless technology, IoT, and embedded systems.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">Evolved from 40 seats (1999) to 120 seats today. Core focus on signal processing, communication systems, wireless technology, IoT, embedded systems, and 5G/6G communication technologies. Well-equipped labs for telecom and RF engineering.</p>
           </div>
 
           <!-- IT - Est. 1999 -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-database text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-database text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Information Technology</h2>
+                <h3 class="text-xl font-bold text-primary">Information Technology</h2>
                 <p class="text-sm text-slate-400">Est. 1999 | Intake: 120</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">10 computer laboratories with latest terminals and legal copies of software. Supports networking, multimedia, databases, mobile app development, AI & Machine Learning, Data Science.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">10 fully-equipped computer labs with licensed software across networking, multimedia, databases, and mobile app development. Curriculum integrates AI/ML, data science, cloud computing, and cybersecurity with hands-on project-based learning.</p>
           </div>
 
           <!-- MECH -->
-          <div class="card p-8">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 flex items-center justify-center border border-primary">
-                <i class="fa-solid fa-gears text-2xl text-primary"></i>
+          <div class="card p-8 card-hover">
+            <a href="./cse.html" class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center border border-primary shrink-0 transition-colors duration-300">
+                <i class="fa-solid fa-gears text-2xl text-primary transition-colors duration-300"></i>
               </div>
               <div>
-                <h2 class="text-xl font-bold text-primary">Mechanical & Automation Engineering</h2>
+                <h3 class="text-xl font-bold text-primary">Mechanical & Automation Engineering</h2>
                 <p class="text-sm text-slate-400">Est. 1983 | Intake: 60</p>
               </div>
-            </div>
+            </a>
             <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium">NBA Accredited</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">B.Tech</span>
-              <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium">M.Tech</span>
-              <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium">Ph.D.</span>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold">NBA Accredited</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">B.Tech</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold">M.Tech</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold">Ph.D.</span>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed">AICTE-CII recognized for industry interaction. Excellent academic results with campus placement in renowned industries. Consultancy services, sponsored projects, joint research work and infrastructure sharing with industry.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">AICTE-CII recognized for industry collaboration. Offers M.Tech in Design Engineering and Ph.D. programs. Strong placement record with consultancy services, sponsored research projects, and infrastructure sharing partnerships with leading industries.</p>
           </div>
         </div>
 
         <div class="card card--surface p-8 mt-12">
-          <h2 class="text-2xl font-bold text-primary mb-4">Postgraduate & Research Programs</h2>
+          <h3 class="text-2xl font-bold text-primary mb-4">Postgraduate &amp; Research Programs</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h3 class="font-bold text-primary mb-3">M.Tech Programs</h3>
