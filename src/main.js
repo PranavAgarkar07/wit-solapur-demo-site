@@ -34,7 +34,7 @@ function injectComponents() {
   const currentPath = window.location.pathname
   const isHome = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === ''
 
-  const navLinks = document.querySelectorAll('.navigation__menu > li > a, .mobile-drawer a')
+  const navLinks = document.querySelectorAll('.navigation__menu > li > a, .mobile-sheet__nav a')
   navLinks.forEach(link => {
     const href = link.getAttribute('href')
     const isActive = (isHome && (href === '/' || href === 'index.html' || href === 'index.html#')) ||
@@ -67,36 +67,91 @@ function initNavbar() {
     }
   })
 
-  // Hamburger toggle actions
+  // Hamburger toggle → opens mobile full-screen sheet
   const hamburger = document.getElementById('hamburger')
-  const mainNav = document.getElementById('main-nav')
+  const sheet = document.getElementById('mobile-sheet')
+  const sheetBackdrop = document.getElementById('mobile-sheet-backdrop')
+  const sheetClose = document.getElementById('mobile-sheet-close')
+
+  const openSheet = () => {
+    if (!sheet) return
+    document.body.classList.add('sheet-open')
+    sheet.setAttribute('aria-hidden', 'false')
+    sheetBackdrop?.removeAttribute('hidden')
+    hamburger?.classList.add('is-open')
+    hamburger?.setAttribute('aria-expanded', 'true')
+    // Focus the close button for keyboard users
+    setTimeout(() => sheetClose?.focus(), 100)
+    document.addEventListener('keydown', trapSheetKeys)
+  }
+
+  const closeSheet = () => {
+    if (!sheet) return
+    document.body.classList.remove('sheet-open')
+    sheet.setAttribute('aria-hidden', 'true')
+    setTimeout(() => sheetBackdrop?.setAttribute('hidden', ''), 300)
+    hamburger?.classList.remove('is-open')
+    hamburger?.setAttribute('aria-expanded', 'false')
+    document.removeEventListener('keydown', trapSheetKeys)
+    hamburger?.focus()
+  }
+
+  const trapSheetKeys = (e) => {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      closeSheet()
+      return
+    }
+    if (e.key !== 'Tab' || !sheet) return
+    const focusables = sheet.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+    if (!focusables.length) return
+    const first = focusables[0]
+    const last = focusables[focusables.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
 
   hamburger?.addEventListener('click', (e) => {
+    e.preventDefault()
     e.stopPropagation()
-    const isOpen = mainNav?.classList.toggle('drawer-open')
-    hamburger.classList.toggle('is-open')
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
-  })
-
-  // Close mobile drawer on outside click
-  document.addEventListener('click', (e) => {
-    if (mainNav && !mainNav.contains(e.target) && hamburger && !hamburger.contains(e.target)) {
-      if (mainNav.classList.contains('drawer-open')) {
-        mainNav.classList.remove('drawer-open')
-        hamburger.classList.remove('is-open')
-        hamburger.setAttribute('aria-expanded', 'false')
-      }
+    if (document.body.classList.contains('sheet-open')) {
+      closeSheet()
+    } else {
+      openSheet()
     }
   })
 
-  // Close mobile drawer on nav link click
-  document.querySelectorAll('.mobile-drawer a').forEach(link => {
+  sheetClose?.addEventListener('click', closeSheet)
+
+  sheetBackdrop?.addEventListener('click', closeSheet)
+
+  // Close sheet after tapping any link inside it
+  sheet?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      mainNav?.classList.remove('drawer-open')
-      hamburger?.classList.remove('is-open')
-      hamburger?.setAttribute('aria-expanded', 'false')
+      // Delay close so the navigation can happen smoothly
+      setTimeout(closeSheet, 50)
     })
   })
+
+  // Accordion toggles inside sheet
+  sheet?.querySelectorAll('.nav-accordion').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true'
+      btn.setAttribute('aria-expanded', !expanded)
+    })
+  })
+
+  // Close sheet if viewport resizes to desktop while open
+  const mq = window.matchMedia('(min-width: 768px)')
+  const onMqChange = (e) => { if (e.matches && document.body.classList.contains('sheet-open')) closeSheet() }
+  mq.addEventListener('change', onMqChange)
 
   // Desktop dropdown toggles (replace javascript:; hrefs)
   document.querySelectorAll('.nav-dropdown-btn').forEach(btn => {
