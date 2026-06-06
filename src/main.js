@@ -80,8 +80,7 @@ function initNavbar() {
 
   // Close mobile drawer on outside click
   document.addEventListener('click', (e) => {
-    if (!mainNav || !hamburger) return
-    if (!mainNav.contains(e.target) && !hamburger.contains(e.target)) {
+    if (mainNav && !mainNav.contains(e.target) && hamburger && !hamburger.contains(e.target)) {
       if (mainNav.classList.contains('drawer-open')) {
         mainNav.classList.remove('drawer-open')
         hamburger.classList.remove('is-open')
